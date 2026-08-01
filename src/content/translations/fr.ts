@@ -50,10 +50,10 @@ export const fr: Dictionary = {
     logoAwaitingApproval: "Monogramme temporaire — logo officiel en attente d'approbation",
   },
   hero: {
-    eyebrow: "GROUPE NSEYA · AFRIQUE · ROYAUME-UNI · INTERNATIONAL",
+    eyebrow: "GROUPE NSEYA · AFRIQUE · ROYAUME-UNI · DUBAÏ · INTERNATIONAL",
     headline: "Construire les plateformes qui font avancer demain.",
     sub: "Le Groupe Nseya crée des entreprises intelligentes, des plateformes numériques et des infrastructures stratégiques conçues pour résoudre des problèmes réels, ouvrir de nouveaux marchés et accélérer la transformation économique.",
-    indicators: ["Portefeuille multisectoriel", "Opérations UK & RDC", "Ventures propulsées par l'IA", "Conçu pour l'échelle"],
+    indicators: ["Portefeuille multisectoriel", "Opérations UK, RDC & Dubaï", "Ventures propulsées par l'IA", "Conçu pour l'échelle"],
     scrollHint: "Faites défiler pour explorer",
   },
   manifesto: {
@@ -118,7 +118,7 @@ export const fr: Dictionary = {
     paragraphs: [
       "Le Groupe Nseya est un groupe de développement de projets, de technologie et d'investissement créant des entreprises et des plateformes dans des secteurs à forte croissance et à fort impact.",
       "Le groupe opère à l'intersection de la technologie, de la stratégie commerciale, des infrastructures et de la transformation du secteur public. Son portefeuille répond à des défis réels dans l'éducation, le voyage, l'entrepreneuriat, la mobilité urbaine, les paiements, la livraison de repas, la santé, la gouvernance, l'emploi, l'énergie et la durabilité.",
-      "Grâce à ses opérations au Royaume-Uni et en République démocratique du Congo, le Groupe Nseya combine standards internationaux et connaissance directe des marchés africains.",
+      "Grâce à ses opérations au Royaume-Uni, en République démocratique du Congo et à Dubaï, le Groupe Nseya combine standards internationaux et connaissance directe des marchés africains et du Golfe.",
       "Chaque venture commence par la même question : quel problème de valeur reste non résolu, et quel système faut-il construire pour le résoudre à grande échelle ?",
     ],
     missionLabel: "Mission",

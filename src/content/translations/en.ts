@@ -48,10 +48,10 @@ export const en = {
     logoAwaitingApproval: "Temporary monogram — official logo awaiting approval",
   },
   hero: {
-    eyebrow: "GROUPE NSEYA · AFRICA · UNITED KINGDOM · GLOBAL",
+    eyebrow: "GROUPE NSEYA · AFRICA · UNITED KINGDOM · DUBAI · GLOBAL",
     headline: "Building the platforms that power tomorrow.",
     sub: "Groupe Nseya creates intelligent businesses, digital platforms and strategic infrastructure designed to solve real problems, unlock new markets and accelerate economic transformation.",
-    indicators: ["Multi-Sector Portfolio", "UK & DRC Operations", "AI-Powered Ventures", "Built for Scale"],
+    indicators: ["Multi-Sector Portfolio", "UK, DRC & Dubai Operations", "AI-Powered Ventures", "Built for Scale"],
     scrollHint: "Scroll to explore",
   },
   manifesto: {
@@ -116,7 +116,7 @@ export const en = {
     paragraphs: [
       "Groupe Nseya is a project-development, technology and investment group creating businesses and platforms across high-growth and high-impact sectors.",
       "The group works at the intersection of technology, commercial strategy, infrastructure and public-sector transformation. Its portfolio addresses real challenges across education, travel, entrepreneurship, urban mobility, payments, food delivery, healthcare, governance, employment, energy and sustainability.",
-      "Through its United Kingdom and Democratic Republic of Congo operations, Groupe Nseya combines international standards with direct knowledge of African markets.",
+      "Through its United Kingdom, Democratic Republic of Congo and Dubai operations, Groupe Nseya combines international standards with direct knowledge of African and Gulf markets.",
       "Every venture begins with the same question: what valuable problem remains unsolved, and what system must be built to solve it at scale?",
     ],
     missionLabel: "Mission",

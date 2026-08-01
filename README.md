@@ -104,9 +104,8 @@ page, filters and search pick it up automatically.
 - [ ] Confirm Live vs Launching status for every "subject to confirmation"
       platform (VERYX, MarketWar OS, Buzz Pro, Openn Job Global, Joshrix,
       Jess Move, Niche Finder, Virvoo, AxionOS).
-- [ ] Confirm the MarketWar OS domain (must not reuse the VERYX domain unless
-      intentionally one product family) and the AxionOS/Evandeli brand-domain
-      relationship (`domainConfirmed`).
+- [ ] Confirm the AxionOS/Evandeli brand-domain relationship
+      (`domainConfirmed`). MarketWar OS is confirmed at marketwaros.com.
 - [ ] Select the primary public name: CIVIX-INTEL or GOV360.
 - [ ] Connect `NEXT_PUBLIC_CONTACT_ENDPOINT` and test all form states.
 - [ ] Replace legal-page placeholder copy with reviewed legal content.

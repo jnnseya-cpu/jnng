@@ -19,8 +19,6 @@ import type { Platform } from "@/types/content";
  *    (/logos/placeholders/platform-placeholder-[slug].svg). Never invent an
  *    official logo — replace the file once the approved asset is supplied,
  *    then set `logoApproved: true`.
- *  - MarketWar OS: must not use the VERYX domain unless the two products are
- *    intentionally one family; internal profile until its domain is confirmed.
  *  - AxionOS: product name and domain (evandeli.com) differ — confirm whether
  *    Evandeli is the operating company, public brand or temporary domain
  *    (`domainConfirmed: false` until then).
@@ -290,8 +288,7 @@ const records: PlatformRecord[] = [
     sector: "marketing",
     secondarySectors: ["ai"],
     status: "launching", // "Launching, subject to deployment confirmation"
-    // Must not use the VERYX domain unless intentionally one product family.
-    // Internal profile until a dedicated domain is confirmed.
+    website: "https://marketwaros.com",
     internalPath: "/platforms/marketwar",
     logo: "/logos/placeholders/platform-placeholder-marketwar.svg",
     monogram: "MW",
@@ -308,10 +305,10 @@ const records: PlatformRecord[] = [
       { en: "Competitive analysis", fr: "Analyse concurrentielle" },
     ],
     ctaLabel: { en: "Explore MarketWar", fr: "Explorer MarketWar" },
-    externalLinkEnabled: false,
+    externalLinkEnabled: true,
     featured: false,
     displayOrder: 7,
-    domainConfirmed: false,
+    domainConfirmed: true,
   },
   {
     id: "buzz-pro",
