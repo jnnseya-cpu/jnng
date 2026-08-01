@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@theme {
+  /* Groupe Nseya palette */
+  --color-obsidian: #050709;
+  --color-midnight: #081421;
+  --color-gold: #c9a55c;
+  --color-gold-bright: #e5c475;
+  --color-electric: #1877f2;
+  --color-congo: #007fff;
+  --color-paper: #f7f8fa;
+  --color-muted: #a9b1bc;
+  --color-live: #31d17c;
+  --color-launching: #4da3ff;
+  --color-soon: #d4a84f;
+
+  --font-display: var(--font-sora), "Sora", "Manrope", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-obsidian);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-gold) 60%, transparent);
+  color: #050709;
+}
+
+/* Visible keyboard focus (WCAG 2.2 AA) */
+:focus-visible {
+  outline: 2px solid var(--color-gold-bright);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ————— Utility layers ————— */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Gold gradient headline emphasis */
+.text-gold-gradient {
+  background: linear-gradient(100deg, #e5c475 0%, #c9a55c 45%, #f0d9a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Cinematic surfaces */
+.surface-midnight {
+  background:
+    radial-gradient(1200px 500px at 80% -10%, rgba(24, 119, 242, 0.08), transparent 60%),
+    radial-gradient(900px 420px at 10% 110%, rgba(201, 165, 92, 0.07), transparent 60%),
+    var(--color-midnight);
+}
+
+.hero-canvas {
+  background:
+    radial-gradient(1100px 620px at 70% 8%, rgba(0, 127, 255, 0.16), transparent 62%),
+    radial-gradient(820px 520px at 18% 30%, rgba(201, 165, 92, 0.12), transparent 58%),
+    radial-gradient(1400px 700px at 50% 115%, rgba(8, 20, 33, 0.9), transparent 70%),
+    linear-gradient(180deg, #050709 0%, #081421 58%, #050709 100%);
+}
+
+/* City-lights points over the hero (pure CSS, no assets) */
+.city-lights {
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 68%, rgba(229, 196, 117, 0.85), transparent 100%),
+    radial-gradient(1px 1px at 22% 74%, rgba(247, 248, 250, 0.5), transparent 100%),
+    radial-gradient(1.5px 1.5px at 31% 66%, rgba(229, 196, 117, 0.6), transparent 100%),
+    radial-gradient(1px 1px at 42% 72%, rgba(77, 163, 255, 0.7), transparent 100%),
+    radial-gradient(2px 2px at 55% 65%, rgba(229, 196, 117, 0.75), transparent 100%),
+    radial-gradient(1px 1px at 64% 70%, rgba(247, 248, 250, 0.45), transparent 100%),
+    radial-gradient(1.5px 1.5px at 74% 67%, rgba(0, 127, 255, 0.65), transparent 100%),
+    radial-gradient(1px 1px at 84% 73%, rgba(229, 196, 117, 0.6), transparent 100%),
+    radial-gradient(1.5px 1.5px at 92% 69%, rgba(247, 248, 250, 0.4), transparent 100%);
+}
+
+/* Fine grid suggesting digital infrastructure */
+.network-grid {
+  background-image:
+    linear-gradient(rgba(169, 177, 188, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(169, 177, 188, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 75%);
+}
+
+/* Gold hairline used in the opening sequence and section dividers */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 165, 92, 0.9), transparent);
+}
+
+/* Card treatment */
+.card-glass {
+  background: linear-gradient(165deg, rgba(247, 248, 250, 0.045), rgba(247, 248, 250, 0.015));
+  border: 1px solid rgba(247, 248, 250, 0.09);
+  backdrop-filter: blur(8px);
+}
+
+.card-glass-hover {
+  transition: transform 300ms cubic-bezier(0.2, 0.6, 0.2, 1), border-color 300ms, box-shadow 300ms;
+}
+
+@media (hover: hover) {
+  .card-glass-hover:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(201, 165, 92, 0.45);
+    box-shadow: 0 18px 50px -18px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(201, 165, 92, 0.12);
+  }
+  .card-glass-hover:hover .external-icon {
+    transform: rotate(45deg);
+  }
+  .card-glass-hover:hover .status-dot {
+    animation: pulse-once 700ms ease-out 1;
+  }
+}
+
+.external-icon {
+  transition: transform 250ms ease;
+}
+
+@keyframes pulse-once {
+  0% { box-shadow: 0 0 0 0 currentColor; }
+  100% { box-shadow: 0 0 0 7px transparent; }
+}
+
+/* Founder portrait monochrome-to-colour hover (desktop only) */
+@media (hover: hover) {
+  .portrait-reveal {
+    filter: grayscale(1);
+    transition: filter 700ms ease;
+  }
+  .portrait-reveal:hover {
+    filter: grayscale(0);
+  }
+}
+
+/* Header glass state after scroll */
+.header-glass {
+  background: rgba(5, 7, 9, 0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(247, 248, 250, 0.07);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-gold);
+  color: #050709;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+/* Reduced motion: honour user preference globally */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .card-glass-hover:hover {
+    transform: none;
+  }
+  .portrait-reveal {
+    filter: none;
+  }
+}
