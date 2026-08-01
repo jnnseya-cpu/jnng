@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import Image from "next/image";
 import { getDictionary, isLocale, localePath } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { Reveal } from "@/components/motion/reveal";
@@ -10,6 +13,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const dict = getDictionary(isLocale(raw) ? raw : "en");
   return { title: `${dict.founder.name} — ${dict.founder.title}`, description: dict.founder.bio[0] };
 }
+
+// Founder portrait: drop the approved photograph at
+// public/images/founder/justin-nseya.jpg and it renders automatically at the
+// next build; until then the styled placeholder frame is shown.
+const PORTRAIT_SRC = "/images/founder/justin-nseya.jpg";
+const hasPortrait = existsSync(join(process.cwd(), "public", PORTRAIT_SRC));
 
 export default async function FounderPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;
@@ -44,10 +53,21 @@ export default async function FounderPage({ params }: { params: Promise<{ locale
           <div className="grid gap-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
             <Reveal>
               <div>
-                {/* Editorial portrait slot — dark architectural backdrop with
-                    gold rim lighting; replace with the approved photograph. */}
+                {/* Editorial portrait — dark architectural frame with gold rim,
+                    monochrome-to-colour hover on desktop. */}
                 <div className="portrait-reveal relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-gold/25 bg-midnight">
-                  <div aria-hidden className="hero-canvas absolute inset-0 opacity-80" />
+                  {hasPortrait ? (
+                    <Image
+                      src={PORTRAIT_SRC}
+                      alt={`${dict.founder.name} — ${dict.founder.role}`}
+                      fill
+                      priority
+                      sizes="(min-width: 1024px) 40vw, 100vw"
+                      className="object-cover object-top"
+                    />
+                  ) : (
+                    <div aria-hidden className="hero-canvas absolute inset-0 opacity-80" />
+                  )}
                   <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-obsidian to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6">
                     <p className="font-display text-2xl font-semibold text-paper">{dict.founder.name}</p>
@@ -57,7 +77,7 @@ export default async function FounderPage({ params }: { params: Promise<{ locale
                     </p>
                   </div>
                 </div>
-                <p className="mt-3 text-xs italic text-muted/70">{dict.founder.portraitNote}</p>
+                {!hasPortrait ? <p className="mt-3 text-xs italic text-muted/70">{dict.founder.portraitNote}</p> : null}
               </div>
             </Reveal>
 
