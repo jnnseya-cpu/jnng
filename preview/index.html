@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Groupe Nseya — Visual Preview (standalone)</title>
+<style>
+  /* Zero-dependency visual preview of the Groupe Nseya design system.
+     Open this file directly in any browser — no build, no network. */
+  :root {
+    --obsidian: #050709; --midnight: #081421; --gold: #C9A55C; --gold-bright: #E5C475;
+    --electric: #1877F2; --congo: #007FFF; --paper: #F7F8FA; --muted: #A9B1BC;
+    --live: #31D17C; --launching: #4DA3FF; --soon: #D4A84F;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--obsidian); color: var(--paper); font-family: "Inter", "DM Sans", system-ui, sans-serif; line-height: 1.6; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; font-size: .68rem; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  a { color: inherit; }
+
+  header { position: sticky; top: 0; background: rgba(5,7,9,.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(247,248,250,.07); z-index: 10; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .18em; font-size: .85rem; }
+  .logo-mark { width: 34px; height: 34px; border-radius: 9px; background: var(--midnight); border: 1px solid rgba(201,165,92,.6); display: grid; place-items: center; color: var(--gold); font-size: 1.05rem; }
+  .nav-links { display: none; gap: 22px; font-size: .85rem; color: rgba(247,248,250,.8); }
+  .nav-links span:hover { color: var(--paper); cursor: pointer; }
+  .pill { border: 1px solid rgba(247,248,250,.2); border-radius: 999px; padding: 6px 12px; font-size: .68rem; }
+  @media (min-width: 900px) { .nav-links { display: flex; } }
+
+  .hero { min-height: 92vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;
+    background:
+      radial-gradient(1100px 620px at 70% 8%, rgba(0,127,255,.16), transparent 62%),
+      radial-gradient(820px 520px at 18% 30%, rgba(201,165,92,.12), transparent 58%),
+      linear-gradient(180deg, #050709 0%, #081421 58%, #050709 100%);
+  }
+  .hero::before { content:""; position:absolute; inset:0;
+    background-image:
+      radial-gradient(2px 2px at 12% 70%, rgba(229,196,117,.85), transparent),
+      radial-gradient(1.5px 1.5px at 30% 66%, rgba(229,196,117,.55), transparent),
+      radial-gradient(1.5px 1.5px at 44% 73%, rgba(77,163,255,.7), transparent),
+      radial-gradient(2px 2px at 58% 64%, rgba(229,196,117,.75), transparent),
+      radial-gradient(1.5px 1.5px at 76% 68%, rgba(0,127,255,.65), transparent),
+      radial-gradient(2px 2px at 90% 72%, rgba(247,248,250,.45), transparent);
+  }
+  .hero::after { content:""; position:absolute; left:0; right:0; top:38%; height:1px;
+    background: linear-gradient(90deg, transparent, rgba(201,165,92,.9), transparent); animation: sweep 1.4s ease-out; }
+  @keyframes sweep { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .hero::after { animation: none; } .fade { animation: none !important; opacity: 1 !important; } }
+  .fade { opacity: 0; animation: fadeUp .9s cubic-bezier(.2,.6,.2,1) forwards; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+
+  .eyebrow { color: var(--gold); animation-delay: .2s; }
+  h1 { font-family: "Sora", "Manrope", system-ui, sans-serif; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1.05; letter-spacing: -.02em; max-width: 16ch; margin-top: 22px; animation-delay: .4s; }
+  h1 em { font-style: normal; background: linear-gradient(100deg, #E5C475, #C9A55C 45%, #F0D9A0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { color: var(--muted); max-width: 56ch; margin-top: 24px; font-size: 1.05rem; animation-delay: .65s; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; animation-delay: .85s; }
+  .btn { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 26px; border-radius: 8px; font-weight: 600; font-size: .9rem; text-decoration: none; }
+  .btn-gold { background: var(--gold); color: var(--obsidian); } .btn-gold:hover { background: var(--gold-bright); }
+  .btn-ghost { border: 1px solid rgba(247,248,250,.25); color: var(--paper); } .btn-ghost:hover { border-color: rgba(201,165,92,.6); color: var(--gold-bright); }
+  .indicators { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px 32px; margin-top: 64px; max-width: 760px; list-style: none; animation-delay: 1.05s; }
+  .indicators li { border-left: 1px solid rgba(201,165,92,.4); padding-left: 12px; color: rgba(247,248,250,.7); }
+  @media (min-width: 700px) { .indicators { grid-template-columns: repeat(4,1fr); } }
+
+  section { padding: 88px 0; }
+  .midnight { background:
+      radial-gradient(1200px 500px at 80% -10%, rgba(24,119,242,.08), transparent 60%),
+      radial-gradient(900px 420px at 10% 110%, rgba(201,165,92,.07), transparent 60%), var(--midnight); }
+  h2 { font-family: "Sora", system-ui, sans-serif; font-size: clamp(1.7rem, 3.6vw, 2.6rem); letter-spacing: -.02em; max-width: 24ch; }
+  .label { color: var(--gold); margin-bottom: 14px; }
+  .intro { color: var(--muted); max-width: 62ch; margin-top: 16px; }
+
+  .grid { display: grid; gap: 20px; margin-top: 44px; }
+  @media (min-width: 720px) { .grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1080px) { .grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .card { background: linear-gradient(165deg, rgba(247,248,250,.045), rgba(247,248,250,.015)); border: 1px solid rgba(247,248,250,.09);
+    border-radius: 18px; padding: 24px; display: flex; flex-direction: column; transition: transform .3s, border-color .3s; }
+  .card:hover { transform: translateY(-4px) scale(1.02); border-color: rgba(201,165,92,.45); }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .tile { width: 54px; height: 54px; border-radius: 12px; background: linear-gradient(135deg, #0b1826, #050709); display: grid; place-items: center; font-family: "Sora", sans-serif; font-weight: 600; }
+  .status { display: inline-flex; align-items: center; gap: 7px; border-radius: 999px; padding: 4px 12px; font-size: .6rem; }
+  .status i { width: 6px; height: 6px; border-radius: 50%; }
+  .st-live { color: var(--live); border: 1px solid rgba(49,209,124,.3); } .st-live i { background: var(--live); }
+  .st-launch { color: var(--launching); border: 1px solid rgba(77,163,255,.3); } .st-launch i { background: var(--launching); }
+  .st-soon { color: var(--soon); border: 1px solid rgba(212,168,79,.3); } .st-soon i { background: var(--soon); }
+  .cat { color: var(--muted); margin-top: 18px; }
+  .card h3 { font-family: "Sora", sans-serif; font-size: 1.2rem; margin-top: 6px; }
+  .tag { font-size: .88rem; font-weight: 600; margin-top: 4px; }
+  .desc { color: var(--muted); font-size: .88rem; margin-top: 10px; flex: 1; }
+  .card-cta { margin-top: 18px; font-size: .85rem; font-weight: 600; color: var(--gold); text-decoration: none; }
+  .card-cta:hover { color: var(--gold-bright); }
+
+  .words { display: flex; flex-wrap: wrap; gap: 10px 34px; margin-top: 40px; font-family: "Sora", sans-serif; font-weight: 600; font-size: clamp(1.5rem, 4vw, 2.6rem); letter-spacing: -.02em; list-style: none; }
+  .words li span { color: rgba(201,165,92,.6); margin-left: 18px; }
+
+  footer { border-top: 1px solid rgba(247,248,250,.07); padding: 48px 0; color: var(--muted); font-size: .8rem; }
+  footer .note { margin-top: 10px; color: rgba(169,177,188,.7); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="logo"><span class="logo-mark">N</span> GROUPE <span style="color:var(--gold)">&nbsp;NSEYA</span></div>
+    <nav class="nav-links" aria-label="Preview navigation">
+      <span>Our Group</span><span>Platforms</span><span>Sectors</span><span>Founder</span><span>Impact</span><span>News</span><span>Contact</span>
+    </nav>
+    <span class="pill mono">EN · FR</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="mono eyebrow fade">GROUPE NSEYA · AFRICA · UNITED KINGDOM · GLOBAL</p>
+    <h1 class="fade">Building the platforms that <em>power tomorrow.</em></h1>
+    <p class="sub fade">Groupe Nseya creates intelligent businesses, digital platforms and strategic infrastructure designed to solve real problems, unlock new markets and accelerate economic transformation.</p>
+    <div class="ctas fade">
+      <a class="btn btn-gold" href="#live">Explore Our Platforms</a>
+      <a class="btn btn-ghost" href="#next">Become a Strategic Partner</a>
+    </div>
+    <ul class="indicators mono fade">
+      <li>Multi-Sector Portfolio</li><li>UK &amp; DRC Operations</li><li>AI-Powered Ventures</li><li>Built for Scale</li>
+    </ul>
+  </div>
+</section>
+
+<section class="midnight">
+  <div class="wrap">
+    <h2>Ideas create possibility. Execution creates value.</h2>
+    <p class="intro">We combine project development, artificial intelligence, industry knowledge, commercial strategy and disciplined execution to build platforms capable of serving individuals, businesses and public institutions.</p>
+    <ul class="words">
+      <li>Identify<span>·</span></li><li>Validate<span>·</span></li><li>Design<span>·</span></li><li>Build<span>·</span></li><li>Launch<span>·</span></li><li>Scale<span>·</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="live">
+  <div class="wrap">
+    <p class="mono label">LIVE ECOSYSTEM</p>
+    <h2>Built. Launched. Creating value.</h2>
+    <p class="intro">Our operating and launching platforms are transforming how people learn, travel, build businesses, manage projects and participate in the digital economy.</p>
+    <div class="grid">
+      <article class="card"><div class="card-top"><span class="tile" style="color:#C9A55C;border:1px solid rgba(201,165,92,.55)">JNN</span><span class="status st-live mono"><i></i>Live</span></div>
+        <p class="mono cat">Corporate &amp; Venture Portfolio</p><h3>Groupe JNN</h3><p class="tag" style="color:#C9A55C">One group. One ecosystem. Multiple industries.</p>
+        <p class="desc">The central corporate gateway connecting Groupe Nseya's technology ventures, commercial platforms and strategic development projects.</p>
+        <a class="card-cta" href="https://groupejnn.com" target="_blank" rel="noopener noreferrer">Visit Groupe JNN ↗</a></article>
+      <article class="card"><div class="card-top"><span class="tile" style="color:#1877F2;border:1px solid rgba(24,119,242,.55)">3JN</span><span class="status st-live mono"><i></i>Live</span></div>
+        <p class="mono cat">Travel Technology</p><h3>3JN Travel</h3><p class="tag" style="color:#1877F2">Less searching. Better journeys.</p>
+        <p class="desc">An intelligent online travel platform helping customers discover, compare and book flights, hotels, holiday rentals and travel services.</p>
+        <a class="card-cta" href="https://3jntravel.com" target="_blank" rel="noopener noreferrer">Explore 3JN Travel ↗</a></article>
+      <article class="card"><div class="card-top"><span class="tile" style="color:#4F46E5;border:1px solid rgba(79,70,229,.55)">SY</span><span class="status st-live mono"><i></i>Live</span></div>
+        <p class="mono cat">Education Technology</p><h3>StudYear</h3><p class="tag" style="color:#7c74f0">Smarter learning. Better results.</p>
+        <p class="desc">An AI-powered academic operating system connecting students, parents, teachers, tutors, schools and education programmes.</p>
+        <a class="card-cta" href="https://studyear.com" target="_blank" rel="noopener noreferrer">Explore StudYear ↗</a></article>
+      <article class="card"><div class="card-top"><span class="tile" style="color:#E5C475;border:1px solid rgba(229,196,117,.55)">NX</span><span class="status st-launch mono"><i></i>Live · Launching</span></div>
+        <p class="mono cat">Entrepreneurship &amp; Investment</p><h3>Nseya X-Execute</h3><p class="tag" style="color:#E5C475">Where ideas end. Execution begins.</p>
+        <p class="desc">A technology-enabled entrepreneurial selection and investment platform funding high-potential Congolese ventures through structured execution.</p>
+        <a class="card-cta" href="https://nseyax.com" target="_blank" rel="noopener noreferrer">Discover Nseya X-Execute ↗</a></article>
+      <article class="card"><div class="card-top"><span class="tile" style="color:#31D17C;border:1px solid rgba(49,209,124,.55)">TK</span><span class="status st-live mono"><i></i>Live</span></div>
+        <p class="mono cat">Food Technology &amp; Delivery</p><h3>Tunakula CD</h3><p class="tag" style="color:#31D17C">Kinshasa eats smarter.</p>
+        <p class="desc">A digital food-ordering and delivery ecosystem connecting customers, restaurants, offices and independent delivery partners across Kinshasa.</p>
+        <a class="card-cta" href="https://cd.tunakula.com" target="_blank" rel="noopener noreferrer">Order With Tunakula ↗</a></article>
+      <article class="card"><div class="card-top"><span class="tile" style="color:#007FFF;border:1px solid rgba(0,127,255,.55)">VX</span><span class="status st-launch mono"><i></i>Live · Launching</span></div>
+        <p class="mono cat">Enterprise Project Management</p><h3>VERYX</h3><p class="tag" style="color:#4DA3FF">Total project intelligence.</p>
+        <p class="desc">An AI-powered project, programme and operations environment unifying governance, planning, cost, risk, procurement and asset performance.</p>
+        <a class="card-cta" href="https://www.veryxjnn.com" target="_blank" rel="noopener noreferrer">Explore VERYX ↗</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="midnight" id="next">
+  <div class="wrap">
+    <p class="mono label">THE NEXT GENERATION</p>
+    <h2>What we are building next.</h2>
+    <p class="intro">Our development pipeline is focused on strategic sectors where technology, disciplined execution and local market understanding can unlock significant economic and social value.</p>
+    <div class="grid">
+      <article class="card"><div class="card-top"><span class="tile" style="color:#D4A84F;border:1px solid rgba(212,168,79,.55)">RP</span><span class="status st-soon mono"><i></i>Coming Soon</span></div>
+        <p class="mono cat">Urban Payments</p><h3>RakaPay</h3><p class="tag" style="color:#D4A84F">Every payment. Visible.</p>
+        <p class="desc">A QR-enabled urban revenue-collection platform improving payment visibility, accountability and operational control across transport ecosystems.</p>
+        <a class="card-cta" href="#">Register Interest →</a></article>
+      <article class="card"><div class="card-top"><span class="tile" style="color:#22C55E;border:1px solid rgba(34,197,94,.55)">H3</span><span class="status st-soon mono"><i></i>Coming Soon</span></div>
+        <p class="mono cat">Health Technology</p><h3>HEALTH360 RDC</h3><p class="tag" style="color:#22C55E">One connected health system.</p>
+        <p class="desc">A connected digital-health environment for patient records, referrals, clinical coordination and public-health intelligence.</p>
+        <a class="card-cta" href="#">Register Interest →</a></article>
+      <article class="card"><div class="card-top"><span class="tile" style="color:#E5C475;border:1px solid rgba(229,196,117,.55)">CV</span><span class="status st-soon mono"><i></i>Coming Soon</span></div>
+        <p class="mono cat">Inclusive AI</p><h3>Congo Voice AI</h3><p class="tag" style="color:#E5C475">Intelligence in every voice.</p>
+        <p class="desc">A multilingual voice-first AI platform expanding access to essential information — in French, Lingala, Swahili, Kikongo and Tshiluba.</p>
+        <a class="card-cta" href="#">Register Interest →</a></article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--paper)">GROUPE <span style="color:var(--gold)">NSEYA</span></strong> — Building intelligent ventures, transformative platforms and strategic infrastructure across Africa and global markets.</p>
+    <p class="note">Static preview only — the production site is the Next.js application in this repository (28 platforms, EN/FR, filtering, contact form, SEO). © 2026 Groupe Nseya.</p>
+  </div>
+</footer>
+</body>
+</html>

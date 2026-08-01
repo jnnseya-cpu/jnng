@@ -1,0 +1,1123 @@
+import type { Platform } from "@/types/content";
+
+/**
+ * GROUPE NSEYA — PLATFORM PORTFOLIO (28 public records)
+ *
+ * Single source of truth for the portfolio. Status is controlled HERE only —
+ * never hard-code a status into a component.
+ *
+ * Status governance (see types/content.ts):
+ *  - "live" is reserved for platforms confirmed as publicly operational.
+ *  - Platforms whose operational status awaits internal confirmation are held
+ *    at "launching" — promote them to "live" here once confirmed.
+ *  - "internal" records never render publicly.
+ *
+ * Editing rules:
+ *  - `website` is only set for confirmed public domains. Ventures without an
+ *    approved domain resolve to their internal profile page.
+ *  - `logo` points to a temporary premium monogram tile
+ *    (/logos/placeholders/platform-placeholder-[slug].svg). Never invent an
+ *    official logo — replace the file once the approved asset is supplied,
+ *    then set `logoApproved: true`.
+ *  - MarketWar OS: must not use the VERYX domain unless the two products are
+ *    intentionally one family; internal profile until its domain is confirmed.
+ *  - AxionOS: product name and domain (evandeli.com) differ — confirm whether
+ *    Evandeli is the operating company, public brand or temporary domain
+ *    (`domainConfirmed: false` until then).
+ *  - CIVIX-INTEL / GOV360: one primary public name to be selected pre-launch.
+ */
+type GovernanceDefaults = "logoApproved" | "public" | "contentApproved" | "lastReviewedAt";
+type PlatformRecord = Omit<Platform, GovernanceDefaults> & Partial<Pick<Platform, GovernanceDefaults>>;
+
+const governanceDefaults: Pick<Platform, GovernanceDefaults> = {
+  logoApproved: false, // every logo is currently a temporary monogram
+  public: true,
+  contentApproved: true,
+  lastReviewedAt: "2026-08-01",
+};
+
+const records: PlatformRecord[] = [
+  // ─────────────────────────── LIVE ECOSYSTEM ───────────────────────────
+  {
+    id: "groupe-jnn",
+    slug: "groupe-jnn",
+    name: "Groupe JNN",
+    tagline: {
+      en: "One group. One ecosystem. Multiple industries.",
+      fr: "Un groupe. Un écosystème. Plusieurs industries.",
+    },
+    shortDescription: {
+      en: "The central corporate gateway connecting Groupe Nseya's technology ventures, commercial platforms and strategic development projects.",
+      fr: "La porte d'entrée corporative centrale reliant les entreprises technologiques, les plateformes commerciales et les projets de développement stratégique du Groupe Nseya.",
+    },
+    fullDescription: {
+      en: "Groupe JNN is the corporate and venture portfolio hub of the group. It presents every operating company, platform and programme in one place, giving partners, institutions and investors a clear view of how the ecosystem connects — shared leadership, shared technology and one standard of execution.",
+      fr: "Groupe JNN est le hub corporatif et le portefeuille de ventures du groupe. Il présente chaque société opérationnelle, plateforme et programme en un seul endroit, offrant aux partenaires, institutions et investisseurs une vision claire des connexions de l'écosystème — direction partagée, technologie partagée et un seul standard d'exécution.",
+    },
+    category: { en: "Corporate & Venture Portfolio", fr: "Portefeuille corporatif et ventures" },
+    sector: "entrepreneurship",
+    status: "live",
+    website: "https://groupejnn.com",
+    internalPath: "/platforms/groupe-jnn",
+    logo: "/logos/placeholders/platform-placeholder-groupe-jnn.svg",
+    monogram: "JNN",
+    brandColour: "#C9A55C",
+    regions: ["uk", "drc", "global"],
+    audiences: [
+      { en: "Investors", fr: "Investisseurs" },
+      { en: "Governments", fr: "Gouvernements" },
+      { en: "Strategic partners", fr: "Partenaires stratégiques" },
+    ],
+    capabilities: [
+      { en: "Unified portfolio gateway", fr: "Porte d'entrée unifiée du portefeuille" },
+      { en: "Venture and programme visibility", fr: "Visibilité des ventures et programmes" },
+      { en: "Partnership and investment entry point", fr: "Point d'entrée partenariats et investissement" },
+    ],
+    cardStatement: { en: "One group. One ecosystem. Multiple industries.", fr: "Un groupe. Un écosystème. Plusieurs industries." },
+    ctaLabel: { en: "Visit Groupe JNN", fr: "Visiter Groupe JNN" },
+    externalLinkEnabled: true,
+    featured: true,
+    displayOrder: 1,
+  },
+  {
+    id: "3jn-travel",
+    slug: "3jn-travel",
+    name: "3JN Travel",
+    tagline: { en: "Less searching. Better journeys.", fr: "Moins de recherche. De meilleurs voyages." },
+    shortDescription: {
+      en: "An intelligent online travel platform helping customers discover, compare and book flights, hotels, holiday rentals and travel services through a simplified digital experience.",
+      fr: "Une plateforme de voyage en ligne intelligente aidant les clients à découvrir, comparer et réserver vols, hôtels, locations de vacances et services de voyage via une expérience numérique simplifiée.",
+    },
+    fullDescription: {
+      en: "3JN Travel turns fragmented travel planning into one simplified journey. Customers discover, compare and book flights, hotels, holiday rentals and travel services in a single intelligent environment, while the platform's distribution model opens travel commerce to partners and resellers.",
+      fr: "3JN Travel transforme la planification de voyage fragmentée en un parcours simplifié. Les clients découvrent, comparent et réservent vols, hôtels, locations et services de voyage dans un environnement intelligent unique, tandis que le modèle de distribution de la plateforme ouvre le commerce du voyage aux partenaires et revendeurs.",
+    },
+    category: { en: "Travel Technology", fr: "Technologie du voyage" },
+    sector: "travel",
+    status: "live",
+    website: "https://3jntravel.com",
+    internalPath: "/platforms/3jn-travel",
+    logo: "/logos/placeholders/platform-placeholder-3jn-travel.svg",
+    monogram: "3JN",
+    brandColour: "#1877F2",
+    regions: ["uk", "drc", "africa", "global"],
+    audiences: [
+      { en: "Travellers", fr: "Voyageurs" },
+      { en: "Travel agents", fr: "Agents de voyage" },
+      { en: "Hospitality partners", fr: "Partenaires hôteliers" },
+    ],
+    capabilities: [
+      { en: "Flight, hotel and rental booking", fr: "Réservation de vols, hôtels et locations" },
+      { en: "Price comparison and discovery", fr: "Comparaison des prix et découverte" },
+      { en: "Partner distribution network", fr: "Réseau de distribution partenaires" },
+    ],
+    cardStatement: { en: "Less searching. Better journeys.", fr: "Moins de recherche. De meilleurs voyages." },
+    ctaLabel: { en: "Explore 3JN Travel", fr: "Explorer 3JN Travel" },
+    externalLinkEnabled: true,
+    featured: true,
+    displayOrder: 2,
+  },
+  {
+    id: "studyear",
+    slug: "studyear",
+    name: "StudYear",
+    tagline: { en: "Smarter learning. Better results.", fr: "Apprentissage plus intelligent. Meilleurs résultats." },
+    shortDescription: {
+      en: "An AI-powered education operating system connecting students, parents, teachers, tutors, schools and public education programmes through one intelligent academic environment.",
+      fr: "Un système d'exploitation éducatif propulsé par l'IA connectant élèves, parents, enseignants, tuteurs, écoles et programmes publics d'éducation dans un environnement académique intelligent unique.",
+    },
+    fullDescription: {
+      en: "StudYear creates a coordinated academic environment that combines diagnostics, personalised planning, AI tutoring, progress intelligence and institutional visibility. It gives every actor in the education chain — from student to ministry — a shared, intelligent view of learning.",
+      fr: "StudYear crée un environnement académique coordonné combinant diagnostics, planification personnalisée, tutorat IA, intelligence de progression et visibilité institutionnelle. Il donne à chaque acteur de la chaîne éducative — de l'élève au ministère — une vision partagée et intelligente de l'apprentissage.",
+    },
+    category: { en: "Education Technology", fr: "Technologie éducative" },
+    sector: "education",
+    secondarySectors: ["ai"],
+    status: "live",
+    website: "https://studyear.com",
+    internalPath: "/platforms/studyear",
+    logo: "/logos/placeholders/platform-placeholder-studyear.svg",
+    monogram: "SY",
+    brandColour: "#4F46E5",
+    regions: ["uk", "global"],
+    audiences: [
+      { en: "Students", fr: "Élèves et étudiants" },
+      { en: "Parents", fr: "Parents" },
+      { en: "Teachers and tutors", fr: "Enseignants et tuteurs" },
+      { en: "Schools and authorities", fr: "Écoles et autorités" },
+    ],
+    capabilities: [
+      { en: "AI tutoring and diagnostics", fr: "Tutorat IA et diagnostics" },
+      { en: "Personalised academic planning", fr: "Planification académique personnalisée" },
+      { en: "Institutional progress intelligence", fr: "Intelligence de progression institutionnelle" },
+    ],
+    cardStatement: { en: "Smarter learning. Better results.", fr: "Apprentissage plus intelligent. Meilleurs résultats." },
+    ctaLabel: { en: "Explore StudYear", fr: "Explorer StudYear" },
+    externalLinkEnabled: true,
+    featured: true,
+    displayOrder: 3,
+  },
+  {
+    id: "nseya-x-execute",
+    slug: "nseya-x-execute",
+    name: "Nseya X-Execute",
+    tagline: { en: "Where ideas end. Execution begins.", fr: "Là où finissent les idées. L'exécution commence." },
+    shortDescription: {
+      en: "A technology-enabled entrepreneurial selection and investment platform identifying, developing and funding high-potential Congolese ventures through structured execution.",
+      fr: "Une plateforme technologique de sélection entrepreneuriale et d'investissement identifiant, développant et finançant des ventures congolaises à fort potentiel grâce à une exécution structurée.",
+    },
+    fullDescription: {
+      en: "Nseya X-Execute connects capital to credible opportunity. The platform identifies high-potential Congolese entrepreneurs, puts them through a structured execution programme and channels investment into the ventures that prove they can deliver — turning raw ambition into operating companies.",
+      fr: "Nseya X-Execute connecte le capital aux opportunités crédibles. La plateforme identifie des entrepreneurs congolais à fort potentiel, les fait passer par un programme d'exécution structuré et dirige l'investissement vers les ventures qui prouvent leur capacité à livrer — transformant l'ambition brute en entreprises opérationnelles.",
+    },
+    category: { en: "Entrepreneurship & Investment", fr: "Entrepreneuriat et investissement" },
+    sector: "entrepreneurship",
+    secondarySectors: ["ai"],
+    status: "launching",
+    website: "https://nseyax.com",
+    internalPath: "/platforms/nseya-x-execute",
+    logo: "/logos/placeholders/platform-placeholder-nseya-x-execute.svg",
+    monogram: "NX",
+    brandColour: "#E5C475",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "Entrepreneurs and founders", fr: "Entrepreneurs et fondateurs" },
+      { en: "Investors", fr: "Investisseurs" },
+      { en: "Development organisations", fr: "Organisations de développement" },
+    ],
+    capabilities: [
+      { en: "Structured venture selection", fr: "Sélection structurée des ventures" },
+      { en: "Execution and development programme", fr: "Programme d'exécution et de développement" },
+      { en: "Investment routing", fr: "Acheminement de l'investissement" },
+    ],
+    cardStatement: { en: "Where ideas end. Execution begins.", fr: "Là où finissent les idées. L'exécution commence." },
+    ctaLabel: { en: "Discover Nseya X-Execute", fr: "Découvrir Nseya X-Execute" },
+    externalLinkEnabled: true,
+    featured: true,
+    displayOrder: 4,
+  },
+  {
+    id: "tunakula-cd",
+    slug: "tunakula-cd",
+    name: "Tunakula CD",
+    tagline: { en: "Kinshasa eats smarter.", fr: "Kinshasa mange plus intelligemment." },
+    shortDescription: {
+      en: "A digital food-ordering and delivery ecosystem connecting customers, restaurants, offices and independent delivery partners across Kinshasa.",
+      fr: "Un écosystème numérique de commande et de livraison de repas connectant clients, restaurants, bureaux et livreurs indépendants à travers Kinshasa.",
+    },
+    fullDescription: {
+      en: "Tunakula CD builds the digital rails for food commerce in Kinshasa: customers order from restaurants and kitchens, offices organise team meals, and independent delivery partners earn through a structured last-mile network designed for the realities of the city.",
+      fr: "Tunakula CD construit les rails numériques du commerce alimentaire à Kinshasa : les clients commandent auprès des restaurants, les bureaux organisent les repas d'équipe, et les livreurs indépendants gagnent leur vie via un réseau du dernier kilomètre structuré, conçu pour les réalités de la ville.",
+    },
+    category: { en: "Food Technology & Last-Mile Delivery", fr: "Technologie alimentaire et livraison du dernier kilomètre" },
+    sector: "commerce",
+    secondarySectors: ["mobility"],
+    status: "live",
+    website: "https://cd.tunakula.com",
+    internalPath: "/platforms/tunakula-cd",
+    logo: "/logos/placeholders/platform-placeholder-tunakula-cd.svg",
+    monogram: "TK",
+    brandColour: "#31D17C",
+    regions: ["drc"],
+    audiences: [
+      { en: "Customers", fr: "Clients" },
+      { en: "Restaurants", fr: "Restaurants" },
+      { en: "Delivery partners", fr: "Livreurs partenaires" },
+      { en: "Offices", fr: "Bureaux et entreprises" },
+    ],
+    capabilities: [
+      { en: "Food ordering and delivery", fr: "Commande et livraison de repas" },
+      { en: "Restaurant partner tools", fr: "Outils pour restaurants partenaires" },
+      { en: "Independent courier network", fr: "Réseau de coursiers indépendants" },
+    ],
+    ctaLabel: { en: "Order With Tunakula", fr: "Commander avec Tunakula" },
+    externalLinkEnabled: true,
+    featured: true,
+    displayOrder: 5,
+  },
+  {
+    id: "veryx",
+    slug: "veryx",
+    name: "VERYX",
+    tagline: { en: "Total project intelligence.", fr: "L'intelligence de projet totale." },
+    shortDescription: {
+      en: "An AI-powered project, programme and operations environment unifying governance, planning, cost, resources, risk, procurement, documents, sustainability and asset performance.",
+      fr: "Un environnement de projets, programmes et opérations propulsé par l'IA unifiant gouvernance, planification, coûts, ressources, risques, achats, documents, durabilité et performance des actifs.",
+    },
+    fullDescription: {
+      en: "VERYX brings the discipline of major-programme delivery into one intelligent environment. Governance, planning, cost, resources, risk, procurement, documentation, sustainability and asset performance operate in a single connected system — built for organisations that deliver complex work.",
+      fr: "VERYX apporte la discipline de la livraison de grands programmes dans un environnement intelligent unique. Gouvernance, planification, coûts, ressources, risques, achats, documentation, durabilité et performance des actifs opèrent dans un seul système connecté — conçu pour les organisations qui livrent des projets complexes.",
+    },
+    category: { en: "Enterprise Project Management", fr: "Gestion de projets d'entreprise" },
+    sector: "infrastructure",
+    secondarySectors: ["ai"],
+    status: "launching", // "Live or Launching, subject to final public release confirmation"
+    website: "https://www.veryxjnn.com",
+    internalPath: "/platforms/veryx",
+    logo: "/logos/placeholders/platform-placeholder-veryx.svg",
+    monogram: "VX",
+    brandColour: "#007FFF",
+    regions: ["uk", "global"],
+    audiences: [
+      { en: "Project and programme teams", fr: "Équipes projets et programmes" },
+      { en: "Contractors and consultants", fr: "Entrepreneurs et consultants" },
+      { en: "Asset owners", fr: "Propriétaires d'actifs" },
+    ],
+    capabilities: [
+      { en: "Programme governance and planning", fr: "Gouvernance et planification de programmes" },
+      { en: "Cost, risk and procurement control", fr: "Contrôle des coûts, risques et achats" },
+      { en: "Sustainability and asset performance", fr: "Durabilité et performance des actifs" },
+    ],
+    ctaLabel: { en: "Explore VERYX", fr: "Explorer VERYX" },
+    externalLinkEnabled: true,
+    featured: true,
+    displayOrder: 6,
+  },
+  {
+    id: "marketwar-os",
+    slug: "marketwar",
+    name: "MarketWar OS",
+    tagline: { en: "Every action must create value.", fr: "Chaque action doit créer de la valeur." },
+    shortDescription: {
+      en: "An intelligent commercial operating system designed to help businesses find customers, build campaigns, outperform competitors and turn marketing activity into measurable revenue.",
+      fr: "Un système d'exploitation commercial intelligent conçu pour aider les entreprises à trouver des clients, construire des campagnes, dépasser leurs concurrents et transformer l'activité marketing en revenus mesurables.",
+    },
+    fullDescription: {
+      en: "MarketWar OS treats marketing as a commercial weapon, not a cost centre. It helps businesses find customers, build campaigns, monitor competitors and connect every marketing action to measurable revenue — one operating system for the entire acquisition engine.",
+      fr: "MarketWar OS traite le marketing comme une arme commerciale, pas comme un centre de coûts. Il aide les entreprises à trouver des clients, construire des campagnes, surveiller la concurrence et relier chaque action marketing à des revenus mesurables — un seul système d'exploitation pour tout le moteur d'acquisition.",
+    },
+    category: { en: "Marketing & Customer Acquisition", fr: "Marketing et acquisition de clients" },
+    sector: "marketing",
+    secondarySectors: ["ai"],
+    status: "launching", // "Launching, subject to deployment confirmation"
+    // Must not use the VERYX domain unless intentionally one product family.
+    // Internal profile until a dedicated domain is confirmed.
+    internalPath: "/platforms/marketwar",
+    logo: "/logos/placeholders/platform-placeholder-marketwar.svg",
+    monogram: "MW",
+    brandColour: "#E5484D",
+    regions: ["uk", "global"],
+    audiences: [
+      { en: "Businesses and brands", fr: "Entreprises et marques" },
+      { en: "Marketing teams", fr: "Équipes marketing" },
+      { en: "Agencies", fr: "Agences" },
+    ],
+    capabilities: [
+      { en: "Customer acquisition intelligence", fr: "Intelligence d'acquisition de clients" },
+      { en: "Campaign building and tracking", fr: "Construction et suivi de campagnes" },
+      { en: "Competitive analysis", fr: "Analyse concurrentielle" },
+    ],
+    ctaLabel: { en: "Explore MarketWar", fr: "Explorer MarketWar" },
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 7,
+    domainConfirmed: false,
+  },
+  {
+    id: "buzz-pro",
+    slug: "buzz-pro",
+    name: "Buzz Pro",
+    tagline: { en: "Visibility that moves business.", fr: "Une visibilité qui fait avancer les affaires." },
+    shortDescription: {
+      en: "A modern marketing and communications agency helping organisations build stronger brands, create high-performing content and grow their digital visibility.",
+      fr: "Une agence moderne de marketing et de communication aidant les organisations à construire des marques plus fortes, créer du contenu performant et accroître leur visibilité numérique.",
+    },
+    fullDescription: {
+      en: "Buzz Pro is the group's marketing and communications agency. It combines brand strategy, content production and digital distribution to give organisations visibility that translates into commercial results — not vanity metrics.",
+      fr: "Buzz Pro est l'agence de marketing et de communication du groupe. Elle combine stratégie de marque, production de contenu et distribution numérique pour donner aux organisations une visibilité qui se traduit en résultats commerciaux — pas en métriques de vanité.",
+    },
+    category: { en: "Marketing & Communications", fr: "Marketing et communication" },
+    sector: "marketing",
+    status: "launching", // "Live or Launching, subject to operational confirmation"
+    website: "https://www.produbuzz.com",
+    internalPath: "/platforms/buzz-pro",
+    logo: "/logos/placeholders/platform-placeholder-buzz-pro.svg",
+    monogram: "BP",
+    brandColour: "#F59E0B",
+    regions: ["uk", "drc", "global"],
+    audiences: [
+      { en: "Brands and organisations", fr: "Marques et organisations" },
+      { en: "Startups", fr: "Startups" },
+      { en: "Institutions", fr: "Institutions" },
+    ],
+    capabilities: [
+      { en: "Brand strategy", fr: "Stratégie de marque" },
+      { en: "Content production", fr: "Production de contenu" },
+      { en: "Digital growth", fr: "Croissance numérique" },
+    ],
+    ctaLabel: { en: "Discover Buzz Pro", fr: "Découvrir Buzz Pro" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 8,
+  },
+  {
+    id: "openn-job-global",
+    slug: "openn-job-global",
+    name: "Openn Job Global",
+    tagline: { en: "Opportunity without borders.", fr: "L'opportunité sans frontières." },
+    shortDescription: {
+      en: "A digital employment marketplace connecting employers, qualified candidates and global opportunities through a simplified recruitment experience.",
+      fr: "Une place de marché numérique de l'emploi connectant employeurs, candidats qualifiés et opportunités mondiales via une expérience de recrutement simplifiée.",
+    },
+    fullDescription: {
+      en: "Openn Job Global removes friction from recruitment. Employers reach qualified candidates, candidates reach global opportunities, and the marketplace handles discovery and matching through one simplified experience built for international hiring.",
+      fr: "Openn Job Global élimine les frictions du recrutement. Les employeurs atteignent des candidats qualifiés, les candidats accèdent à des opportunités mondiales, et la place de marché gère la découverte et le matching via une expérience simplifiée conçue pour le recrutement international.",
+    },
+    category: { en: "Employment Technology", fr: "Technologie de l'emploi" },
+    sector: "employment",
+    status: "launching", // "Live or Launching, subject to operational confirmation"
+    website: "https://www.opennjob.com",
+    internalPath: "/platforms/openn-job-global",
+    logo: "/logos/placeholders/platform-placeholder-openn-job-global.svg",
+    monogram: "OJ",
+    brandColour: "#0EA5E9",
+    regions: ["uk", "africa", "global"],
+    audiences: [
+      { en: "Employers", fr: "Employeurs" },
+      { en: "Job seekers", fr: "Chercheurs d'emploi" },
+      { en: "Recruiters", fr: "Recruteurs" },
+    ],
+    capabilities: [
+      { en: "Job marketplace", fr: "Place de marché de l'emploi" },
+      { en: "Candidate matching", fr: "Matching de candidats" },
+      { en: "International opportunities", fr: "Opportunités internationales" },
+    ],
+    ctaLabel: { en: "Explore Openn Job", fr: "Explorer Openn Job" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 9,
+  },
+  {
+    id: "joshrix",
+    slug: "joshrix",
+    name: "Joshrix",
+    tagline: { en: "The sovereignty of creation.", fr: "La souveraineté de la création." },
+    shortDescription: {
+      en: "An AI game-studio platform where prompts, documents and ideas become structured, hosted and monetised game businesses — enterprise-grade creation for every operator.",
+      fr: "Une plateforme de studio de jeux propulsée par l'IA où prompts, documents et idées deviennent des entreprises de jeux structurées, hébergées et monétisées — la création de niveau entreprise pour chaque opérateur.",
+    },
+    fullDescription: {
+      en: "JOSHRIX Studio erases the distance between an idea and a commercial game product. Five connected layers — Creation, Intelligence, Runtime, Commerce and Growth — let a solo creator in Kinshasa, a micro-studio in Birmingham or an enterprise publisher in London command the same production system, IP sovereignty architecture and global distribution once reserved for organisations with millions in capital. Operated by Groupe Nseya Digital / JNN Global.",
+      fr: "JOSHRIX Studio efface la distance entre une idée et un produit de jeu commercial. Cinq couches connectées — Création, Intelligence, Runtime, Commerce et Croissance — permettent à un créateur solo à Kinshasa, un micro-studio à Birmingham ou un éditeur d'entreprise à Londres de commander le même système de production, la même architecture de souveraineté de la propriété intellectuelle et la même distribution mondiale autrefois réservées aux organisations dotées de millions de capital. Opéré par Groupe Nseya Digital / JNN Global.",
+    },
+    category: { en: "AI Game Creation & Digital Commerce", fr: "Création de jeux par IA et commerce numérique" },
+    sector: "gaming",
+    secondarySectors: ["ai", "commerce"],
+    status: "launching", // "Live or Launching, subject to final product availability"
+    website: "https://www.joshrix.com",
+    internalPath: "/platforms/joshrix",
+    logo: "/logos/placeholders/platform-placeholder-joshrix.svg",
+    monogram: "JX",
+    brandColour: "#8B5CF6",
+    regions: ["uk", "drc", "global"],
+    audiences: [
+      { en: "Creators", fr: "Créateurs" },
+      { en: "Micro-studios", fr: "Micro-studios" },
+      { en: "Enterprise publishers", fr: "Éditeurs d'entreprise" },
+    ],
+    capabilities: [
+      { en: "Idea-to-game production system", fr: "Système de production de l'idée au jeu" },
+      { en: "Specialised intelligence agents", fr: "Agents d'intelligence spécialisés" },
+      { en: "Hosted runtime and marketplace", fr: "Runtime hébergé et place de marché" },
+      { en: "Ethical growth analytics", fr: "Analytique de croissance éthique" },
+    ],
+    ctaLabel: { en: "Enter Joshrix Studio", fr: "Entrer dans Joshrix Studio" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 10,
+  },
+  {
+    id: "jess-move",
+    slug: "jess-move",
+    name: "Jess Move",
+    tagline: { en: "Movement that fits real life.", fr: "Le mouvement qui s'adapte à la vraie vie." },
+    shortDescription: {
+      en: "A health platform that intelligently places micro-movement inside real schedules — turning sedentary days into active ones without demanding time people do not have.",
+      fr: "Une plateforme santé qui place intelligemment le micro-mouvement dans les emplois du temps réels — transformant les journées sédentaires en journées actives sans exiger un temps que les gens n'ont pas.",
+    },
+    fullDescription: {
+      en: "Meeting a weekly exercise target does not cancel the risk of spending the rest of the day sitting. Jess Move schedules frequent short bursts of activity against a person's actual context — calendar, energy, environment — and makes them enjoyable and social. Privacy is answered architecturally, and an Engagement Rescue agent keeps momentum alive past the novelty period.",
+      fr: "Atteindre un objectif d'exercice hebdomadaire n'annule pas le risque de passer le reste de la journée assis. Jess Move programme de courtes séquences d'activité fréquentes selon le contexte réel de la personne — agenda, énergie, environnement — et les rend agréables et sociales. La confidentialité est traitée au niveau architectural, et un agent Engagement Rescue maintient la dynamique au-delà de la période de nouveauté.",
+    },
+    category: { en: "Health, Fitness & Behavioural Technology", fr: "Santé, forme et technologie comportementale" },
+    sector: "health",
+    secondarySectors: ["ai"],
+    status: "launching", // "Live or Launching, subject to public product confirmation"
+    website: "https://www.jessmove.com",
+    internalPath: "/platforms/jess-move",
+    logo: "/logos/placeholders/platform-placeholder-jess-move.svg",
+    monogram: "JM",
+    brandColour: "#22C55E",
+    regions: ["uk"],
+    audiences: [
+      { en: "Desk-based workers", fr: "Travailleurs de bureau" },
+      { en: "Remote teams", fr: "Équipes à distance" },
+      { en: "Health-conscious individuals", fr: "Personnes soucieuses de leur santé" },
+    ],
+    capabilities: [
+      { en: "Context-aware micro-movement scheduling", fr: "Programmation contextuelle du micro-mouvement" },
+      { en: "Social and gamified engagement", fr: "Engagement social et gamifié" },
+      { en: "Privacy-first calendar integration", fr: "Intégration d'agenda respectueuse de la vie privée" },
+    ],
+    ctaLabel: { en: "Discover Jess Move", fr: "Découvrir Jess Move" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 11,
+  },
+  {
+    id: "niche-finder",
+    slug: "niche-finder",
+    name: "Niche Finder",
+    tagline: { en: "Find the gap. Build the business.", fr: "Trouvez le créneau. Construisez l'entreprise." },
+    shortDescription: {
+      en: "A market-intelligence platform helping entrepreneurs and businesses identify viable niches, validate demand and enter markets with evidence instead of guesswork.",
+      fr: "Une plateforme d'intelligence de marché aidant entrepreneurs et entreprises à identifier des niches viables, valider la demande et entrer sur les marchés avec des preuves plutôt que des suppositions.",
+    },
+    fullDescription: {
+      en: "Niche Finder replaces guesswork with market evidence. It helps entrepreneurs and businesses discover underserved niches, measure real demand and choose where to compete — before committing capital and time to the wrong market.",
+      fr: "Niche Finder remplace les suppositions par des preuves de marché. Il aide entrepreneurs et entreprises à découvrir des niches mal desservies, mesurer la demande réelle et choisir où concourir — avant d'engager capital et temps dans le mauvais marché.",
+    },
+    category: { en: "Market Intelligence & Business Discovery", fr: "Intelligence de marché et découverte d'opportunités" },
+    sector: "ai",
+    secondarySectors: ["marketing", "entrepreneurship"],
+    status: "launching", // "Live or Launching"
+    website: "https://nichefinderhq.com",
+    internalPath: "/platforms/niche-finder",
+    logo: "/logos/placeholders/platform-placeholder-niche-finder.svg",
+    monogram: "NF",
+    brandColour: "#14B8A6",
+    regions: ["global"],
+    audiences: [
+      { en: "Entrepreneurs", fr: "Entrepreneurs" },
+      { en: "Small businesses", fr: "Petites entreprises" },
+      { en: "Product teams", fr: "Équipes produit" },
+    ],
+    capabilities: [
+      { en: "Niche discovery", fr: "Découverte de niches" },
+      { en: "Demand validation", fr: "Validation de la demande" },
+      { en: "Market-entry insight", fr: "Analyse d'entrée sur le marché" },
+    ],
+    ctaLabel: { en: "Explore Niche Finder", fr: "Explorer Niche Finder" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 12,
+  },
+  {
+    id: "virvoo",
+    slug: "virvoo",
+    name: "Virvoo",
+    tagline: { en: "Where smart athletes shop.", fr: "Là où les athlètes intelligents font leurs achats." },
+    shortDescription: {
+      en: "A multi-sport e-commerce platform making quality sports gear accessible to everyday athletes — modern designs, consistent affordability, one destination.",
+      fr: "Une plateforme e-commerce multisport rendant l'équipement sportif de qualité accessible aux athlètes du quotidien — designs modernes, prix abordables et constants, une seule destination.",
+    },
+    fullDescription: {
+      en: "Virvoo exists because the sports industry made access expensive. By cutting unnecessary retail layers and optimising sourcing, the platform delivers reliable, modern gear across basketball, football, American football and training — priced for students, local teams, weekend players and gym grinders, not for margin abuse.",
+      fr: "Virvoo existe parce que l'industrie du sport a rendu l'accès coûteux. En supprimant les couches de distribution inutiles et en optimisant l'approvisionnement, la plateforme livre un équipement fiable et moderne pour le basketball, le football, le football américain et l'entraînement — à des prix pensés pour les étudiants, les équipes locales et les sportifs du quotidien, pas pour l'abus de marge.",
+    },
+    category: { en: "Sports Commerce", fr: "Commerce sportif" },
+    sector: "sports",
+    secondarySectors: ["commerce"],
+    status: "launching", // "Live or Launching"
+    website: "https://virvoo.com",
+    internalPath: "/platforms/virvoo",
+    logo: "/logos/placeholders/platform-placeholder-virvoo.svg",
+    monogram: "VV",
+    brandColour: "#F97316",
+    regions: ["global"],
+    audiences: [
+      { en: "Everyday athletes", fr: "Athlètes du quotidien" },
+      { en: "Students and local teams", fr: "Étudiants et équipes locales" },
+      { en: "Fitness communities", fr: "Communautés fitness" },
+    ],
+    capabilities: [
+      { en: "Multi-sport catalogue", fr: "Catalogue multisport" },
+      { en: "Price-intelligence strategy", fr: "Stratégie d'intelligence des prix" },
+      { en: "Fast, simple online experience", fr: "Expérience en ligne rapide et simple" },
+    ],
+    ctaLabel: { en: "Shop Virvoo", fr: "Acheter sur Virvoo" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 13,
+  },
+  {
+    id: "axionos",
+    slug: "axionos",
+    name: "AxionOS",
+    tagline: { en: "Trust, built into the transaction.", fr: "La confiance, intégrée à la transaction." },
+    shortDescription: {
+      en: "The operating system for construction work in the UK — verified identity, escrow-controlled payments and earned reputation, powered by the SignalCore demand engine.",
+      fr: "Le système d'exploitation des travaux de construction au Royaume-Uni — identité vérifiée, paiements sous séquestre et réputation méritée, propulsé par le moteur de demande SignalCore.",
+    },
+    fullDescription: {
+      en: "AxionOS manages the transaction, not just the lead. Every trade passes identity, financial and insurance verification before they can quote; funds sit in milestone escrow and release only on the client's approval; reputation is earned from verified, completed jobs. SignalCore turns lawfully obtained construction signals into scored opportunities routed to the right trade within a 50-mile radius. Operated by JNN Global from Birmingham, serving trades and clients across the UK.",
+      fr: "AxionOS gère la transaction, pas seulement le contact. Chaque artisan passe une vérification d'identité, financière et d'assurance avant de pouvoir proposer un devis ; les fonds sont placés sous séquestre par jalons et libérés uniquement sur approbation du client ; la réputation se construit sur des chantiers vérifiés et achevés. SignalCore transforme des signaux de construction obtenus légalement en opportunités notées, dirigées vers le bon artisan dans un rayon de 50 miles. Opéré par JNN Global depuis Birmingham, au service des artisans et clients de tout le Royaume-Uni.",
+    },
+    category: { en: "Construction Marketplace & Transaction Infrastructure", fr: "Place de marché de la construction et infrastructure de transaction" },
+    sector: "infrastructure",
+    secondarySectors: ["fintech", "ai"],
+    status: "launching", // "Live or Launching"
+    // Domain clarification required: product name (AxionOS) and domain
+    // (evandeli.com) differ — confirm brand/company/domain relationship.
+    website: "https://www.evandeli.com",
+    internalPath: "/platforms/axionos",
+    logo: "/logos/placeholders/platform-placeholder-axionos.svg",
+    monogram: "AX",
+    brandColour: "#1877F2",
+    regions: ["uk"],
+    audiences: [
+      { en: "Homeowners and businesses", fr: "Propriétaires et entreprises" },
+      { en: "Tradespeople", fr: "Artisans" },
+      { en: "Construction firms", fr: "Entreprises de construction" },
+    ],
+    capabilities: [
+      { en: "Verified identity (KYC and insurance checks)", fr: "Identité vérifiée (KYC et assurances)" },
+      { en: "Milestone escrow payments", fr: "Paiements sous séquestre par jalons" },
+      { en: "SignalCore demand intelligence", fr: "Intelligence de la demande SignalCore" },
+      { en: "Earned, verified reputation", fr: "Réputation méritée et vérifiée" },
+    ],
+    ctaLabel: { en: "Explore AxionOS", fr: "Explorer AxionOS" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 14,
+    domainConfirmed: false,
+  },
+  {
+    id: "jnseya-construction",
+    slug: "jnseya-construction",
+    name: "JNseya Construction",
+    legalName: "JNseya Construction Consultant",
+    tagline: { en: "Building homes. Improving lives.", fr: "Construire des maisons. Améliorer des vies." },
+    shortDescription: {
+      en: "A construction and home-improvement company delivering bespoke renovations, extensions, conversions and new builds for homeowners across Birmingham and surrounding regions.",
+      fr: "Une entreprise de construction et de rénovation livrant des rénovations sur mesure, extensions, aménagements et constructions neuves pour les propriétaires de Birmingham et des régions voisines.",
+    },
+    fullDescription: {
+      en: "JNseya Construction Consultant provides bespoke, high-quality construction, extension, refurbishment and maintenance services — plus mechanical, electrical and plumbing engineering — to clients with prime residences in Birmingham and the surrounding regions. From bathrooms and kitchens to extensions, conversions, landscaping and complete new builds: no job is too big or small.",
+      fr: "JNseya Construction Consultant fournit des services de construction, d'extension, de rénovation et de maintenance sur mesure et de haute qualité — ainsi que l'ingénierie mécanique, électrique et de plomberie — à des clients possédant des résidences de standing à Birmingham et dans les régions voisines. Des salles de bains et cuisines aux extensions, aménagements, paysagement et constructions neuves complètes : aucun chantier n'est trop grand ni trop petit.",
+    },
+    category: { en: "Construction & Home Improvement", fr: "Construction et rénovation" },
+    sector: "infrastructure",
+    status: "live",
+    website: "https://www.jnseya.co.uk",
+    internalPath: "/platforms/jnseya-construction",
+    logo: "/logos/placeholders/platform-placeholder-jnseya-construction.svg",
+    monogram: "JC",
+    brandColour: "#C9A55C",
+    regions: ["uk"],
+    audiences: [
+      { en: "Homeowners", fr: "Propriétaires" },
+      { en: "Residential clients", fr: "Clients résidentiels" },
+    ],
+    capabilities: [
+      { en: "Bathrooms and kitchens", fr: "Salles de bains et cuisines" },
+      { en: "Extensions and conversions", fr: "Extensions et aménagements" },
+      { en: "Landscaping and patios", fr: "Paysagement et terrasses" },
+      { en: "New builds", fr: "Constructions neuves" },
+    ],
+    ctaLabel: { en: "View Construction Services", fr: "Voir les services de construction" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 15,
+  },
+  {
+    id: "jnn-estate",
+    slug: "jnn-estate",
+    name: "JNN Estate Agency",
+    tagline: { en: "Find your perfect property.", fr: "Trouvez le bien immobilier idéal." },
+    shortDescription: {
+      en: "A Dubai-based estate agency offering online and office-based services across modern luxury residential and commercial developments in the UAE.",
+      fr: "Une agence immobilière basée à Dubaï offrant des services en ligne et en agence sur des développements résidentiels et commerciaux de luxe modernes aux Émirats arabes unis.",
+    },
+    fullDescription: {
+      en: "JNN Estates Agents is a leading estate agency in Dubai, UAE, delivering online and office-based services. Its portfolio spans modern luxury developments in highly sought-after residential and commercial destinations across Dubai.",
+      fr: "JNN Estates Agents est une agence immobilière de premier plan à Dubaï, aux Émirats arabes unis, offrant des services en ligne et en agence. Son portefeuille couvre des développements de luxe modernes dans les destinations résidentielles et commerciales les plus recherchées de Dubaï.",
+    },
+    category: { en: "Property & Real Estate", fr: "Propriété et immobilier" },
+    sector: "property",
+    secondarySectors: ["commerce"],
+    status: "live",
+    website: "https://jnnestate.com",
+    internalPath: "/platforms/jnn-estate",
+    logo: "/logos/placeholders/platform-placeholder-jnn-estate.svg",
+    monogram: "JE",
+    brandColour: "#E5C475",
+    regions: ["middle-east", "global"],
+    audiences: [
+      { en: "Home buyers", fr: "Acheteurs immobiliers" },
+      { en: "Property investors", fr: "Investisseurs immobiliers" },
+      { en: "Commercial clients", fr: "Clients commerciaux" },
+    ],
+    capabilities: [
+      { en: "Luxury residential portfolio", fr: "Portefeuille résidentiel de luxe" },
+      { en: "Commercial property services", fr: "Services immobiliers commerciaux" },
+      { en: "Online and office-based service", fr: "Service en ligne et en agence" },
+    ],
+    ctaLabel: { en: "Explore JNN Estate", fr: "Explorer JNN Estate" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 16,
+  },
+
+  // ─────────────────────────── THE NEXT GENERATION ───────────────────────────
+  {
+    id: "rakapay",
+    slug: "rakapay",
+    name: "RakaPay",
+    tagline: { en: "Every payment. Visible.", fr: "Chaque paiement. Visible." },
+    shortDescription: {
+      en: "A QR-enabled urban revenue-collection platform designed to improve payment visibility, accountability and operational control across transport and public-service ecosystems.",
+      fr: "Une plateforme de collecte de revenus urbains par QR conçue pour améliorer la visibilité des paiements, la redevabilité et le contrôle opérationnel dans les écosystèmes de transport et de services publics.",
+    },
+    fullDescription: {
+      en: "RakaPay digitises the money that moves through cities. QR-enabled collection gives transport networks and public-service operators real-time payment visibility, auditable accountability and operational control — replacing leakage with light.",
+      fr: "RakaPay numérise l'argent qui circule dans les villes. La collecte par QR donne aux réseaux de transport et aux opérateurs de services publics une visibilité des paiements en temps réel, une redevabilité auditable et un contrôle opérationnel — remplaçant les fuites par la transparence.",
+    },
+    category: { en: "Urban Payments & Revenue Collection", fr: "Paiements urbains et collecte de revenus" },
+    sector: "fintech",
+    secondarySectors: ["mobility", "government"],
+    status: "coming-soon",
+    internalPath: "/platforms/rakapay",
+    logo: "/logos/placeholders/platform-placeholder-rakapay.svg",
+    monogram: "RP",
+    brandColour: "#D4A84F",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "Transport operators", fr: "Opérateurs de transport" },
+      { en: "Municipal authorities", fr: "Autorités municipales" },
+      { en: "Public-service agencies", fr: "Agences de services publics" },
+    ],
+    capabilities: [
+      { en: "QR-enabled fare and fee collection", fr: "Collecte de frais et tarifs par QR" },
+      { en: "Real-time revenue visibility", fr: "Visibilité des revenus en temps réel" },
+      { en: "Operational accountability tools", fr: "Outils de redevabilité opérationnelle" },
+    ],
+    externalLinkEnabled: false,
+    featured: true,
+    displayOrder: 17,
+  },
+  {
+    id: "parksmart",
+    slug: "parksmart",
+    name: "ParkSmart",
+    tagline: { en: "Smarter streets. Moving cities.", fr: "Des rues plus intelligentes. Des villes en mouvement." },
+    shortDescription: {
+      en: "A smart parking-management system using digital payments, number-plate recognition, capacity control and automated enforcement to improve urban mobility.",
+      fr: "Un système intelligent de gestion du stationnement utilisant paiements numériques, reconnaissance de plaques, contrôle de capacité et application automatisée pour améliorer la mobilité urbaine.",
+    },
+    fullDescription: {
+      en: "ParkSmart turns parking from an urban headache into managed infrastructure. Digital payments, number-plate recognition, live capacity control and automated enforcement give cities and operators the tools to keep streets moving and revenue accounted for.",
+      fr: "ParkSmart transforme le stationnement d'un casse-tête urbain en infrastructure gérée. Paiements numériques, reconnaissance de plaques, contrôle de capacité en direct et application automatisée donnent aux villes et opérateurs les outils pour fluidifier les rues et comptabiliser les revenus.",
+    },
+    category: { en: "Smart Mobility & Urban Parking", fr: "Mobilité intelligente et stationnement urbain" },
+    sector: "mobility",
+    secondarySectors: ["fintech"],
+    status: "coming-soon",
+    internalPath: "/platforms/parksmart",
+    logo: "/logos/placeholders/platform-placeholder-parksmart.svg",
+    monogram: "PS",
+    brandColour: "#007FFF",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "City authorities", fr: "Autorités municipales" },
+      { en: "Parking operators", fr: "Opérateurs de stationnement" },
+      { en: "Drivers", fr: "Conducteurs" },
+    ],
+    capabilities: [
+      { en: "Number-plate recognition", fr: "Reconnaissance de plaques" },
+      { en: "Digital parking payments", fr: "Paiements de stationnement numériques" },
+      { en: "Capacity and enforcement automation", fr: "Automatisation de la capacité et du contrôle" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 18,
+  },
+  {
+    id: "bitripay",
+    slug: "bitripay",
+    name: "BitriPay",
+    tagline: { en: "One scan. Connected payments.", fr: "Un scan. Des paiements connectés." },
+    shortDescription: {
+      en: "A digital payment infrastructure platform designed to simplify QR payments, merchant collections and connected financial services.",
+      fr: "Une plateforme d'infrastructure de paiement numérique conçue pour simplifier les paiements QR, les encaissements marchands et les services financiers connectés.",
+    },
+    fullDescription: {
+      en: "BitriPay is payment infrastructure for real operating environments: QR payments customers already understand, merchant collection tools businesses actually need, and rails designed to connect wallets, banks and financial services into one network.",
+      fr: "BitriPay est une infrastructure de paiement pour des environnements opérationnels réels : des paiements QR que les clients comprennent déjà, des outils d'encaissement dont les commerçants ont réellement besoin, et des rails conçus pour connecter portefeuilles, banques et services financiers en un seul réseau.",
+    },
+    category: { en: "Financial Technology", fr: "Technologie financière" },
+    sector: "fintech",
+    status: "coming-soon",
+    internalPath: "/platforms/bitripay",
+    logo: "/logos/placeholders/platform-placeholder-bitripay.svg",
+    monogram: "BT",
+    brandColour: "#31D17C",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "Merchants", fr: "Commerçants" },
+      { en: "Consumers", fr: "Consommateurs" },
+      { en: "Financial institutions", fr: "Institutions financières" },
+    ],
+    capabilities: [
+      { en: "QR payment rails", fr: "Rails de paiement QR" },
+      { en: "Merchant collections", fr: "Encaissements marchands" },
+      { en: "Connected financial services", fr: "Services financiers connectés" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 19,
+  },
+  {
+    id: "ticketroyality",
+    slug: "ticketroyality",
+    name: "TicketRoyality",
+    tagline: { en: "Every ticket protected.", fr: "Chaque billet protégé." },
+    shortDescription: {
+      en: "A secure ticketing, access-control and event-intelligence platform using dynamic QR validation, fraud protection and revenue optimisation.",
+      fr: "Une plateforme sécurisée de billetterie, de contrôle d'accès et d'intelligence événementielle utilisant la validation QR dynamique, la protection contre la fraude et l'optimisation des revenus.",
+    },
+    fullDescription: {
+      en: "TicketRoyality protects the value of every seat. Dynamic QR validation stops fraud at the gate, access control keeps events secure, and event intelligence helps organisers price, fill and optimise revenue across their calendar.",
+      fr: "TicketRoyality protège la valeur de chaque place. La validation QR dynamique stoppe la fraude à l'entrée, le contrôle d'accès sécurise les événements, et l'intelligence événementielle aide les organisateurs à tarifer, remplir et optimiser les revenus de leur calendrier.",
+    },
+    category: { en: "Ticketing & Event Technology", fr: "Billetterie et technologie événementielle" },
+    sector: "commerce",
+    secondarySectors: ["fintech"],
+    status: "coming-soon",
+    internalPath: "/platforms/ticketroyality",
+    logo: "/logos/placeholders/platform-placeholder-ticketroyality.svg",
+    monogram: "TR",
+    brandColour: "#E5484D",
+    regions: ["drc", "africa", "global"],
+    audiences: [
+      { en: "Event organisers", fr: "Organisateurs d'événements" },
+      { en: "Venues", fr: "Salles et lieux" },
+      { en: "Ticket buyers", fr: "Acheteurs de billets" },
+    ],
+    capabilities: [
+      { en: "Dynamic QR validation", fr: "Validation QR dynamique" },
+      { en: "Fraud protection", fr: "Protection contre la fraude" },
+      { en: "Event revenue intelligence", fr: "Intelligence des revenus événementiels" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 20,
+  },
+  {
+    id: "vibr",
+    slug: "vibr",
+    name: "VIBR",
+    tagline: { en: "Find your frequency.", fr: "Trouvez votre fréquence." },
+    shortDescription: {
+      en: "An AI-enabled social platform designed around discovery, communities, meaningful engagement and intelligent content experiences.",
+      fr: "Une plateforme sociale propulsée par l'IA, conçue autour de la découverte, des communautés, de l'engagement authentique et d'expériences de contenu intelligentes.",
+    },
+    fullDescription: {
+      en: "VIBR rethinks social technology around what people actually want: discovery that surprises, communities that matter and content experiences shaped by intelligence rather than outrage. Engagement designed to mean something.",
+      fr: "VIBR repense la technologie sociale autour de ce que les gens veulent vraiment : une découverte qui surprend, des communautés qui comptent et des expériences de contenu façonnées par l'intelligence plutôt que par l'indignation. Un engagement conçu pour avoir du sens.",
+    },
+    category: { en: "Social Technology", fr: "Technologie sociale" },
+    sector: "ai",
+    status: "coming-soon",
+    internalPath: "/platforms/vibr",
+    logo: "/logos/placeholders/platform-placeholder-vibr.svg",
+    monogram: "VB",
+    brandColour: "#8B5CF6",
+    regions: ["africa", "global"],
+    audiences: [
+      { en: "Creators", fr: "Créateurs" },
+      { en: "Communities", fr: "Communautés" },
+      { en: "Brands", fr: "Marques" },
+    ],
+    capabilities: [
+      { en: "AI-driven discovery", fr: "Découverte pilotée par l'IA" },
+      { en: "Community spaces", fr: "Espaces communautaires" },
+      { en: "Intelligent content experiences", fr: "Expériences de contenu intelligentes" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 21,
+  },
+  {
+    id: "health360-rdc",
+    slug: "health360-rdc",
+    name: "HEALTH360 RDC",
+    tagline: { en: "One connected health system.", fr: "Un système de santé connecté." },
+    shortDescription: {
+      en: "A connected digital-health environment for patient records, referrals, clinical coordination, public-health intelligence and secure healthcare delivery.",
+      fr: "Un environnement de santé numérique connecté pour les dossiers patients, les références, la coordination clinique, l'intelligence de santé publique et la prestation de soins sécurisée.",
+    },
+    fullDescription: {
+      en: "HEALTH360 RDC connects the health system end to end: patient records that follow the patient, referrals that arrive, clinical coordination that works across facilities, and public-health intelligence that gives decision-makers a live picture of care delivery.",
+      fr: "HEALTH360 RDC connecte le système de santé de bout en bout : des dossiers patients qui suivent le patient, des références qui aboutissent, une coordination clinique qui fonctionne entre établissements, et une intelligence de santé publique donnant aux décideurs une image en direct de la prestation de soins.",
+    },
+    category: { en: "Health Technology", fr: "Technologie de la santé" },
+    sector: "health",
+    secondarySectors: ["government", "ai"],
+    status: "coming-soon",
+    internalPath: "/platforms/health360-rdc",
+    logo: "/logos/placeholders/platform-placeholder-health360-rdc.svg",
+    monogram: "H3",
+    brandColour: "#22C55E",
+    regions: ["drc"],
+    audiences: [
+      { en: "Health facilities", fr: "Établissements de santé" },
+      { en: "Clinicians", fr: "Cliniciens" },
+      { en: "Public-health authorities", fr: "Autorités de santé publique" },
+      { en: "Patients", fr: "Patients" },
+    ],
+    capabilities: [
+      { en: "Digital patient records", fr: "Dossiers patients numériques" },
+      { en: "Referral and clinical coordination", fr: "Références et coordination clinique" },
+      { en: "Public-health intelligence", fr: "Intelligence de santé publique" },
+    ],
+    externalLinkEnabled: false,
+    featured: true,
+    displayOrder: 22,
+  },
+  {
+    // Naming rule: one primary public name (CIVIX-INTEL or GOV360) must be
+    // selected before launch; the other may remain a module or working name.
+    id: "gov360",
+    slug: "gov360",
+    name: "CIVIX-INTEL / GOV360",
+    tagline: { en: "Government intelligence in action.", fr: "L'intelligence gouvernementale en action." },
+    shortDescription: {
+      en: "An intelligent governance and public-administration platform designed to improve operational visibility, accountability, decision-making and citizen services.",
+      fr: "Une plateforme intelligente de gouvernance et d'administration publique conçue pour améliorer la visibilité opérationnelle, la redevabilité, la prise de décision et les services aux citoyens.",
+    },
+    fullDescription: {
+      en: "GOV360 gives public institutions the operational visibility private enterprises take for granted: live dashboards of service delivery, accountable workflows, evidence-based decision support and citizen services that actually serve citizens.",
+      fr: "GOV360 donne aux institutions publiques la visibilité opérationnelle que les entreprises privées tiennent pour acquise : tableaux de bord en direct de la prestation de services, flux de travail redevables, aide à la décision fondée sur les preuves et services aux citoyens qui servent réellement les citoyens.",
+    },
+    category: { en: "Government Technology", fr: "Technologie gouvernementale" },
+    sector: "government",
+    secondarySectors: ["ai"],
+    status: "coming-soon",
+    internalPath: "/platforms/gov360",
+    logo: "/logos/placeholders/platform-placeholder-gov360.svg",
+    monogram: "G3",
+    brandColour: "#007FFF",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "Government ministries", fr: "Ministères" },
+      { en: "Public administrations", fr: "Administrations publiques" },
+      { en: "Citizens", fr: "Citoyens" },
+    ],
+    capabilities: [
+      { en: "Operational dashboards", fr: "Tableaux de bord opérationnels" },
+      { en: "Accountability workflows", fr: "Flux de travail de redevabilité" },
+      { en: "Citizen service delivery", fr: "Prestation de services aux citoyens" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 23,
+  },
+  {
+    id: "congo-voice-ai",
+    slug: "congo-voice-ai",
+    name: "Congo Voice AI",
+    tagline: { en: "Intelligence in every voice.", fr: "L'intelligence dans chaque voix." },
+    shortDescription: {
+      en: "A multilingual voice-first AI platform designed to expand access to essential information across health, education, agriculture and public services — in French, Lingala, Swahili, Kikongo and Tshiluba.",
+      fr: "Une plateforme d'IA vocale multilingue conçue pour élargir l'accès à l'information essentielle en santé, éducation, agriculture et services publics — en français, lingala, swahili, kikongo et tshiluba.",
+    },
+    fullDescription: {
+      en: "Congo Voice AI is inclusive artificial intelligence built for how people actually communicate. Voice-first, multilingual across French, Lingala, Swahili, Kikongo and Tshiluba, it opens essential information in health, education, agriculture and public services to communities that text-first, English-first technology leaves behind.",
+      fr: "Congo Voice AI est une intelligence artificielle inclusive, construite pour la façon dont les gens communiquent réellement. Vocale d'abord, multilingue en français, lingala, swahili, kikongo et tshiluba, elle ouvre l'information essentielle en santé, éducation, agriculture et services publics aux communautés que la technologie centrée sur le texte et l'anglais laisse de côté.",
+    },
+    category: { en: "Inclusive Artificial Intelligence", fr: "Intelligence artificielle inclusive" },
+    sector: "ai",
+    secondarySectors: ["health", "education", "government"],
+    status: "coming-soon",
+    internalPath: "/platforms/congo-voice-ai",
+    logo: "/logos/placeholders/platform-placeholder-congo-voice-ai.svg",
+    monogram: "CV",
+    brandColour: "#E5C475",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "Communities", fr: "Communautés" },
+      { en: "Public institutions", fr: "Institutions publiques" },
+      { en: "NGOs and development partners", fr: "ONG et partenaires de développement" },
+    ],
+    capabilities: [
+      { en: "Voice-first multilingual AI", fr: "IA vocale multilingue" },
+      { en: "Five supported languages", fr: "Cinq langues prises en charge" },
+      { en: "Essential-information access", fr: "Accès à l'information essentielle" },
+    ],
+    externalLinkEnabled: false,
+    featured: true,
+    displayOrder: 24,
+  },
+  {
+    id: "snel-link",
+    slug: "snel-link",
+    name: "SNEL Link",
+    tagline: { en: "Power, connected.", fr: "L'énergie, connectée." },
+    shortDescription: {
+      en: "A digital electricity-service environment designed to improve billing, customer access, payment visibility and service communication.",
+      fr: "Un environnement numérique de services d'électricité conçu pour améliorer la facturation, l'accès client, la visibilité des paiements et la communication de service.",
+    },
+    fullDescription: {
+      en: "SNEL Link digitises the relationship between electricity providers and the people they serve: transparent billing, accessible customer service, visible payments and communication that reaches customers before the lights go out.",
+      fr: "SNEL Link numérise la relation entre les fournisseurs d'électricité et les personnes qu'ils servent : facturation transparente, service client accessible, paiements visibles et communication qui atteint les clients avant que la lumière ne s'éteigne.",
+    },
+    category: { en: "Energy Technology", fr: "Technologie de l'énergie" },
+    sector: "energy",
+    secondarySectors: ["fintech"],
+    status: "coming-soon",
+    internalPath: "/platforms/snel-link",
+    logo: "/logos/placeholders/platform-placeholder-snel-link.svg",
+    monogram: "SL",
+    brandColour: "#F59E0B",
+    regions: ["drc"],
+    audiences: [
+      { en: "Electricity customers", fr: "Clients d'électricité" },
+      { en: "Utility operators", fr: "Opérateurs de services publics" },
+    ],
+    capabilities: [
+      { en: "Digital billing", fr: "Facturation numérique" },
+      { en: "Payment visibility", fr: "Visibilité des paiements" },
+      { en: "Customer service communication", fr: "Communication de service client" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 25,
+  },
+  {
+    id: "c-recycle",
+    slug: "c-recycle",
+    name: "C-Recycle",
+    tagline: { en: "Waste becomes value.", fr: "Les déchets deviennent de la valeur." },
+    shortDescription: {
+      en: "A technology-enabled recycling and resource-recovery venture designed to transform urban waste into economic, environmental and industrial value.",
+      fr: "Une venture de recyclage et de valorisation des ressources, appuyée par la technologie, conçue pour transformer les déchets urbains en valeur économique, environnementale et industrielle.",
+    },
+    fullDescription: {
+      en: "C-Recycle treats urban waste as an unexploited resource. Technology-enabled collection, sorting and resource recovery turn what cities throw away into industrial inputs, jobs and environmental gain — the circular economy, operationalised.",
+      fr: "C-Recycle traite les déchets urbains comme une ressource inexploitée. La collecte, le tri et la valorisation appuyés par la technologie transforment ce que les villes jettent en intrants industriels, en emplois et en gains environnementaux — l'économie circulaire, opérationnalisée.",
+    },
+    category: { en: "Circular Economy", fr: "Économie circulaire" },
+    sector: "sustainability",
+    secondarySectors: ["energy"],
+    status: "coming-soon",
+    internalPath: "/platforms/c-recycle",
+    logo: "/logos/placeholders/platform-placeholder-c-recycle.svg",
+    monogram: "CR",
+    brandColour: "#31D17C",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "Municipalities", fr: "Municipalités" },
+      { en: "Industrial buyers", fr: "Acheteurs industriels" },
+      { en: "Communities", fr: "Communautés" },
+    ],
+    capabilities: [
+      { en: "Technology-enabled collection and sorting", fr: "Collecte et tri appuyés par la technologie" },
+      { en: "Resource recovery", fr: "Valorisation des ressources" },
+      { en: "Circular-economy value chains", fr: "Chaînes de valeur circulaires" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 26,
+  },
+  {
+    id: "energy-industrial-drc",
+    slug: "energy-industrial-drc",
+    name: "Energy & Industrial DRC",
+    tagline: { en: "Building power for growth.", fr: "Construire l'énergie de la croissance." },
+    shortDescription: {
+      en: "A development portfolio focused on renewable energy, grid infrastructure, industrial capacity, solar, hydro and waste-to-energy opportunities in the Democratic Republic of Congo.",
+      fr: "Un portefeuille de développement axé sur les énergies renouvelables, les infrastructures de réseau, la capacité industrielle, le solaire, l'hydroélectricité et la valorisation énergétique des déchets en République démocratique du Congo.",
+    },
+    fullDescription: {
+      en: "Energy & Industrial DRC is the group's infrastructure development portfolio: renewable generation, grid infrastructure, industrial capacity, solar, hydro and waste-to-energy programmes — developed with the programme-delivery discipline the group's leadership brings from major UK and European infrastructure.",
+      fr: "Energy & Industrial DRC est le portefeuille de développement d'infrastructures du groupe : production renouvelable, infrastructures de réseau, capacité industrielle, programmes solaires, hydroélectriques et de valorisation énergétique des déchets — développés avec la discipline de livraison de programmes que la direction du groupe apporte des grandes infrastructures britanniques et européennes.",
+    },
+    category: { en: "Energy & Infrastructure", fr: "Énergie et infrastructures" },
+    sector: "energy",
+    secondarySectors: ["infrastructure", "sustainability"],
+    status: "coming-soon",
+    internalPath: "/platforms/energy-industrial-drc",
+    logo: "/logos/placeholders/platform-placeholder-energy-industrial-drc.svg",
+    monogram: "EI",
+    brandColour: "#C9A55C",
+    regions: ["drc"],
+    audiences: [
+      { en: "Governments", fr: "Gouvernements" },
+      { en: "Development finance institutions", fr: "Institutions de financement du développement" },
+      { en: "Industrial partners", fr: "Partenaires industriels" },
+    ],
+    capabilities: [
+      { en: "Renewable generation development", fr: "Développement de production renouvelable" },
+      { en: "Grid and industrial infrastructure", fr: "Infrastructures de réseau et industrielles" },
+      { en: "Solar, hydro and waste-to-energy", fr: "Solaire, hydro et valorisation énergétique" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 27,
+  },
+  {
+    id: "3jn-vendor-partners",
+    slug: "3jn-vendor-partners",
+    name: "3JN Vendor Partner Programme",
+    tagline: { en: "Sell more. Earn more. Own no platform.", fr: "Vendez plus. Gagnez plus. Sans posséder de plateforme." },
+    shortDescription: {
+      en: "A travel-sales partnership programme enabling approved individuals, retailers and travel professionals to sell through 3JN Travel and earn recurring commission.",
+      fr: "Un programme de partenariat de vente de voyages permettant aux particuliers, détaillants et professionnels du voyage approuvés de vendre via 3JN Travel et de percevoir des commissions récurrentes.",
+    },
+    fullDescription: {
+      en: "The 3JN Vendor Partner Programme opens travel commerce to people who sell. Approved individuals, retailers and travel professionals distribute 3JN Travel inventory, earn recurring commission and build a travel business — without building a platform.",
+      fr: "Le programme 3JN Vendor Partner ouvre le commerce du voyage à ceux qui vendent. Les particuliers, détaillants et professionnels du voyage approuvés distribuent l'inventaire de 3JN Travel, perçoivent des commissions récurrentes et construisent une activité de voyage — sans construire de plateforme.",
+    },
+    category: { en: "Travel Commerce", fr: "Commerce du voyage" },
+    sector: "travel",
+    secondarySectors: ["commerce", "employment"],
+    status: "coming-soon",
+    internalPath: "/platforms/3jn-vendor-partners",
+    logo: "/logos/placeholders/platform-placeholder-3jn-vendor-partners.svg",
+    monogram: "3V",
+    brandColour: "#1877F2",
+    regions: ["uk", "drc", "africa"],
+    audiences: [
+      { en: "Travel professionals", fr: "Professionnels du voyage" },
+      { en: "Retailers", fr: "Détaillants" },
+      { en: "Independent sellers", fr: "Vendeurs indépendants" },
+    ],
+    capabilities: [
+      { en: "Approved partner distribution", fr: "Distribution par partenaires approuvés" },
+      { en: "Recurring commission model", fr: "Modèle de commission récurrente" },
+      { en: "3JN Travel inventory access", fr: "Accès à l'inventaire 3JN Travel" },
+    ],
+    externalLinkEnabled: false,
+    featured: false,
+    displayOrder: 28,
+  },
+];
+
+/** Public portfolio — governance defaults applied, internal records excluded. */
+export const platforms: Platform[] = records
+  .map((r) => ({ ...governanceDefaults, ...r }))
+  .filter((p) => p.public && p.status !== "internal");
+
+export const livePlatforms = platforms.filter((p) => p.status === "live");
+export const launchingPlatforms = platforms.filter((p) => p.status === "launching");
+export const operatingPlatforms = platforms.filter((p) => p.status === "live" || p.status === "launching");
+export const comingSoonPlatforms = platforms.filter((p) => p.status === "coming-soon");
+export const featuredPlatforms = platforms.filter((p) => p.featured && p.status !== "coming-soon");
+
+export function getPlatform(slug: string): Platform | undefined {
+  return platforms.find((p) => p.slug === slug);
+}
+
+export function relatedPlatforms(platform: Platform, count = 3): Platform[] {
+  return platforms
+    .filter((p) => p.slug !== platform.slug)
+    .sort((a, b) => {
+      const score = (x: Platform) =>
+        (x.sector === platform.sector ? 2 : 0) +
+        (x.secondarySectors?.includes(platform.sector) ? 1 : 0) +
+        (x.status === platform.status ? 1 : 0);
+      return score(b) - score(a);
+    })
+    .slice(0, count);
+}
