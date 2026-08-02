@@ -24,6 +24,10 @@ npm run dev                  # http://localhost:3000 → redirects to /en or /fr
 
 Production build: `npm run build && npm start`.
 
+**Smoke & accessibility suite** (route sweep, filters, forms, security headers,
+axe WCAG 2.2 AA): start the production server on port 3100, then
+`npm run test:e2e` (needs a Chromium binary via `CHROME_PATH`).
+
 A **zero-dependency visual preview** lives at [`preview/index.html`](preview/index.html) —
 open it directly in a browser, no build required.
 
@@ -107,7 +111,9 @@ page, filters and search pick it up automatically.
 - [ ] Confirm the AxionOS/Evandeli brand-domain relationship
       (`domainConfirmed`). MarketWar OS is confirmed at marketwaros.com.
 - [ ] Select the primary public name: CIVIX-INTEL or GOV360.
-- [ ] Connect `NEXT_PUBLIC_CONTACT_ENDPOINT` and test all form states.
+- [ ] Connect `NEXT_PUBLIC_CONTACT_ENDPOINT` and test all form states. (Until
+      then the form is still fully functional: it validates, then opens the
+      visitor's email client with the enquiry prefilled to contact@groupejnn.com.)
 - [ ] Replace legal-page placeholder copy with reviewed legal content.
 - [ ] Confirm the Kinshasa address locality spelling ("Brikin") and the footer
       corporate-relationship wording against the legal structure.
