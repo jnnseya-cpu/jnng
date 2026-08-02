@@ -266,6 +266,8 @@ export const fr: Dictionary = {
       offline: "Vous semblez être hors ligne. Votre message n'a pas été envoyé — veuillez réessayer une fois reconnecté.",
       retry: "Réessayer",
       notConfigured: "Le point de terminaison du formulaire n'est pas encore configuré. Veuillez nous contacter directement à",
+      mailtoOpened: "Votre application email s'est ouverte avec votre demande préparée — appuyez sur envoyer pour la finaliser.",
+      mailtoManual: "Si rien ne s'est ouvert, écrivez-nous directement à",
       errors: {
         fullName: "Veuillez saisir votre nom complet.",
         email: "Veuillez saisir une adresse email valide.",

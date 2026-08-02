@@ -264,6 +264,8 @@ export const en = {
       offline: "You appear to be offline. Your message has not been sent — please try again once you are reconnected.",
       retry: "Try again",
       notConfigured: "The form endpoint is not configured yet. Please contact us directly at",
+      mailtoOpened: "Your email app has opened with your enquiry prepared — press send there to complete it.",
+      mailtoManual: "If nothing opened, email us directly at",
       errors: {
         fullName: "Please enter your full name.",
         email: "Please enter a valid email address.",

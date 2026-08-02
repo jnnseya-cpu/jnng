@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, MotionConfig, useReducedMotion } from "motion/react";
+import { motion, MotionConfig } from "motion/react";
 import type { ReactNode } from "react";
 
 /**
@@ -32,9 +32,12 @@ export function Reveal({
   );
 }
 
-/** Kinetic manifesto words: staggered reveal, static when reduced motion is on. */
+/**
+ * Kinetic manifesto words: staggered reveal. Markup is identical on server
+ * and client (no useReducedMotion branch — it would cause a hydration
+ * mismatch); MotionConfig strips transforms for reduced-motion users.
+ */
 export function KineticWords({ words }: { words: string[] }) {
-  const reduced = useReducedMotion();
   return (
     <MotionConfig reducedMotion="user">
       <ul className="flex flex-wrap items-baseline gap-x-6 gap-y-2 sm:gap-x-10" aria-label={words.join(", ")}>
@@ -42,7 +45,7 @@ export function KineticWords({ words }: { words: string[] }) {
           <motion.li
             key={word}
             className="font-display text-2xl font-semibold tracking-tight text-paper/25 sm:text-4xl lg:text-5xl"
-            initial={reduced ? false : { opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0, color: "#F7F8FA" }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.55, delay: i * 0.12 }}

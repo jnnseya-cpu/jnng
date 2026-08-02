@@ -1,7 +1,8 @@
 export const site = {
   name: "Groupe Nseya",
   legalLine: "Groupe Nseya operates through its affiliated companies, platforms and strategic ventures, including JNN Global Ltd.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://groupejnn.com",
+  // Canonical host — matches the production primary domain (www).
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.groupejnn.com",
   formEndpoint: process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ?? process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? "",
   email: "contact@groupejnn.com",
   phoneUK: "+44 (0) 7493 216101",

@@ -7,7 +7,7 @@ import type { Locale } from "@/types/content";
 import { platforms } from "@/content/platforms";
 import { site } from "@/lib/site";
 
-type FormState = "default" | "submitting" | "success" | "error" | "offline" | "not-configured";
+type FormState = "default" | "submitting" | "success" | "error" | "offline" | "mailto";
 
 /**
  * Frontend-only contact form.
@@ -89,8 +89,27 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
       setState("offline");
       return;
     }
+    // No endpoint configured yet: fall back to a prefilled email so the form
+    // remains fully functional from day one (no third-party dependency).
     if (!site.formEndpoint) {
-      setState("not-configured");
+      const d = parsed.data;
+      const subject = `[groupejnn.com] ${d.enquiryType}${d.platform ? ` — ${d.platform}` : ""} — ${d.fullName}`;
+      const body = [
+        `Name: ${d.fullName}`,
+        d.organisation ? `Organisation: ${d.organisation}` : "",
+        d.position ? `Position: ${d.position}` : "",
+        `Email: ${d.email}`,
+        d.telephone ? `Telephone: ${d.telephone}` : "",
+        `Country: ${d.country}`,
+        `Enquiry type: ${d.enquiryType}`,
+        d.platform ? `Platform of interest: ${d.platform}` : "",
+        "",
+        d.message,
+      ]
+        .filter(Boolean)
+        .join("\n");
+      window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setState("mailto");
       return;
     }
 
@@ -124,6 +143,21 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
     );
   }
 
+  if (state === "mailto") {
+    return (
+      <div role="status" className="card-glass rounded-2xl border-gold/30 p-8 text-center">
+        <p className="font-display text-xl font-semibold text-gold-bright">✉</p>
+        <p className="mt-3 text-base leading-relaxed text-paper">{f.mailtoOpened}</p>
+        <p className="mt-3 text-sm text-muted">
+          {f.mailtoManual}{" "}
+          <a href={`mailto:${site.email}`} className="text-gold underline underline-offset-2">
+            {site.email}
+          </a>
+        </p>
+      </div>
+    );
+  }
+
   return (
     <form onSubmit={onSubmit} noValidate className="card-glass rounded-2xl p-6 sm:p-8">
       {errorEntries.length > 0 ? (
@@ -142,13 +176,13 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
         </div>
       ) : null}
 
-      {state === "error" || state === "offline" || state === "not-configured" ? (
+      {state === "error" || state === "offline" ? (
         <div role="alert" className="mb-6 rounded-md border border-soon/40 bg-soon/5 p-4 text-sm text-paper/90">
           {state === "offline" ? (
             f.offline
           ) : (
             <>
-              {state === "not-configured" ? f.notConfigured : f.submitError}{" "}
+              {f.submitError}{" "}
               <a href={`mailto:${site.email}`} className="text-gold underline underline-offset-2">
                 {site.email}
               </a>

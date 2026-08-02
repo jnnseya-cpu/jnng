@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, MotionConfig, useReducedMotion } from "motion/react";
+import { motion, MotionConfig } from "motion/react";
 import { GhostButtonLink, GoldButtonLink, TextLink } from "@/components/ui/buttons";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
@@ -12,16 +12,15 @@ import { localePath } from "@/lib/i18n";
  * navigation, and collapses to simple fades under prefers-reduced-motion.
  */
 export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
-  const reduced = useReducedMotion();
-
-  const fadeUp = (delay: number) =>
-    reduced
-      ? { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 0.3 } }
-      : {
-          initial: { opacity: 0, y: 26 },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.8, delay, ease: [0.2, 0.6, 0.2, 1] as const },
-        };
+  // NOTE: never branch the rendered markup on useReducedMotion here — the
+  // server can't know the preference, and mismatched markup causes a
+  // hydration error. MotionConfig reducedMotion="user" strips the transform
+  // animations for reduced-motion users while keeping markup identical.
+  const fadeUp = (delay: number) => ({
+    initial: { opacity: 0, y: 26 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, delay, ease: [0.2, 0.6, 0.2, 1] as const },
+  });
 
   return (
     <MotionConfig reducedMotion="user">
@@ -29,16 +28,15 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         <div aria-hidden className="city-lights absolute inset-0" />
         <div aria-hidden className="network-grid absolute inset-0" />
 
-        {/* Gold light sweep */}
-        {!reduced ? (
-          <motion.div
-            aria-hidden
-            className="gold-line absolute left-0 right-0 top-[38%]"
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            transition={{ duration: 1.1, delay: 0.15, ease: "easeOut" }}
-          />
-        ) : null}
+        {/* Gold light sweep — under reduced motion the scaleX animation is
+            stripped by MotionConfig and the line simply fades in. */}
+        <motion.div
+          aria-hidden
+          className="gold-line absolute left-0 right-0 top-[38%]"
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ duration: 1.1, delay: 0.15, ease: "easeOut" }}
+        />
 
         <div className="relative mx-auto w-full max-w-7xl px-4 pb-24 pt-32 sm:px-6 lg:px-8">
           <motion.p {...fadeUp(0.25)} className="font-mono-label text-[0.65rem] text-gold sm:text-xs">
