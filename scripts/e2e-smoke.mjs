@@ -107,7 +107,7 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
 
   await page.click('button[role="radio"]:has-text("Coming Soon")');
   await page.waitForTimeout(400);
-  if ((await cards()) === 24) ok("status filter: coming-soon = 24"); else fail("status filter", `${await cards()}`);
+  if ((await cards()) === 23) ok("status filter: coming-soon = 23"); else fail("status filter", `${await cards()}`);
   if (page.url().includes("status=coming-soon")) ok("URL sync: ?status=coming-soon"); else fail("URL sync", page.url());
 
   await page.click('button:has-text("Clear filters")');

@@ -210,7 +210,7 @@ const records: PlatformRecord[] = [
     category: { en: "AI Commerce & Food Delivery", fr: "Commerce IA et livraison de repas" },
     sector: "commerce",
     secondarySectors: ["mobility", "ai"],
-    status: "coming-soon", // per owner portfolio dossier: NZELA-OS relaunch in build; existing site link retained
+    status: "live", // Tunakula CD live since 2025 (owner confirmed); NZELA-OS is its next-generation evolution
     website: "https://cd.tunakula.com",
     internalPath: "/platforms/tunakula-cd",
     logo: "/logos/placeholders/platform-placeholder-tunakula-cd.svg",

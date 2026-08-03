@@ -58,7 +58,7 @@ platform data, statuses or copy:
 `live` · `launching` · `coming-soon` · `internal` (never rendered). Statuses are
 controlled only in `platforms.ts`. Platforms whose operational status awaits
 internal confirmation are held at **launching** — promote to **live** in one
-place once confirmed. Currently live: Groupe JNN, 3JN Travel, StudYear, VERYX,
+place once confirmed. Currently live: Groupe JNN, 3JN Travel, StudYear, Tunakula CD, VERYX,
 MarketWar OS, JESSIE-OS, Nseya X-Execute, Joshrix, BuildAxis, JNseya
 Construction, JNN Estate Agency.
 
