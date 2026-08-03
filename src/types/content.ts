@@ -91,6 +91,21 @@ export type Sector = {
   description: Localized;
 };
 
+export type Article = {
+  slug: string;
+  date: string; // ISO date
+  category: Localized;
+  title: Localized;
+  excerpt: Localized;
+  /** Body paragraphs. Platform names are auto-linked at render time. */
+  body: { en: string[]; fr: string[] };
+  /** SEO keywords for metadata. */
+  keywords: string[];
+  /** Platforms featured — rendered as related cards + used for cross-linking. */
+  relatedPlatformSlugs: string[];
+  author: "group" | "founder";
+};
+
 export type NewsItem = {
   id: string;
   date: string; // ISO date

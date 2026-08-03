@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: {
       canonical: `/${locale}`,
       languages: { en: "/en", fr: "/fr", "x-default": "/en" },
+      types: { "application/rss+xml": "/feed.xml" },
     },
     openGraph: {
       type: "website",

@@ -21,10 +21,12 @@ const platformSlugs = [
   "koda","scan-go-rdc","echostream","tradenerve","nzela-os","talento","legai","alphaafrican-wealth","movie-empire","3jn-fund",
 ];
 const staticPaths = ["","/about","/platforms","/sectors","/founder","/impact","/news","/contact","/privacy","/cookies","/terms","/accessibility"];
+const articleSlugs = ["next-billion-users","one-shared-spine","governance-is-the-product","diaspora-corridor-economy"];
 const allPaths = [];
 for (const l of ["en","fr"]) {
   for (const p of staticPaths) allPaths.push(`/${l}${p}`);
   for (const s of platformSlugs) allPaths.push(`/${l}/platforms/${s}`);
+  for (const s of articleSlugs) allPaths.push(`/${l}/news/${s}`);
 }
 
 const failures = [];
@@ -69,7 +71,7 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
 {
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
-  for (const p of ["/sitemap.xml","/robots.txt","/manifest.webmanifest","/en/opengraph-image","/fr/opengraph-image","/icon.svg"]) {
+  for (const p of ["/sitemap.xml","/robots.txt","/manifest.webmanifest","/en/opengraph-image","/fr/opengraph-image","/icon.svg","/feed.xml"]) {
     const res = await page.goto(BASE + p, { timeout: 15000 });
     if (res?.status() !== 200) fail(`meta ${p}`, `status ${res?.status()}`); else ok(`meta ${p}`);
   }
