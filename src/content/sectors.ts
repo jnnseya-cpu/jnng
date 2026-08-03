@@ -131,6 +131,14 @@ export const sectors: Sector[] = [
     },
   },
   {
+    id: "media",
+    name: { en: "Media & Streaming", fr: "Médias et streaming" },
+    description: {
+      en: "Content, streaming and production infrastructure engineered for the bandwidth, devices and economics of African distribution.",
+      fr: "Des infrastructures de contenu, de streaming et de production conçues pour la bande passante, les appareils et l'économie de la distribution africaine.",
+    },
+  },
+  {
     id: "sustainability",
     name: { en: "Circular Economy", fr: "Économie circulaire" },
     description: {

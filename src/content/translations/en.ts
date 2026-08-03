@@ -56,8 +56,8 @@ export const en = {
   },
   manifesto: {
     heading: "Ideas create possibility. Execution creates value.",
-    body: "Groupe Nseya exists to turn ambitious opportunities into structured, operational and commercially sustainable ventures. We combine project development, artificial intelligence, industry knowledge and disciplined execution to build platforms capable of serving individuals, businesses and public institutions.",
-    support: "From the first concept to market deployment, we build for scale, resilience and measurable impact.",
+    body: "The next billion users will not be onboarded onto software built for Silicon Valley. They will be onboarded onto software built for WhatsApp, mobile money, intermittent bandwidth and five national languages. Groupe Nseya builds AI-native operating systems for exactly that world — a portfolio of ventures riding one shared spine: payment rails for every unit of money that moves, metered billing for every unit of intelligence consumed, and a common agent architecture that takes a new venture from concept to production specification in weeks, not quarters.",
+    support: "We are not a fund with a portfolio. We are a factory with an output.",
     words: ["Identify", "Validate", "Design", "Build", "Launch", "Scale"],
   },
   live: {
@@ -68,8 +68,8 @@ export const en = {
   },
   ecosystem: {
     heading: "One connected ecosystem.",
-    body: "Every platform is independent in its market, but connected through shared technology, strategic leadership, commercial infrastructure and an execution-first operating model.",
-    tagline: "Independent ventures. Shared intelligence. International standards. One commitment to execution.",
+    body: "Every platform operates independently in its market but rides one shared spine: BitriPay settles every unit of money that moves, ACU metered billing prices every unit of intelligence consumed, and a common agent architecture means the marginal cost of the next venture is close to zero.",
+    tagline: "One rail. One meter. One factory. One market thesis. One distribution engine.",
   },
   comingSoon: {
     label: "THE NEXT GENERATION",
@@ -118,6 +118,7 @@ export const en = {
       "The group works at the intersection of technology, commercial strategy, infrastructure and public-sector transformation. Its portfolio addresses real challenges across education, travel, entrepreneurship, urban mobility, payments, food delivery, healthcare, governance, employment, energy and sustainability.",
       "Through its United Kingdom, Democratic Republic of Congo and Dubai operations, Groupe Nseya combines international standards with direct knowledge of African and Gulf markets.",
       "Every venture begins with the same question: what valuable problem remains unsolved, and what system must be built to solve it at scale?",
+      "We are not competing with Silicon Valley. We are building where Silicon Valley cannot follow without starting over.",
     ],
     missionLabel: "Mission",
     mission: "To create and scale intelligent ventures that solve critical problems, unlock economic opportunity and deliver measurable value.",

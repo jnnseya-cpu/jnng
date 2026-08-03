@@ -58,8 +58,8 @@ export const fr: Dictionary = {
   },
   manifesto: {
     heading: "Les idées créent le possible. L'exécution crée la valeur.",
-    body: "Le Groupe Nseya existe pour transformer des opportunités ambitieuses en ventures structurées, opérationnelles et commercialement durables. Nous combinons développement de projets, intelligence artificielle, connaissance des industries et exécution disciplinée pour construire des plateformes capables de servir les individus, les entreprises et les institutions publiques.",
-    support: "Du premier concept au déploiement sur le marché, nous construisons pour l'échelle, la résilience et l'impact mesurable.",
+    body: "Le prochain milliard d'utilisateurs ne sera pas embarqué sur des logiciels conçus pour la Silicon Valley. Il sera embarqué sur des logiciels conçus pour WhatsApp, le mobile money, une bande passante intermittente et cinq langues nationales. Le Groupe Nseya construit des systèmes d'exploitation natifs IA précisément pour ce monde — un portefeuille de ventures porté par une seule colonne vertébrale commune : des rails de paiement pour chaque unité d'argent qui circule, une facturation à l'usage pour chaque unité d'intelligence consommée, et une architecture d'agents commune qui amène une nouvelle venture du concept à la spécification de production en semaines, pas en trimestres.",
+    support: "Nous ne sommes pas un fonds avec un portefeuille. Nous sommes une usine avec une production.",
     words: ["Identifier", "Valider", "Concevoir", "Construire", "Lancer", "Déployer"],
   },
   live: {
@@ -70,8 +70,8 @@ export const fr: Dictionary = {
   },
   ecosystem: {
     heading: "Un écosystème connecté.",
-    body: "Chaque plateforme est indépendante sur son marché, mais connectée par une technologie partagée, une direction stratégique, une infrastructure commerciale et un modèle opérationnel centré sur l'exécution.",
-    tagline: "Des ventures indépendantes. Une intelligence partagée. Des standards internationaux. Un seul engagement : l'exécution.",
+    body: "Chaque plateforme opère indépendamment sur son marché mais repose sur une même colonne vertébrale : BitriPay règle chaque unité d'argent qui circule, la facturation à l'usage ACU tarife chaque unité d'intelligence consommée, et une architecture d'agents commune rend quasi nul le coût marginal de la prochaine venture.",
+    tagline: "Un rail. Un compteur. Une usine. Une thèse de marché. Un moteur de distribution.",
   },
   comingSoon: {
     label: "LA PROCHAINE GÉNÉRATION",
@@ -120,6 +120,7 @@ export const fr: Dictionary = {
       "Le groupe opère à l'intersection de la technologie, de la stratégie commerciale, des infrastructures et de la transformation du secteur public. Son portefeuille répond à des défis réels dans l'éducation, le voyage, l'entrepreneuriat, la mobilité urbaine, les paiements, la livraison de repas, la santé, la gouvernance, l'emploi, l'énergie et la durabilité.",
       "Grâce à ses opérations au Royaume-Uni, en République démocratique du Congo et à Dubaï, le Groupe Nseya combine standards internationaux et connaissance directe des marchés africains et du Golfe.",
       "Chaque venture commence par la même question : quel problème de valeur reste non résolu, et quel système faut-il construire pour le résoudre à grande échelle ?",
+      "Nous ne concourons pas avec la Silicon Valley. Nous construisons là où la Silicon Valley ne peut pas nous suivre sans tout recommencer.",
     ],
     missionLabel: "Mission",
     mission: "Créer et déployer des ventures intelligentes qui résolvent des problèmes critiques, débloquent des opportunités économiques et livrent une valeur mesurable.",

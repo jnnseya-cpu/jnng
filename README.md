@@ -1,7 +1,7 @@
 # Groupe Nseya — Premium Corporate & Venture Portfolio Website
 
 Frontend-only, CMS-ready corporate website for **Groupe Nseya / JNN Global Ltd**
-(`groupejnn.com`). Cinematic dark-mode experience presenting the group's 29
+(`groupejnn.com`). Cinematic dark-mode experience presenting the group's 39
 platform records across Live, Launching and Coming-Soon status, in English and
 French.
 
@@ -46,8 +46,8 @@ platform data, statuses or copy:
 
 | File | Contents |
 | --- | --- |
-| `src/content/platforms.ts` | **The single source of truth** for all 29 platform records: name, slug, status, sector, regions, bilingual copy, CTA, brand colour, governance flags (`logoApproved`, `domainConfirmed`, `public`, `contentApproved`, `lastReviewedAt`). |
-| `src/content/sectors.ts` | Sector taxonomy (17 sectors) used for filtering and the Sectors page. |
+| `src/content/platforms.ts` | **The single source of truth** for all 39 platform records: name, slug, status, sector, regions, bilingual copy, CTA, brand colour, governance flags (`logoApproved`, `domainConfirmed`, `public`, `contentApproved`, `lastReviewedAt`). |
+| `src/content/sectors.ts` | Sector taxonomy (18 sectors) used for filtering and the Sectors page. |
 | `src/content/translations/en.ts`, `fr.ts` | Full page copy in both languages (`fr` is type-checked against `en`). |
 | `src/content/news.ts` | News/announcement records (editorial placeholders — confirm before launch). |
 | `src/content/impact.ts` | Impact metrics. **Only `verified: true` metrics ever render** — no invented figures. |
@@ -58,8 +58,9 @@ platform data, statuses or copy:
 `live` · `launching` · `coming-soon` · `internal` (never rendered). Statuses are
 controlled only in `platforms.ts`. Platforms whose operational status awaits
 internal confirmation are held at **launching** — promote to **live** in one
-place once confirmed. Currently live: Groupe JNN, 3JN Travel, StudYear,
-Tunakula CD, JNseya Construction, JNN Estate Agency.
+place once confirmed. Currently live: Groupe JNN, 3JN Travel, StudYear, VERYX,
+MarketWar OS, JESSIE-OS, Nseya X-Execute, Joshrix, BuildAxis, JNseya
+Construction, JNN Estate Agency.
 
 ### Adding a platform
 
