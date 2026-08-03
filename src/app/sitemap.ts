@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/lib/i18n";
 import { platforms } from "@/content/platforms";
+import { articles } from "@/content/articles";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -42,6 +43,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
         alternates: {
           languages: Object.fromEntries(locales.map((l) => [l, `${site.url}/${l}${platform.internalPath}`])),
+        },
+      });
+    }
+    for (const article of articles) {
+      entries.push({
+        url: `${site.url}/${locale}/news/${article.slug}`,
+        lastModified: new Date(article.date),
+        changeFrequency: "monthly",
+        priority: 0.75,
+        alternates: {
+          languages: Object.fromEntries(locales.map((l) => [l, `${site.url}/${l}/news/${article.slug}`])),
         },
       });
     }
