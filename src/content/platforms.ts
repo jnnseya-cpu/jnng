@@ -1089,6 +1089,45 @@ const records: PlatformRecord[] = [
     featured: false,
     displayOrder: 28,
   },
+  {
+    id: "focus-start",
+    slug: "focus-start",
+    name: "Focus Start",
+    tagline: { en: "Your smooth ride, just a tap away.", fr: "Votre trajet fluide, en un seul geste." },
+    shortDescription: {
+      en: "A ride-sharing and delivery platform connecting customers with reliable drivers for instant trips, scheduled journeys and parcel delivery — one ride at a time.",
+      fr: "Une plateforme de covoiturage et de livraison connectant les clients à des chauffeurs fiables pour des trajets instantanés, des courses planifiées et la livraison de colis — un trajet à la fois.",
+    },
+    fullDescription: {
+      en: "Focus Start makes everyday mobility simple. Riders book instant or scheduled trips with reliable drivers, by car or motorbike, through a real-time booking experience; parcels move across the city on the same network. Drivers earn on their own terms — accepting requests that fit their location and availability, scheduling trips around their own timetable and tracking their income with instant payouts after every ride.",
+      fr: "Focus Start simplifie la mobilité du quotidien. Les passagers réservent des trajets instantanés ou planifiés avec des chauffeurs fiables, en voiture ou à moto, via une expérience de réservation en temps réel ; les colis circulent en ville sur le même réseau. Les chauffeurs gagnent leur vie à leurs conditions — en acceptant les demandes adaptées à leur position et à leur disponibilité, en planifiant leurs courses selon leur propre emploi du temps et en suivant leurs revenus avec des paiements instantanés après chaque trajet.",
+    },
+    category: { en: "Ride-Sharing & Urban Mobility", fr: "VTC et mobilité urbaine" },
+    sector: "mobility",
+    secondarySectors: ["commerce"],
+    status: "coming-soon",
+    website: "https://focus-start.com",
+    internalPath: "/platforms/focus-start",
+    logo: "/logos/placeholders/platform-placeholder-focus-start.svg",
+    monogram: "FS",
+    brandColour: "#38BDF8",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "Riders", fr: "Passagers" },
+      { en: "Drivers", fr: "Chauffeurs" },
+      { en: "Delivery partners", fr: "Livreurs partenaires" },
+    ],
+    capabilities: [
+      { en: "Instant trip booking", fr: "Réservation instantanée de trajets" },
+      { en: "Scheduled trips", fr: "Courses planifiées" },
+      { en: "Parcel delivery", fr: "Livraison de colis" },
+      { en: "Driver earnings with instant payouts", fr: "Revenus chauffeurs avec paiements instantanés" },
+    ],
+    ctaLabel: { en: "Discover Focus Start", fr: "Découvrir Focus Start" },
+    externalLinkEnabled: true,
+    featured: false,
+    displayOrder: 29,
+  },
 ];
 
 /** Public portfolio — governance defaults applied, internal records excluded. */

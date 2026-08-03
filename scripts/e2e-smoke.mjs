@@ -17,7 +17,7 @@ const platformSlugs = [
   "groupe-jnn","3jn-travel","studyear","nseya-x-execute","tunakula-cd","veryx","marketwar","buzz-pro",
   "openn-job-global","joshrix","jess-move","niche-finder","virvoo","axionos","jnseya-construction","jnn-estate",
   "rakapay","parksmart","bitripay","ticketroyality","vibr","health360-rdc","gov360","congo-voice-ai",
-  "snel-link","c-recycle","energy-industrial-drc","3jn-vendor-partners",
+  "snel-link","c-recycle","energy-industrial-drc","3jn-vendor-partners","focus-start",
 ];
 const staticPaths = ["","/about","/platforms","/sectors","/founder","/impact","/news","/contact","/privacy","/cookies","/terms","/accessibility"];
 const allPaths = [];
@@ -102,11 +102,11 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
   const page = await ctx.newPage();
   await page.goto(BASE + "/en/platforms", { waitUntil: "networkidle" });
   const cards = () => page.locator("article").count();
-  if ((await cards()) === 28) ok("directory shows all 28 platforms"); else fail("directory count", `${await cards()}`);
+  if ((await cards()) === 29) ok("directory shows all 29 platforms"); else fail("directory count", `${await cards()}`);
 
   await page.click('button[role="radio"]:has-text("Coming Soon")');
   await page.waitForTimeout(400);
-  if ((await cards()) === 12) ok("status filter: coming-soon = 12"); else fail("status filter", `${await cards()}`);
+  if ((await cards()) === 13) ok("status filter: coming-soon = 13"); else fail("status filter", `${await cards()}`);
   if (page.url().includes("status=coming-soon")) ok("URL sync: ?status=coming-soon"); else fail("URL sync", page.url());
 
   await page.click('button:has-text("Clear filters")');
