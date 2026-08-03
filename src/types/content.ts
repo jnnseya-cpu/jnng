@@ -39,7 +39,8 @@ export type SectorId =
   | "sustainability"
   | "property"
   | "gaming"
-  | "sports";
+  | "sports"
+  | "media";
 
 export type RegionId = "uk" | "drc" | "africa" | "europe" | "middle-east" | "global";
 
