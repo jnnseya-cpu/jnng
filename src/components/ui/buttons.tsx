@@ -6,7 +6,7 @@ const base =
 
 export function GoldButtonLink({ href, children }: { href: string; children: ReactNode }) {
   return (
-    <Link href={href} className={`${base} bg-gold text-obsidian hover:bg-gold-bright`}>
+    <Link href={href} className={`${base} btn-sheen text-obsidian`}>
       {children}
     </Link>
   );

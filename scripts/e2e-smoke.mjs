@@ -18,7 +18,7 @@ const platformSlugs = [
   "openn-job-global","joshrix","jess-move","niche-finder","virvoo","axionos","jnseya-construction","jnn-estate",
   "rakapay","parksmart","bitripay","ticketroyality","vibr","health360-rdc","gov360","congo-voice-ai",
   "snel-link","c-recycle","energy-industrial-drc","3jn-vendor-partners","focus-start",
-  "koda","scan-go-rdc","echostream","buildaxis","tradenerve","talento","legai","alphaafrican-wealth","movie-empire","3jn-fund",
+  "koda","scan-go-rdc","echostream","tradenerve","nzela-os","talento","legai","alphaafrican-wealth","movie-empire","3jn-fund",
 ];
 const staticPaths = ["","/about","/platforms","/sectors","/founder","/impact","/news","/contact","/privacy","/cookies","/terms","/accessibility"];
 const allPaths = [];

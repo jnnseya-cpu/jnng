@@ -59,8 +59,8 @@ platform data, statuses or copy:
 controlled only in `platforms.ts`. Platforms whose operational status awaits
 internal confirmation are held at **launching** — promote to **live** in one
 place once confirmed. Currently live: Groupe JNN, 3JN Travel, StudYear, Tunakula CD, VERYX,
-MarketWar OS, JESSIE-OS, Nseya X-Execute, Joshrix, BuildAxis, JNseya
-Construction, JNN Estate Agency.
+MarketWar OS, JESSIE-OS, Nseya X-Execute, Joshrix, AxionOS, Niche Finder,
+JNseya Construction, JNN Estate Agency.
 
 ### Adding a platform
 
