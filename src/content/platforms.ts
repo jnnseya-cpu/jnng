@@ -197,20 +197,20 @@ const records: PlatformRecord[] = [
   {
     id: "tunakula-cd",
     slug: "tunakula-cd",
-    name: "NZELA-OS / Tunakula CD",
-    tagline: { en: "No app download. No card. Kinshasa eats over WhatsApp.", fr: "Pas d'application. Pas de carte. Kinshasa commande sur WhatsApp." },
+    name: "Tunakula CD",
+    tagline: { en: "Kinshasa eats smarter.", fr: "Kinshasa mange plus intelligemment." },
     shortDescription: {
-      en: "An AI-powered commerce and food-delivery ecosystem built for African cities: WhatsApp-native ordering, logistics optimisation, merchant management and AI customer engagement — starting with Kinshasa.",
-      fr: "Un écosystème de commerce et de livraison de repas propulsé par l'IA, conçu pour les villes africaines : commande native WhatsApp, optimisation logistique, gestion des marchands et engagement client par IA — en commençant par Kinshasa.",
+      en: "A digital food-ordering and delivery ecosystem connecting customers, restaurants, offices and independent delivery partners across Kinshasa — live since 2025.",
+      fr: "Un écosystème numérique de commande et de livraison de repas connectant clients, restaurants, bureaux et livreurs indépendants à travers Kinshasa — en ligne depuis 2025.",
     },
     fullDescription: {
-      en: "Every food-delivery playbook assumes an app store, a data plan and a debit card. Kinshasa has WhatsApp, mobile money and a hard ceiling on how much data anyone will spend to order lunch — the Western model doesn't underperform here, it doesn't function. NZELA-OS runs ordering, dispatch, vendor management and settlement inside a conversation the customer is already in, engineered around WhatsApp message economics as a first-class constraint rather than a post-launch surprise. Four demand engines drive the Tunakula turnaround: corporate B2B contracts, subscriptions, diaspora remittance-to-meal, and events and catering.",
-      fr: "Chaque modèle de livraison de repas suppose un app store, un forfait data et une carte bancaire. Kinshasa a WhatsApp, le mobile money et un plafond strict sur la data qu'on accepte de dépenser pour commander à déjeuner — ici, le modèle occidental ne sous-performe pas, il ne fonctionne pas. NZELA-OS gère commande, dispatch, gestion des vendeurs et règlement à l'intérieur d'une conversation où le client se trouve déjà, en traitant l'économie des messages WhatsApp comme une contrainte d'ingénierie de premier ordre et non comme une surprise post-lancement. Quatre moteurs de demande portent la relance de Tunakula : contrats B2B, abonnements, transfert-repas de la diaspora, et événements et traiteur.",
+      en: "Tunakula CD built the digital rails for food commerce in Kinshasa: customers order from restaurants and kitchens, offices organise team meals, and independent delivery partners earn through a structured last-mile network designed for the realities of the city. Four demand engines drive its growth: corporate B2B contracts, subscriptions, diaspora remittance-to-meal, and events and catering. Its next-generation evolution, NZELA-OS, brings the entire experience inside WhatsApp — no app download, no card.",
+      fr: "Tunakula CD a construit les rails numériques du commerce alimentaire à Kinshasa : les clients commandent auprès des restaurants et cuisines, les bureaux organisent les repas d'équipe, et les livreurs indépendants gagnent leur vie via un réseau du dernier kilomètre structuré, conçu pour les réalités de la ville. Quatre moteurs de demande portent sa croissance : contrats B2B, abonnements, transfert-repas de la diaspora, et événements et traiteur. Son évolution de nouvelle génération, NZELA-OS, amène toute l'expérience dans WhatsApp — sans application, sans carte.",
     },
-    category: { en: "AI Commerce & Food Delivery", fr: "Commerce IA et livraison de repas" },
+    category: { en: "Food Technology & Last-Mile Delivery", fr: "Technologie alimentaire et livraison du dernier kilomètre" },
     sector: "commerce",
     secondarySectors: ["mobility", "ai"],
-    status: "live", // Tunakula CD live since 2025 (owner confirmed); NZELA-OS is its next-generation evolution
+    status: "live", // live since 2025 (owner confirmed)
     website: "https://cd.tunakula.com",
     internalPath: "/platforms/tunakula-cd",
     logo: "/logos/placeholders/platform-placeholder-tunakula-cd.svg",
@@ -483,7 +483,7 @@ const records: PlatformRecord[] = [
     category: { en: "AI Opportunity Discovery", fr: "Découverte d'opportunités par IA" },
     sector: "ai",
     secondarySectors: ["marketing", "entrepreneurship"],
-    status: "coming-soon", // per owner portfolio dossier; existing site link retained
+    status: "live", // confirmed Live by the owner
     website: "https://nichefinderhq.com",
     internalPath: "/platforms/niche-finder",
     logo: "/logos/placeholders/platform-placeholder-niche-finder.svg",
@@ -559,9 +559,7 @@ const records: PlatformRecord[] = [
     category: { en: "Construction Marketplace & Transaction Infrastructure", fr: "Place de marché de la construction et infrastructure de transaction" },
     sector: "infrastructure",
     secondarySectors: ["fintech", "ai"],
-    status: "launching", // "Live or Launching"
-    // Domain clarification required: product name (AxionOS) and domain
-    // (evandeli.com) differ — confirm brand/company/domain relationship.
+    status: "live", // confirmed Live by the owner; absorbs the former BuildAxis construction-OS positioning
     website: "https://www.evandeli.com",
     internalPath: "/platforms/axionos",
     logo: "/logos/placeholders/platform-placeholder-axionos.svg",
@@ -1245,42 +1243,6 @@ const records: PlatformRecord[] = [
     displayOrder: 32,
   },
   {
-    id: "buildaxis",
-    slug: "buildaxis",
-    name: "BuildAxis AI-Agent OS",
-    tagline: { en: "The construction sector's missing operating layer.", fr: "La couche d'exploitation manquante du secteur de la construction." },
-    shortDescription: {
-      en: "A construction intelligence operating system: specialised AI agents automate project delivery, programme controls, safety, procurement, commercial management and executive reporting across the construction lifecycle.",
-      fr: "Un système d'exploitation d'intelligence de la construction : des agents IA spécialisés automatisent la livraison de projets, le contrôle des programmes, la sécurité, les achats, la gestion commerciale et le reporting exécutif sur tout le cycle de vie.",
-    },
-    fullDescription: {
-      en: "Construction is one of the DRC's largest capital flows and its least digitised — an industry that runs on WhatsApp voice notes, paper and memory. BuildAxis deploys specialised AI agents for contractors, developers and infrastructure owners: scheduling, procurement, site reporting, safety, commercial management and cost control brought into one governed system, backed by the group's fourteen years of UK and European major-programme delivery discipline.",
-      fr: "La construction est l'un des plus grands flux de capitaux de la RDC et son secteur le moins numérisé — une industrie qui fonctionne aux notes vocales WhatsApp, au papier et à la mémoire. BuildAxis déploie des agents IA spécialisés pour les entrepreneurs, promoteurs et propriétaires d'infrastructures : planification, achats, rapports de chantier, sécurité, gestion commerciale et contrôle des coûts réunis dans un seul système gouverné, adossé aux quatorze années de discipline de livraison de grands programmes du groupe au Royaume-Uni et en Europe.",
-    },
-    category: { en: "Construction Intelligence OS", fr: "OS d'intelligence de la construction" },
-    sector: "infrastructure",
-    secondarySectors: ["ai"],
-    status: "live", // confirmed Live by the owner (portfolio dossier); public domain to follow
-    internalPath: "/platforms/buildaxis",
-    logo: "/logos/placeholders/platform-placeholder-buildaxis.svg",
-    monogram: "BX",
-    brandColour: "#C9A55C",
-    regions: ["drc", "africa", "uk"],
-    audiences: [
-      { en: "Contractors", fr: "Entrepreneurs" },
-      { en: "Developers", fr: "Promoteurs" },
-      { en: "Infrastructure owners", fr: "Propriétaires d'infrastructures" },
-    ],
-    capabilities: [
-      { en: "Agent-driven programme controls", fr: "Contrôle de programmes par agents" },
-      { en: "Procurement and commercial management", fr: "Achats et gestion commerciale" },
-      { en: "Safety and site reporting", fr: "Sécurité et rapports de chantier" },
-    ],
-    externalLinkEnabled: false,
-    featured: false,
-    displayOrder: 33,
-  },
-  {
     id: "tradenerve",
     slug: "tradenerve",
     name: "TradeNerve AI",
@@ -1494,6 +1456,42 @@ const records: PlatformRecord[] = [
     externalLinkEnabled: false,
     featured: false,
     displayOrder: 39,
+  },
+  {
+    id: "nzela-os",
+    slug: "nzela-os",
+    name: "NZELA-OS",
+    tagline: { en: "No app download. No card. Kinshasa eats over WhatsApp.", fr: "Pas d'application. Pas de carte. Kinshasa commande sur WhatsApp." },
+    shortDescription: {
+      en: "The WhatsApp-native evolution of Tunakula CD: ordering, dispatch, vendor management and settlement inside a conversation the customer is already in.",
+      fr: "L'évolution native WhatsApp de Tunakula CD : commande, dispatch, gestion des vendeurs et règlement à l'intérieur d'une conversation où le client se trouve déjà.",
+    },
+    fullDescription: {
+      en: "Every food-delivery playbook assumes an app store, a data plan and a debit card. Kinshasa has WhatsApp, mobile money and a hard ceiling on how much data anyone will spend to order lunch — the Western model doesn't underperform here, it doesn't function. NZELA-OS runs the whole Tunakula experience inside WhatsApp, with AI agents handling ordering, dispatch, vendor management and settlement, engineered around WhatsApp message economics as a first-class constraint rather than a post-launch surprise. Competitors will discover per-conversation pricing after launch, when their unit economics are already broken.",
+      fr: "Chaque modèle de livraison de repas suppose un app store, un forfait data et une carte bancaire. Kinshasa a WhatsApp, le mobile money et un plafond strict sur la data qu'on accepte de dépenser pour commander à déjeuner — ici, le modèle occidental ne sous-performe pas, il ne fonctionne pas. NZELA-OS fait tourner toute l'expérience Tunakula dans WhatsApp, avec des agents IA gérant commande, dispatch, gestion des vendeurs et règlement, en traitant l'économie des messages WhatsApp comme une contrainte d'ingénierie de premier ordre et non comme une surprise post-lancement. Les concurrents découvriront la tarification par conversation après leur lancement, quand leur économie unitaire sera déjà cassée.",
+    },
+    category: { en: "WhatsApp-Native Commerce", fr: "Commerce natif WhatsApp" },
+    sector: "commerce",
+    secondarySectors: ["ai", "mobility"],
+    status: "coming-soon",
+    internalPath: "/platforms/nzela-os",
+    logo: "/logos/placeholders/platform-placeholder-nzela-os.svg",
+    monogram: "NZ",
+    brandColour: "#34D399",
+    regions: ["drc", "africa"],
+    audiences: [
+      { en: "Customers on WhatsApp", fr: "Clients sur WhatsApp" },
+      { en: "Restaurants and vendors", fr: "Restaurants et vendeurs" },
+      { en: "Delivery partners", fr: "Livreurs partenaires" },
+    ],
+    capabilities: [
+      { en: "WhatsApp-native ordering and dispatch", fr: "Commande et dispatch natifs WhatsApp" },
+      { en: "AI agents for vendors and settlement", fr: "Agents IA pour vendeurs et règlement" },
+      { en: "Mobile money payment", fr: "Paiement mobile money" },
+    ],
+    externalLinkEnabled: false,
+    featured: true,
+    displayOrder: 40,
   },
 ];
 

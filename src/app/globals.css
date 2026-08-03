@@ -77,10 +77,50 @@ body {
 
 .hero-canvas {
   background:
-    radial-gradient(1100px 620px at 70% 8%, rgba(0, 127, 255, 0.16), transparent 62%),
-    radial-gradient(820px 520px at 18% 30%, rgba(201, 165, 92, 0.12), transparent 58%),
+    radial-gradient(1100px 620px at 70% 8%, rgba(0, 127, 255, 0.18), transparent 62%),
+    radial-gradient(820px 520px at 18% 30%, rgba(201, 165, 92, 0.13), transparent 58%),
+    radial-gradient(1600px 420px at 50% 74%, rgba(229, 148, 76, 0.10), transparent 65%),
+    radial-gradient(1200px 380px at 46% 78%, rgba(201, 165, 92, 0.09), transparent 60%),
     radial-gradient(1400px 700px at 50% 115%, rgba(8, 20, 33, 0.9), transparent 70%),
-    linear-gradient(180deg, #050709 0%, #081421 58%, #050709 100%);
+    linear-gradient(180deg, #050709 0%, #0a1526 46%, #081421 66%, #030507 100%);
+}
+
+/* Cinematic vignette — draws the eye to the centre of the frame */
+.vignette {
+  background: radial-gradient(ellipse 92% 78% at 50% 45%, transparent 58%, rgba(2, 4, 7, 0.55) 100%);
+}
+
+/* Film grain (inline SVG turbulence) — the analogue texture of a graded frame */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+}
+
+/* Data corridors: gold and electric arcs drawn slowly across the sky */
+.data-arc {
+  stroke-dasharray: 6 14;
+  animation: arc-flow 9s linear infinite;
+}
+.data-arc-slow {
+  stroke-dasharray: 4 16;
+  animation: arc-flow 14s linear infinite reverse;
+}
+@keyframes arc-flow {
+  to { stroke-dashoffset: -200; }
+}
+
+/* Premium gold button sheen */
+.btn-sheen {
+  background-image: linear-gradient(110deg, #e5c475 0%, #c9a55c 45%, #d9b56b 70%, #f0d9a0 100%);
+  background-size: 200% 100%;
+  transition: background-position 500ms ease, box-shadow 300ms ease;
+}
+@media (hover: hover) {
+  .btn-sheen:hover {
+    background-position: 100% 0;
+    box-shadow: 0 8px 30px -10px rgba(201, 165, 92, 0.55);
+  }
 }
 
 /* City-lights points over the hero (pure CSS, no assets) */
@@ -198,5 +238,10 @@ body {
   }
   .portrait-reveal {
     filter: none;
+  }
+  .data-arc,
+  .data-arc-slow {
+    animation: none;
+    stroke-dasharray: none;
   }
 }
