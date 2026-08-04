@@ -195,6 +195,10 @@ export const en = {
     visit: "Visit {name}",
     partnershipCta: "Discuss a Partnership",
     strategicNote: "Part of the Groupe Nseya connected ecosystem — independent in its market, backed by shared technology, leadership and execution standards.",
+    growthLabel: "AI GROWTH ENGINE",
+    growthHeading: "Built-in tools to maximise your reach.",
+    growthIntro: "Every partner gets an AI co-pilot. These tools are built into the {name} dashboard — generating, optimising and measuring your growth so the marketing works while you run the business.",
+    growthCta: "Open the {name} dashboard",
   },
   sectorsPage: {
     title: "Sectors",

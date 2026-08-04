@@ -44,6 +44,18 @@ export type SectorId =
 
 export type RegionId = "uk" | "drc" | "africa" | "europe" | "middle-east" | "global";
 
+export type GrowthToolId =
+  | "social-post"
+  | "travel-advert"
+  | "email-campaign"
+  | "landing-page"
+  | "hashtag"
+  | "video-script"
+  | "performance"
+  | "audience"
+  | "analytics"
+  | "best-time";
+
 export type Platform = {
   id: string;
   slug: string;
@@ -72,6 +84,8 @@ export type Platform = {
   cardStatement?: Localized;
   /** Approved platform-specific CTA, e.g. "Order With Tunakula". */
   ctaLabel?: Localized;
+  /** AI Growth Engine tools built into this platform's partner dashboard. */
+  growthTools?: GrowthToolId[];
   externalLinkEnabled: boolean;
   featured: boolean;
   displayOrder: number;
