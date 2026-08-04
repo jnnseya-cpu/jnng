@@ -199,6 +199,8 @@ export const en = {
     growthHeading: "Built-in tools to maximise your reach.",
     growthIntro: "Every partner gets an AI co-pilot. These tools are built into the {name} dashboard — generating, optimising and measuring your growth so the marketing works while you run the business.",
     growthCta: "Open the {name} dashboard",
+    acuLabel: "ACU-METERED",
+    acuNote: "Every AI action is metered and gated by available ACUs — no ACUs, no AI action, regardless of tier. Intelligence is billed per unit consumed, so cost always tracks value and nothing runs unaccounted.",
   },
   sectorsPage: {
     title: "Sectors",

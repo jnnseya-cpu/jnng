@@ -10,6 +10,7 @@ import {
   BarChart3,
   Clock,
   ArrowUpRight,
+  Gauge,
 } from "lucide-react";
 import type { GrowthToolId, Locale, Platform } from "@/types/content";
 import type { Dictionary } from "@/lib/i18n";
@@ -80,6 +81,20 @@ export function GrowthEngine({
           );
         })}
       </ul>
+
+      {/* ACU policy — every AI action is metered and gated, no exceptions. */}
+      <div className="mt-8 flex items-start gap-4 rounded-2xl border border-gold/25 bg-gold/[0.05] p-5">
+        <span
+          aria-hidden
+          className="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gold/40 bg-gold/15"
+        >
+          <Gauge className="h-5 w-5 text-gold-bright" />
+        </span>
+        <p className="text-sm leading-relaxed text-paper/90">
+          <span className="font-mono-label mr-2 text-[0.62rem] text-gold">{dict.platformDetail.acuLabel}</span>
+          {dict.platformDetail.acuNote}
+        </p>
+      </div>
 
       <div className="mt-10 flex flex-wrap items-center gap-4">
         {external ? (
