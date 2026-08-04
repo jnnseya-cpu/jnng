@@ -201,6 +201,8 @@ export const fr: Dictionary = {
     growthHeading: "Des outils intégrés pour maximiser votre portée.",
     growthIntro: "Chaque partenaire dispose d'un copilote IA. Ces outils sont intégrés au tableau de bord de {name} — ils génèrent, optimisent et mesurent votre croissance pendant que vous dirigez votre activité.",
     growthCta: "Ouvrir le tableau de bord {name}",
+    acuLabel: "FACTURÉ EN ACU",
+    acuNote: "Chaque action IA est mesurée et conditionnée aux ACU disponibles — pas d'ACU, pas d'action IA, quel que soit le niveau d'abonnement. L'intelligence est facturée à l'unité consommée : le coût suit toujours la valeur et rien ne s'exécute sans être comptabilisé.",
   },
   sectorsPage: {
     title: "Secteurs",
