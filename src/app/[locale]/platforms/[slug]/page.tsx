@@ -9,6 +9,7 @@ import { getSector } from "@/content/sectors";
 import { Monogram } from "@/components/ui/monogram";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { PlatformCard } from "@/components/platforms/platform-card";
+import { GrowthEngine } from "@/components/platforms/growth-engine";
 import { Reveal } from "@/components/motion/reveal";
 import { GoldButtonLink, GhostButtonLink } from "@/components/ui/buttons";
 import { site } from "@/lib/site";
@@ -198,6 +199,10 @@ export default async function PlatformDetailPage({
               </dl>
             </Reveal>
           </div>
+
+          <Reveal delay={0.1}>
+            <GrowthEngine platform={platform} locale={locale} dict={dict} />
+          </Reveal>
 
           <div className="mt-20">
             <Reveal>

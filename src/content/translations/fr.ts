@@ -197,6 +197,10 @@ export const fr: Dictionary = {
     visit: "Visiter {name}",
     partnershipCta: "Discuter d'un partenariat",
     strategicNote: "Membre de l'écosystème connecté du Groupe Nseya — indépendante sur son marché, appuyée par une technologie, une direction et des standards d'exécution partagés.",
+    growthLabel: "MOTEUR DE CROISSANCE IA",
+    growthHeading: "Des outils intégrés pour maximiser votre portée.",
+    growthIntro: "Chaque partenaire dispose d'un copilote IA. Ces outils sont intégrés au tableau de bord de {name} — ils génèrent, optimisent et mesurent votre croissance pendant que vous dirigez votre activité.",
+    growthCta: "Ouvrir le tableau de bord {name}",
   },
   sectorsPage: {
     title: "Secteurs",
