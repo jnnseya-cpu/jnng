@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter, Sora, IBM_Plex_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
@@ -110,6 +111,10 @@ export default async function LocaleLayout({
         <main id="main-content">{children}</main>
         <Footer locale={locale} dict={dict} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        {/* Cookieless, consent-free visitor analytics (activates once enabled
+            in the Vercel dashboard). The script endpoint only exists on Vercel,
+            so render it there only — local/self-hosted runs stay clean. */}
+        {process.env.VERCEL ? <Analytics /> : null}
       </body>
     </html>
   );
