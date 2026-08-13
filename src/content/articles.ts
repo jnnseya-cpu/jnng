@@ -158,6 +158,115 @@ export const articles: Article[] = [
   },
 ];
 
+// ——— Customer-intent guides (bottom-funnel acquisition content) ———
+articles.push(
+  {
+    slug: "london-kinshasa-flights-guide",
+    date: "2026-08-04",
+    category: { en: "Guide", fr: "Guide" },
+    title: {
+      en: "London to Kinshasa flights: how diaspora families stop overpaying",
+      fr: "Vols Londres–Kinshasa : comment les familles de la diaspora arrêtent de surpayer",
+    },
+    excerpt: {
+      en: "Fares on the London–Kinshasa route spike without warning, and families booking for weddings, funerals and holidays pay the price. Here is how the route really works — and how to lock a seat months ahead without paying upfront.",
+      fr: "Les tarifs sur la route Londres–Kinshasa flambent sans préavis, et les familles qui réservent pour des mariages, funérailles et vacances en paient le prix. Voici comment la route fonctionne vraiment — et comment bloquer un siège des mois à l'avance sans payer d'avance.",
+    },
+    body: {
+      en: [
+        "If you have ever booked a flight from London, Paris or Brussels to Kinshasa, you know the pattern: the fare you saw last month has doubled, the dates you need are 'almost full', and the agent quoting you cannot explain why. The corridor is priced like a captive market because, for most airlines and resellers, it is one — demand is emotional, dates are fixed by weddings, funerals and school holidays, and most passengers book late, in a hurry, at whatever price appears.",
+        "The mechanics behind the spikes are simple: limited direct capacity, inventory held by consolidators, and peak seasons (June–August, December) when the entire diaspora flies at once. Booking six to nine months out routinely saves hundreds of pounds — but almost nobody can pay the full fare that far ahead, so families wait, and waiting is exactly what the pricing model punishes.",
+        "This is the problem 3JN Travel was built to break. Its seat-holding model secures tickets and inventory months ahead — so availability and price are locked when you commit, not when you finally pay. Combined with instalment payments, it matches the way corridor families actually save for travel: a little each month, with certainty at the end, instead of a lump-sum panic purchase at the worst possible price.",
+        "Practical checklist for the corridor: book the moment your dates are fixed, even provisionally; fly mid-week where possible; compare the total journey (a connection through Addis, Istanbul or Brussels often beats 'direct' pricing); and never leave December travel later than September. Above all, work with an operator that holds inventory rather than one that just forwards your enquiry to the same consolidators everyone else uses.",
+        "The London–Kinshasa lifeline should not cost a month's salary in stress. Lock the seat, spread the payment, and fly on your own terms — explore 3JN Travel to see current corridor availability.",
+      ],
+      fr: [
+        "Si vous avez déjà réservé un vol de Londres, Paris ou Bruxelles vers Kinshasa, vous connaissez le schéma : le tarif vu le mois dernier a doublé, vos dates sont « presque complètes », et l'agent qui vous fait le devis ne sait pas expliquer pourquoi. Le corridor est tarifé comme un marché captif parce que, pour la plupart des compagnies et revendeurs, c'en est un — la demande est émotionnelle, les dates sont fixées par les mariages, funérailles et vacances scolaires, et la plupart des passagers réservent tard, pressés, au prix affiché.",
+        "La mécanique des flambées est simple : capacité directe limitée, inventaire détenu par des consolidateurs, et hautes saisons (juin–août, décembre) où toute la diaspora vole en même temps. Réserver six à neuf mois à l'avance économise couramment des centaines de livres — mais presque personne ne peut payer le billet complet si tôt, alors les familles attendent, et l'attente est exactement ce que le modèle de prix punit.",
+        "C'est le problème que 3JN Travel a été construit pour casser. Son modèle de réservation de sièges sécurise billets et inventaire des mois à l'avance — disponibilité et prix sont verrouillés quand vous vous engagez, pas quand vous finissez de payer. Combiné aux paiements échelonnés, il correspond à la façon dont les familles du corridor épargnent réellement : un peu chaque mois, avec une certitude à la fin, au lieu d'un achat panique au pire prix possible.",
+        "Check-list pratique pour le corridor : réservez dès que vos dates sont fixées, même provisoirement ; volez en milieu de semaine si possible ; comparez le trajet total (une correspondance via Addis, Istanbul ou Bruxelles bat souvent le prix du « direct ») ; et ne laissez jamais un voyage de décembre au-delà de septembre. Surtout, travaillez avec un opérateur qui détient l'inventaire plutôt qu'avec celui qui transmet votre demande aux mêmes consolidateurs que tout le monde.",
+        "La ligne de vie Londres–Kinshasa ne devrait pas coûter un mois de salaire en stress. Verrouillez le siège, étalez le paiement, et voyagez à vos conditions — explorez 3JN Travel pour voir les disponibilités actuelles du corridor.",
+      ],
+    },
+    keywords: [
+      "London to Kinshasa flights", "cheap flights Kinshasa", "vol Londres Kinshasa", "vol Paris Kinshasa pas cher",
+      "diaspora travel DRC", "book Kinshasa flight instalments", "Brussels Kinshasa flight",
+    ],
+    relatedPlatformSlugs: ["3jn-travel", "3jn-vendor-partners", "bitripay"],
+    author: "group",
+  },
+  {
+    slug: "verify-mobile-money-payment",
+    date: "2026-08-06",
+    category: { en: "Guide", fr: "Guide" },
+    title: {
+      en: "How to verify a mobile money payment before you hand over the goods",
+      fr: "Comment vérifier un paiement mobile money avant de remettre la marchandise",
+    },
+    excerpt: {
+      en: "Forwarded screenshots and fake SMS receipts cost African merchants real money every day. Here is how payment confirmation actually gets faked — and how to check a payment in seconds, whatever your size.",
+      fr: "Captures d'écran transférées et faux reçus SMS coûtent chaque jour de l'argent réel aux commerçants africains. Voici comment la confirmation de paiement se falsifie réellement — et comment vérifier un paiement en quelques secondes, quelle que soit votre taille.",
+    },
+    body: {
+      en: [
+        "Every merchant who accepts mobile money knows the moment: the customer shows a screen, the queue is building, and you have two seconds to decide whether that payment confirmation is real. Fraudsters know it too. Edited screenshots, replayed SMS notifications, cancelled-before-completion transfers — the tricks are cheap, and the merchant absorbs the loss every time.",
+        "The screenshot is not proof. Neither is the SMS, which can be spoofed or forwarded from an earlier, genuine transaction. The only proof is the operator's own ledger: did this amount, from this number, arrive in your account, now? Most small merchants have no way to ask that question quickly — so they squint at a phone and hope, and reconciliation at the end of the day becomes an act of faith.",
+        "KODA exists to make that question instant. It verifies mobile money payments through three doors onto one engine: a Manual Console for the market trader (type the reference, get a real answer), WhatsApp Chat Mode for the informal merchant (forward the detail into a chat you already use), and an API for platforms and retailers who need verification inside their own checkout. Same engine, whatever your size.",
+        "Until you have real verification, protect yourself with discipline: never release goods on a screenshot alone; check your own account balance or statement, not the customer's screen; beware of 'payment pending' claims at closing time; and keep a written log of references so end-of-day reconciliation compares your records against the operator's, not against memory.",
+        "Payment confirmation should not be an act of faith. If your business accepts mobile money — in Kinshasa, Nairobi or anywhere the problem lives — explore KODA and make every payment provable in seconds.",
+      ],
+      fr: [
+        "Tout commerçant qui accepte le mobile money connaît ce moment : le client montre un écran, la file s'allonge, et vous avez deux secondes pour décider si cette confirmation de paiement est vraie. Les fraudeurs le savent aussi. Captures retouchées, notifications SMS rejouées, transferts annulés avant finalisation — les astuces ne coûtent rien, et c'est le commerçant qui absorbe la perte à chaque fois.",
+        "La capture d'écran n'est pas une preuve. Le SMS non plus : il peut être usurpé ou transféré depuis une ancienne transaction authentique. La seule preuve est le grand livre de l'opérateur : ce montant, depuis ce numéro, est-il arrivé sur votre compte, maintenant ? La plupart des petits commerçants n'ont aucun moyen de poser cette question rapidement — alors ils plissent les yeux sur un téléphone et espèrent, et le rapprochement du soir devient un acte de foi.",
+        "KODA existe pour rendre cette question instantanée. Il vérifie les paiements mobile money par trois portes sur un seul moteur : une console manuelle pour le commerçant du marché (tapez la référence, obtenez une vraie réponse), un mode WhatsApp pour le marchand informel (transférez le détail dans une conversation que vous utilisez déjà), et une API pour les plateformes et détaillants qui veulent la vérification dans leur propre parcours de paiement. Le même moteur, quelle que soit votre taille.",
+        "En attendant une vraie vérification, protégez-vous par la discipline : ne remettez jamais la marchandise sur une simple capture ; vérifiez votre propre solde ou relevé, pas l'écran du client ; méfiez-vous des « paiements en attente » à l'heure de la fermeture ; et tenez un registre écrit des références pour que le rapprochement du soir compare vos données à celles de l'opérateur, pas à votre mémoire.",
+        "La confirmation de paiement ne devrait pas être un acte de foi. Si votre activité accepte le mobile money — à Kinshasa, Nairobi ou partout où le problème existe — explorez KODA et rendez chaque paiement prouvable en quelques secondes.",
+      ],
+    },
+    keywords: [
+      "verify mobile money payment", "mobile money fraud screenshot", "vérifier paiement mobile money",
+      "M-Pesa payment verification", "Airtel Money confirmation", "merchant payment verification Africa", "arnaque mobile money",
+    ],
+    relatedPlatformSlugs: ["koda", "bitripay", "scan-go-rdc"],
+    author: "group",
+  },
+  {
+    slug: "food-delivery-kinshasa",
+    date: "2026-08-11",
+    category: { en: "Guide", fr: "Guide" },
+    title: {
+      en: "Ordering food online in Kinshasa: what actually works in 2026",
+      fr: "Commander à manger en ligne à Kinshasa : ce qui marche vraiment en 2026",
+    },
+    excerpt: {
+      en: "The global delivery apps never came to Kinshasa — but ordering lunch to your office or family dinner across town works today, with mobile money and no card required. Here is how.",
+      fr: "Les applis mondiales de livraison ne sont jamais venues à Kinshasa — mais commander le déjeuner au bureau ou le dîner familial à l'autre bout de la ville fonctionne aujourd'hui, avec le mobile money et sans carte bancaire. Voici comment.",
+    },
+    body: {
+      en: [
+        "Search 'food delivery Kinshasa' and you will notice something strange: the apps that dominate everywhere else are absent. No Glovo, no Uber Eats. A city of over fifteen million people, with a vibrant restaurant culture from Bandal to Gombe, and the global playbook simply never arrived — because that playbook assumes app stores, data plans and debit cards.",
+        "Kinshasa's reality is different, and better served on its own terms: WhatsApp is the operating system of daily life, mobile money is how money moves, and nobody wants to burn megabytes downloading an app to order lunch. Any delivery service that ignores those three facts is designed for a different city.",
+        "Tunakula CD was built on Kinshasa's terms — live since 2025. Customers order from local restaurants online, offices organise team meals, and payment is mobile money, not a card you may not have. A network of independent delivery partners moves the food, earning on their own schedule. And for the diaspora, there is a use case no Western app imagined: remittance-to-meal, sending dinner to your mother in Kinshasa from your phone in Birmingham — a transfer that arrives as food on the table.",
+        "Next comes NZELA-OS, the WhatsApp-native generation: the entire journey — menu, order, payment, delivery tracking — inside a conversation you already have open, with AI agents handling dispatch and settlement behind the scenes. No download, no card, no friction.",
+        "If you are in Kinshasa and hungry, or abroad and thinking of someone who is: order with Tunakula, and see what delivery built for this city feels like. Restaurants and delivery partners can join through the same door.",
+      ],
+      fr: [
+        "Cherchez « livraison repas Kinshasa » et vous remarquerez quelque chose d'étrange : les applis qui dominent partout ailleurs sont absentes. Pas de Glovo, pas d'Uber Eats. Une ville de plus de quinze millions d'habitants, avec une culture de restaurants vibrante de Bandal à Gombe, et le manuel mondial n'est simplement jamais arrivé — parce que ce manuel suppose des app stores, des forfaits data et des cartes bancaires.",
+        "La réalité de Kinshasa est différente, et mieux servie à ses propres conditions : WhatsApp est le système d'exploitation de la vie quotidienne, le mobile money est la façon dont l'argent circule, et personne ne veut brûler des mégaoctets à télécharger une appli pour commander à déjeuner. Tout service de livraison qui ignore ces trois faits est conçu pour une autre ville.",
+        "Tunakula CD a été construit aux conditions de Kinshasa — en ligne depuis 2025. Les clients commandent en ligne auprès des restaurants locaux, les bureaux organisent les repas d'équipe, et le paiement se fait en mobile money, pas avec une carte que vous n'avez peut-être pas. Un réseau de livreurs indépendants transporte les repas, en gagnant selon leur propre horaire. Et pour la diaspora, un usage qu'aucune appli occidentale n'avait imaginé : le transfert-repas — envoyer le dîner à votre mère à Kinshasa depuis votre téléphone à Birmingham, un transfert qui arrive en plat sur la table.",
+        "Vient ensuite NZELA-OS, la génération native WhatsApp : tout le parcours — menu, commande, paiement, suivi de livraison — dans une conversation déjà ouverte, avec des agents IA gérant dispatch et règlement en coulisses. Pas de téléchargement, pas de carte, pas de friction.",
+        "Si vous êtes à Kinshasa et affamé, ou à l'étranger en pensant à quelqu'un qui l'est : commandez avec Tunakula, et voyez ce que donne une livraison construite pour cette ville. Restaurants et livreurs peuvent rejoindre par la même porte.",
+      ],
+    },
+    keywords: [
+      "food delivery Kinshasa", "livraison repas Kinshasa", "commander manger Kinshasa", "order food online DRC",
+      "Kinshasa restaurant delivery", "mobile money food order", "envoyer repas famille Kinshasa diaspora",
+    ],
+    relatedPlatformSlugs: ["tunakula-cd", "nzela-os", "koda"],
+    author: "group",
+  },
+);
+
 export function getArticle(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);
 }

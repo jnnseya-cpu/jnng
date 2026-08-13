@@ -21,7 +21,7 @@ const platformSlugs = [
   "koda","scan-go-rdc","echostream","tradenerve","nzela-os","talento","legai","alphaafrican-wealth","movie-empire","3jn-fund",
 ];
 const staticPaths = ["","/about","/platforms","/sectors","/founder","/impact","/news","/contact","/privacy","/cookies","/terms","/accessibility"];
-const articleSlugs = ["next-billion-users","one-shared-spine","governance-is-the-product","diaspora-corridor-economy"];
+const articleSlugs = ["next-billion-users","one-shared-spine","governance-is-the-product","diaspora-corridor-economy","london-kinshasa-flights-guide","verify-mobile-money-payment","food-delivery-kinshasa"];
 const allPaths = [];
 for (const l of ["en","fr"]) {
   for (const p of staticPaths) allPaths.push(`/${l}${p}`);
