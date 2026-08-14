@@ -118,6 +118,12 @@ export type Article = {
   /** Platforms featured — rendered as related cards + used for cross-linking. */
   relatedPlatformSlugs: string[];
   author: "group" | "founder";
+  /**
+   * Short community summaries in national languages (Lingala, Swahili) for
+   * Kinshasa-facing guides — unique-language content competitors don't write.
+   * Draft quality: have native speakers review before heavy promotion.
+   */
+  communitySummaries?: { ln?: string; sw?: string };
 };
 
 export type NewsItem = {

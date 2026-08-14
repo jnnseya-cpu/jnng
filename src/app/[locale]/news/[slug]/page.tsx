@@ -118,6 +118,26 @@ export default async function ArticlePage({
             </div>
           </Reveal>
 
+          {article.communitySummaries ? (
+            <Reveal delay={0.05}>
+              <aside className="card-glass mt-12 rounded-2xl border-l-2 border-l-gold p-6">
+                <h2 className="font-mono-label text-[0.62rem] text-gold">{dict.news.communityLabel}</h2>
+                {article.communitySummaries.ln ? (
+                  <p lang="ln" className="mt-4 text-sm leading-relaxed text-paper/85">
+                    <span className="font-semibold text-gold-bright">Na Lingala · </span>
+                    {article.communitySummaries.ln}
+                  </p>
+                ) : null}
+                {article.communitySummaries.sw ? (
+                  <p lang="sw" className="mt-4 text-sm leading-relaxed text-paper/85">
+                    <span className="font-semibold text-gold-bright">Kwa Kiswahili · </span>
+                    {article.communitySummaries.sw}
+                  </p>
+                ) : null}
+              </aside>
+            </Reveal>
+          ) : null}
+
           <Reveal delay={0.1}>
             <div className="gold-line mt-14" aria-hidden />
             <div className="mt-10">

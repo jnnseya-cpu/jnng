@@ -229,6 +229,10 @@ articles.push(
     ],
     relatedPlatformSlugs: ["koda", "bitripay", "scan-go-rdc"],
     author: "group",
+    communitySummaries: {
+      ln: "KODA esalisaka yo koyeba soki mbongo ya mobile money ekomi solo liboso opesa biloko. Kondima kaka photo ya ecran te — photo ekoki kozala lokuta. Tala na KODA: na console, na WhatsApp to na API. Moto ya zando moke to magasin monene, moteur ezali kaka moko.",
+      sw: "KODA inakusaidia kuhakikisha malipo ya mobile money yamefika kweli kabla ya kutoa bidhaa. Usikubali picha ya skrini tu — inaweza kuwa ya uongo. Kagua kwa KODA: kwa console, WhatsApp au API. Mfanyabiashara mdogo au mkubwa, injini ni ileile.",
+    },
   },
   {
     slug: "food-delivery-kinshasa",
@@ -264,6 +268,10 @@ articles.push(
     ],
     relatedPlatformSlugs: ["tunakula-cd", "nzela-os", "koda"],
     author: "group",
+    communitySummaries: {
+      ln: "Tunakula CD ezali nzela ya kosomba bilei na Kinshasa. Pona bilei ya restaurant na telefone na yo, futa na mobile money — carte ya banque esengeli te. Motindeli akomemela yo yango na ndako to na biro. Bandeko ya diaspora bakoki mpe kotindela libota bilei uta mboka mosika.",
+      sw: "Tunakula CD ni njia ya kuagiza chakula mjini Kinshasa. Chagua chakula cha mgahawa kwa simu yako, lipa kwa mobile money — huhitaji kadi ya benki. Dereva atakuletea nyumbani au ofisini. Ndugu walio ughaibuni wanaweza pia kutuma chakula kwa familia zao.",
+    },
   },
 );
 
@@ -716,6 +724,113 @@ articles.push(
       "remittance fees Congo", "meilleur taux transfert RDC", "mobile money transfer DRC", "frais Western Union RDC",
     ],
     relatedPlatformSlugs: ["bitripay", "3jn-travel", "alphaafrican-wealth"],
+    author: "founder",
+    communitySummaries: {
+      ln: "Kotinda mbongo na RDC ezali ntalo mingi: pene na 8% ya mbongo ekendaka na bafrais. Liboso ya kotinda, tala esika mibale to misato: mbongo boni ekokoma penza na Kinshasa? Kopona kaka « frais zéro » te — talo ya solo ebombami na taux ya échange. BitriPay ezali koya mpo na kokitisa ntalo yango.",
+      sw: "Kutuma pesa DRC ni ghali: karibu 8% ya pesa huliwa na ada. Kabla ya kutuma, linganisha watoa huduma wawili au watatu: kiasi gani kitafika kweli Kinshasa? Usidanganywe na « ada sifuri » — gharama halisi imefichwa kwenye kiwango cha kubadilisha. BitriPay inakuja kupunguza gharama hiyo.",
+    },
+  },
+);
+
+// ——— Round 4: pre-launch demand capture for coming-soon ventures ———
+articles.push(
+  {
+    slug: "rakapay-transport-revenue",
+    date: "2026-08-14",
+    category: { en: "Coming Soon", fr: "Bientôt" },
+    title: {
+      en: "Where city transport revenue leaks — and how QR collection stops it",
+      fr: "Où fuient les recettes du transport urbain — et comment la collecte par QR les arrête",
+    },
+    excerpt: {
+      en: "Between the passenger's fare and the operator's account, cash leaks at every hand it passes through. RakaPay makes every payment visible — for transport authorities, fleet owners and the drivers themselves.",
+      fr: "Entre le tarif du passager et le compte de l'opérateur, l'argent liquide fuit à chaque main qu'il traverse. RakaPay rend chaque paiement visible — pour les autorités de transport, les propriétaires de flottes et les chauffeurs eux-mêmes.",
+    },
+    body: {
+      en: [
+        "Ask any fleet owner in an African city how much their vehicles earned yesterday and you will get an estimate, not a number. Cash fares pass through drivers, receivers and collectors before whatever survives reaches an account — and every hand is a place where revenue can quietly stay behind. Municipalities collecting market fees and parking levies live the same story at city scale: the money that arrives is a fraction of the money that was paid.",
+        "RakaPay replaces the estimate with a record. Passengers and payers scan a QR; the payment lands digitally and is visible in real time to everyone entitled to see it — the operator's dashboard shows every vehicle's takings as they happen, the authority's view shows collections across the network, and the driver has proof of what they collected, which protects honest drivers as much as it exposes leakage.",
+        "This is accountability infrastructure, not just payments: auditable records for every transaction, reconciliation that takes minutes instead of arguments, and data that turns route planning and fee-setting from guesswork into evidence. It is built for the operating reality of DRC cities — mobile money rails, offline resilience, and interfaces for collectors who are not accountants.",
+        "RakaPay is in structured development, and the operators who shape the pilot will fit it to their networks. If you run a transport fleet, a market, a parking estate or a municipal collection mandate, register your interest — every payment, visible, starts with the first conversation.",
+      ],
+      fr: [
+        "Demandez à n'importe quel propriétaire de flotte d'une ville africaine combien ses véhicules ont gagné hier et vous obtiendrez une estimation, pas un chiffre. Les tarifs en liquide passent par les chauffeurs, receveurs et collecteurs avant que ce qui survit n'atteigne un compte — et chaque main est un endroit où la recette peut discrètement rester. Les municipalités qui collectent taxes de marché et droits de stationnement vivent la même histoire à l'échelle de la ville : l'argent qui arrive est une fraction de l'argent qui a été payé.",
+        "RakaPay remplace l'estimation par un registre. Passagers et payeurs scannent un QR ; le paiement arrive numériquement et devient visible en temps réel pour tous ceux qui ont le droit de le voir — le tableau de bord de l'opérateur montre les recettes de chaque véhicule au fil de l'eau, la vue de l'autorité montre les collectes sur tout le réseau, et le chauffeur a la preuve de ce qu'il a collecté, ce qui protège les chauffeurs honnêtes autant que cela expose les fuites.",
+        "C'est une infrastructure de redevabilité, pas seulement de paiement : des registres auditables pour chaque transaction, un rapprochement qui prend des minutes au lieu de disputes, et des données qui transforment la planification des lignes et la fixation des tarifs en décisions fondées sur des preuves. Construit pour la réalité opérationnelle des villes de la RDC — rails mobile money, résilience hors ligne, et interfaces pour des collecteurs qui ne sont pas comptables.",
+        "RakaPay est en développement structuré, et les opérateurs qui façonneront le pilote l'adapteront à leurs réseaux. Si vous gérez une flotte de transport, un marché, un parc de stationnement ou un mandat de collecte municipale, manifestez votre intérêt — chaque paiement, visible, commence par la première conversation.",
+      ],
+    },
+    keywords: [
+      "recettes transport urbain Kinshasa", "QR fare collection Africa", "digitalisation recettes municipales",
+      "transport revenue leakage", "collecte taxes marché", "fleet revenue tracking Africa", "paiement QR transport",
+    ],
+    relatedPlatformSlugs: ["rakapay", "parksmart", "bitripay"],
+    author: "group",
+  },
+  {
+    slug: "legai-legal-capacity",
+    date: "2026-08-14",
+    category: { en: "Coming Soon", fr: "Bientôt" },
+    title: {
+      en: "Legal capacity without a law firm: what LegAI will put in your hands",
+      fr: "La capacité juridique sans cabinet d'avocats : ce que LegAI mettra entre vos mains",
+    },
+    excerpt: {
+      en: "Contract review before you sign, documents drafted in minutes, compliance you can actually follow — the AI legal operating system for the businesses and citizens the profession has never reached.",
+      fr: "La revue de contrat avant de signer, des documents rédigés en minutes, une conformité que vous pouvez réellement suivre — le système d'exploitation juridique IA pour les entreprises et citoyens que la profession n'a jamais atteints.",
+    },
+    body: {
+      en: [
+        "Most businesses in most of the world sign contracts nobody qualified has read, because the ratio of lawyers to citizens makes legal review a luxury. The cost of that gap is invisible until it isn't: the clause that shifted the risk, the notice period nobody tracked, the compliance requirement discovered at penalty time.",
+        "LegAI is being built to close the gap with software: contract intelligence that reads the agreement before you sign it and tells you, in plain language, what you are accepting and where the risk sits; document automation that drafts employment agreements, service contracts, leases and demand letters in minutes to a standard a professional can refine; and compliance monitoring that tracks the obligations you have actually signed up to — dates, filings, renewals — instead of leaving them to memory.",
+        "The economics are the point. High-value legal output at near-zero marginal cost, metered through ACUs so a market trader reviewing one supplier agreement and a company managing a contract portfolio pay in proportion to what they use. French-language and OHADA-aware coverage is a first-class goal, because the markets that need legal capacity most are the ones global legal tech never localises for.",
+        "For legal professionals, LegAI is leverage rather than replacement — the drafting and review grunt-work compressed, judgement kept human. It is in structured development now: register your interest to join the early cohort, and put a legal department where a legal bill used to be.",
+      ],
+      fr: [
+        "La plupart des entreprises, dans la plus grande partie du monde, signent des contrats qu'aucune personne qualifiée n'a lus, parce que le ratio d'avocats par habitant fait de la revue juridique un luxe. Le coût de ce vide est invisible jusqu'au jour où il ne l'est plus : la clause qui a déplacé le risque, le préavis que personne n'a suivi, l'obligation de conformité découverte au moment de la pénalité.",
+        "LegAI est construit pour combler ce vide par le logiciel : une intelligence contractuelle qui lit l'accord avant que vous ne signiez et vous dit, en langage clair, ce que vous acceptez et où se trouve le risque ; une automatisation documentaire qui rédige contrats de travail, contrats de service, baux et mises en demeure en minutes, à un niveau qu'un professionnel peut affiner ; et un suivi de conformité qui trace les obligations réellement souscrites — dates, dépôts, renouvellements — au lieu de les confier à la mémoire.",
+        "L'économie est le cœur du sujet. Une production juridique à forte valeur pour un coût marginal quasi nul, mesurée en ACU : le commerçant qui fait relire un contrat fournisseur et l'entreprise qui gère un portefeuille de contrats paient en proportion de leur usage. La couverture en français et la prise en compte de l'OHADA sont des objectifs de premier rang, parce que les marchés qui ont le plus besoin de capacité juridique sont ceux que la legal tech mondiale ne localise jamais.",
+        "Pour les professionnels du droit, LegAI est un levier, pas un remplacement — le travail ingrat de rédaction et de revue compressé, le jugement laissé à l'humain. Le développement structuré est en cours : manifestez votre intérêt pour rejoindre la première cohorte, et mettez un département juridique là où il y avait une facture d'avocat.",
+      ],
+    },
+    keywords: [
+      "AI contract review", "générer contrat IA", "aide juridique PME", "OHADA contract software",
+      "AI legal assistant business", "revue de contrat IA", "legal tech Africa francophone",
+    ],
+    relatedPlatformSlugs: ["legai", "veryx", "3jn-fund"],
+    author: "group",
+  },
+  {
+    slug: "alphaafrican-diaspora-investing",
+    date: "2026-08-14",
+    category: { en: "Coming Soon", fr: "Bientôt" },
+    title: {
+      en: "The first generation with wealth to manage: investing from the diaspora",
+      fr: "La première génération avec un patrimoine à gérer : investir depuis la diaspora",
+    },
+    excerpt: {
+      en: "African professionals and the diaspora earn, remit and save — but almost nobody builds them wealth. What AlphaAfrican Wealth is being built to do, and how to be first in when it opens.",
+      fr: "Les professionnels africains et la diaspora gagnent, envoient et épargnent — mais presque personne ne leur construit un patrimoine. Ce qu'AlphaAfrican Wealth est en train de devenir, et comment être premier à l'ouverture.",
+    },
+    body: {
+      en: [
+        "The African diaspora sends home more than a hundred billion dollars a year — and almost all of it is consumption, not capital. Not because the ambition is missing, but because the infrastructure is: the private banks never designed for this client, the home-country options are opaque, and the apps that do exist mostly serve one corridor or one country. A generation is earning real money with nowhere structured to grow it.",
+        "AlphaAfrican Wealth is being built as that structure: AI-guided financial planning that starts from your actual life — income in pounds, family in francs, horizon in decades; portfolio construction across markets rather than betting everything on one economy or one currency; and financial education built in, because the first generation of wealth-builders inherits no playbook from the last.",
+        "The corridor is the advantage. Sitting on the group's own payment rails means moving money into investments — and eventually back out to family, projects and property at home — without surrendering the percentages that legacy transfer chains take at every hop. Remittance and investment stop being separate worlds with separate fees; they become one financial life, managed deliberately.",
+        "The platform is in structured development, and the early cohort will shape what gets built first. If you are earning abroad and tired of your money working for everyone except you, register your interest — the first generation with wealth to manage deserves the first platform built to manage it.",
+      ],
+      fr: [
+        "La diaspora africaine envoie au pays plus de cent milliards de dollars par an — et presque tout est de la consommation, pas du capital. Non par manque d'ambition, mais par manque d'infrastructure : les banques privées n'ont jamais conçu pour ce client, les options du pays d'origine sont opaques, et les applis existantes servent surtout un corridor ou un pays. Une génération gagne un vrai argent sans structure pour le faire croître.",
+        "AlphaAfrican Wealth est construit pour être cette structure : une planification financière guidée par l'IA qui part de votre vie réelle — revenus en livres, famille en francs, horizon en décennies ; une construction de portefeuille répartie entre marchés plutôt qu'un pari sur une seule économie ou une seule monnaie ; et une éducation financière intégrée, parce que la première génération de bâtisseurs de patrimoine n'hérite d'aucun manuel de la précédente.",
+        "Le corridor est l'avantage. S'appuyer sur les rails de paiement du groupe permet de faire entrer l'argent dans les investissements — et un jour de le faire ressortir vers la famille, les projets et l'immobilier au pays — sans abandonner les pourcentages que les chaînes de transfert historiques prennent à chaque étape. Transfert et investissement cessent d'être deux mondes à deux tarifs ; ils deviennent une seule vie financière, gérée délibérément.",
+        "La plateforme est en développement structuré, et la première cohorte façonnera ce qui sera construit d'abord. Si vous gagnez votre vie à l'étranger et que vous êtes fatigué de voir votre argent travailler pour tout le monde sauf vous, manifestez votre intérêt — la première génération avec un patrimoine à gérer mérite la première plateforme construite pour le gérer.",
+      ],
+    },
+    keywords: [
+      "investir depuis la diaspora", "diaspora investment platform Africa", "invest in Africa app",
+      "épargne diaspora africaine", "gestion patrimoine diaspora", "African diaspora wealth management", "Risevest alternative corridor",
+    ],
+    relatedPlatformSlugs: ["alphaafrican-wealth", "bitripay", "3jn-fund"],
     author: "founder",
   },
 );

@@ -21,7 +21,7 @@ const platformSlugs = [
   "koda","scan-go-rdc","echostream","tradenerve","nzela-os","talento","legai","alphaafrican-wealth","movie-empire","3jn-fund",
 ];
 const staticPaths = ["","/about","/platforms","/sectors","/founder","/impact","/news","/contact","/privacy","/cookies","/terms","/accessibility"];
-const articleSlugs = ["next-billion-users","one-shared-spine","governance-is-the-product","diaspora-corridor-economy","london-kinshasa-flights-guide","verify-mobile-money-payment","food-delivery-kinshasa","marketwar-ai-marketing-tools","veryx-audit-trail-governance","studyear-personalisation-engine","koda-three-doors","axionos-escrow-hiring-builders","3jn-travel-instalments-seat-holding","joshrix-five-layers","jessie-os-age-bands","tunakula-restaurant-partners","niche-finder-venture-briefs","openn-job-cross-border-hiring","virvoo-value-sports-gear","envoyer-argent-rdc-vrai-cout"];
+const articleSlugs = ["next-billion-users","one-shared-spine","governance-is-the-product","diaspora-corridor-economy","london-kinshasa-flights-guide","verify-mobile-money-payment","food-delivery-kinshasa","marketwar-ai-marketing-tools","veryx-audit-trail-governance","studyear-personalisation-engine","koda-three-doors","axionos-escrow-hiring-builders","3jn-travel-instalments-seat-holding","joshrix-five-layers","jessie-os-age-bands","tunakula-restaurant-partners","niche-finder-venture-briefs","openn-job-cross-border-hiring","virvoo-value-sports-gear","envoyer-argent-rdc-vrai-cout","rakapay-transport-revenue","legai-legal-capacity","alphaafrican-diaspora-investing"];
 const allPaths = [];
 for (const l of ["en","fr"]) {
   for (const p of staticPaths) allPaths.push(`/${l}${p}`);
