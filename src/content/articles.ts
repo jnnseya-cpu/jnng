@@ -267,6 +267,222 @@ articles.push(
   },
 );
 
+// ——— Feature-selling guides: one platform's features per article ———
+articles.push(
+  {
+    slug: "marketwar-ai-marketing-tools",
+    date: "2026-08-12",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "The ten AI marketing tools inside MarketWar OS — and what each one replaces",
+      fr: "Les dix outils marketing IA de MarketWar OS — et ce que chacun remplace",
+    },
+    excerpt: {
+      en: "AI social post generator, email campaigns, landing pages, hashtags, video scripts, audience optimisation, analytics and more — a tool-by-tool tour of the growth arsenal, and the agency bills each one deletes.",
+      fr: "Générateur de publications IA, campagnes email, pages d'atterrissage, hashtags, scripts vidéo, optimisation d'audience, analytique et plus — un tour outil par outil de l'arsenal de croissance, et les factures d'agence que chacun supprime.",
+    },
+    body: {
+      en: [
+        "Most businesses buy marketing in pieces: a freelancer for posts, an agency for campaigns, a designer for landing pages, a subscription for analytics — and a human at 11pm stitching it together. MarketWar OS replaces the pieces with one operating system where every tool is an agent that acts, not a dashboard that watches. Here is the arsenal, tool by tool.",
+        "Creation: the AI social media post generator writes on-brand posts for every channel in seconds; the AI email campaign generator produces full sequences — subject lines, follow-ups, scheduling — that would cost an agency retainer; the AI landing page builder assembles conversion-ready pages from a brief, not a design team; and the AI video script generator delivers hook-first scripts for reels and ads, timed to the second.",
+        "Distribution: the AI hashtag generator matches tags to your content, market and language instead of recycling generic lists, and best-posting-time recommendations publish when your audience is actually awake — per market, per channel, which matters enormously when your customers span Kinshasa, Birmingham and Dubai time zones.",
+        "Intelligence: AI campaign analytics puts every channel in one view with the story behind the numbers explained; AI audience optimisation matches segments and creative to the people who actually convert; and AI performance recommendations rank what to change next by expected revenue impact — the Money Machine Doctrine applied to your account, not vanity metrics.",
+        "Every action is metered through ACUs — you pay for the intelligence you consume, never for seats — so a one-person business and a marketing team run the same arsenal at radically different spend. Explore MarketWar and put the ten tools to work; several of them also ship inside the partner dashboards of 3JN Travel, Buzz Pro, VIBR and Tunakula CD, because every Groupe Nseya partner gets an AI co-pilot.",
+      ],
+      fr: [
+        "La plupart des entreprises achètent le marketing en morceaux : un freelance pour les publications, une agence pour les campagnes, un designer pour les pages d'atterrissage, un abonnement pour l'analytique — et un humain à 23 heures pour recoudre le tout. MarketWar OS remplace les morceaux par un seul système d'exploitation où chaque outil est un agent qui agit, pas un tableau de bord qui regarde. Voici l'arsenal, outil par outil.",
+        "Création : le générateur IA de publications sociales écrit des posts à votre image pour chaque canal en quelques secondes ; le générateur IA de campagnes email produit des séquences complètes — objets, relances, programmation — qui coûteraient un contrat d'agence ; le constructeur IA de pages d'atterrissage assemble des pages prêtes à convertir à partir d'un brief, pas d'une équipe design ; et le générateur IA de scripts vidéo livre des scripts accrocheurs pour reels et publicités, minutés à la seconde.",
+        "Distribution : le générateur IA de hashtags adapte les tags à votre contenu, votre marché et votre langue au lieu de recycler des listes génériques, et les recommandations de meilleurs horaires publient quand votre audience est réellement présente — par marché, par canal, ce qui compte énormément quand vos clients vivent aux fuseaux de Kinshasa, Birmingham et Dubaï.",
+        "Intelligence : l'analytique IA des campagnes réunit tous les canaux en une seule vue avec l'histoire derrière les chiffres expliquée ; l'optimisation IA de l'audience aligne segments et créations sur les personnes qui convertissent vraiment ; et les recommandations IA de performance classent quoi changer ensuite par impact attendu sur le revenu — la Money Machine Doctrine appliquée à votre compte, pas des métriques de vanité.",
+        "Chaque action est mesurée en ACU — vous payez l'intelligence consommée, jamais des sièges — si bien qu'un solo-entrepreneur et une équipe marketing font tourner le même arsenal à des dépenses radicalement différentes. Explorez MarketWar et mettez les dix outils au travail ; plusieurs équipent aussi les tableaux de bord partenaires de 3JN Travel, Buzz Pro, VIBR et Tunakula CD, car chaque partenaire du Groupe Nseya dispose d'un copilote IA.",
+      ],
+    },
+    keywords: [
+      "AI social media post generator", "AI email campaign generator", "AI landing page builder",
+      "AI hashtag generator", "AI video script generator", "AI marketing tools small business",
+      "outils marketing IA", "générateur de publications IA", "Semrush alternative AI agents",
+    ],
+    relatedPlatformSlugs: ["marketwar", "buzz-pro", "niche-finder"],
+    author: "group",
+  },
+  {
+    slug: "veryx-audit-trail-governance",
+    date: "2026-08-12",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Who decided what, when: the VERYX features your project tool is missing",
+      fr: "Qui a décidé quoi, quand : les fonctionnalités VERYX qui manquent à votre outil de projet",
+    },
+    excerpt: {
+      en: "Immutable audit trails, decision provenance, governed AI agents, cost and risk control in one platform — the enterprise features that turn 'trust me' into 'here is the record'.",
+      fr: "Pistes d'audit immuables, provenance des décisions, agents IA gouvernés, contrôle des coûts et des risques en une seule plateforme — les fonctionnalités d'entreprise qui transforment « faites-moi confiance » en « voici le registre ».",
+    },
+    body: {
+      en: [
+        "When an auditor, a minister or a board asks who approved the variation that added three months to the programme, a comment thread is not an answer. The defining feature of VERYX is that the answer always exists: every action in the system is an immutable event, every decision carries provenance — author, time, authority, context — and nothing can be quietly edited after the fact.",
+        "On that governed foundation sits the full delivery suite: planning and scheduling, cost control, risk registers, procurement, resources, documentation and executive reporting — one data model instead of a spreadsheet archipelago. Change a milestone and the cost forecast, the risk exposure and the board pack all know about it, instantly and traceably.",
+        "The AI layer is where VERYX departs from everything else on the market: agents that draft reports, flag schedule slippage, reconcile procurement and recommend interventions — each operating inside a permissions envelope that is auditable by design. The agent can act, and you can always prove exactly what it did and on whose authority. AI with a leash, which is the only AI an enterprise or a government can defensibly deploy.",
+        "Billing follows the same philosophy: ACU metering means revenue scales with the intelligence you consume, not the seats you occupy. A ten-person delivery team is not priced like a thousand-seat enterprise — until it grows into one, automatically.",
+        "If your organisation delivers complex work — construction programmes, public infrastructure, enterprise transformation — explore VERYX and see what your current tool cannot show you: the record. The same governance philosophy runs through AxionOS for construction transactions and BitriPay for payments, because provenance is the group standard, not a feature.",
+      ],
+      fr: [
+        "Quand un auditeur, un ministre ou un conseil demande qui a approuvé l'avenant qui a ajouté trois mois au programme, un fil de commentaires n'est pas une réponse. La fonctionnalité fondatrice de VERYX est que la réponse existe toujours : chaque action du système est un événement immuable, chaque décision porte sa provenance — auteur, heure, autorité, contexte — et rien ne peut être discrètement modifié après coup.",
+        "Sur cette fondation gouvernée repose la suite de livraison complète : planification, contrôle des coûts, registres de risques, achats, ressources, documentation et reporting exécutif — un seul modèle de données au lieu d'un archipel de tableurs. Modifiez un jalon et la prévision de coûts, l'exposition aux risques et le dossier du conseil le savent, instantanément et traçablement.",
+        "La couche IA est là où VERYX se sépare de tout le reste du marché : des agents qui rédigent les rapports, signalent les dérives de planning, rapprochent les achats et recommandent des interventions — chacun opérant dans une enveloppe de permissions auditable par conception. L'agent peut agir, et vous pouvez toujours prouver exactement ce qu'il a fait et sous quelle autorité. Une IA tenue en laisse : la seule qu'une entreprise ou un gouvernement puisse défendre.",
+        "La facturation suit la même philosophie : la mesure en ACU fait croître le revenu avec l'intelligence consommée, pas avec les sièges occupés. Une équipe de dix personnes n'est pas tarifée comme une entreprise de mille sièges — jusqu'à ce qu'elle en devienne une, automatiquement.",
+        "Si votre organisation livre des projets complexes — programmes de construction, infrastructures publiques, transformation d'entreprise — explorez VERYX et voyez ce que votre outil actuel ne peut pas vous montrer : le registre. La même philosophie de gouvernance traverse AxionOS pour les transactions de construction et BitriPay pour les paiements, parce que la provenance est le standard du groupe, pas une option.",
+      ],
+    },
+    keywords: [
+      "project management software audit trail", "enterprise project governance software", "monday.com alternative enterprise",
+      "Smartsheet alternative government", "AI project management agents", "logiciel gestion de projet gouvernance",
+      "event sourced project management",
+    ],
+    relatedPlatformSlugs: ["veryx", "axionos", "bitripay"],
+    author: "group",
+  },
+  {
+    slug: "studyear-personalisation-engine",
+    date: "2026-08-13",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Inside StudYear's Personalisation Engine: how an AI study plan actually raises grades",
+      fr: "Au cœur du moteur de personnalisation StudYear : comment un plan d'étude IA améliore vraiment les notes",
+    },
+    excerpt: {
+      en: "Diagnostics that find the real gaps, study plans that rebuild themselves every week, memory-decay tracking, predicted outcomes and parent visibility — the StudYear features, explained for families.",
+      fr: "Des diagnostics qui trouvent les vraies lacunes, des plans d'étude qui se reconstruisent chaque semaine, le suivi de la courbe d'oubli, des résultats prédits et une visibilité pour les parents — les fonctionnalités StudYear, expliquées aux familles.",
+    },
+    body: {
+      en: [
+        "Every student who falls behind falls behind somewhere specific: a fraction concept missed in year 7 that breaks algebra in year 10, a French tense never secured that poisons every essay after. StudYear's diagnostics find that somewhere — mapping what a learner actually knows against the curriculum, not what their last test happened to sample.",
+        "From the diagnosis, the Personalisation Engine builds a study plan — and this is the feature that separates it from every static revision app: the plan rebuilds itself continuously. It models each learner's pace, memory-decay curve and failure patterns, so a topic mastered last month resurfaces exactly when it is about to fade, and a persistent weakness gets attacked from a new angle instead of repeating what already failed.",
+        "The engagement layer borrows what consumer apps got right — streaks, progression, immediate feedback — but points it at the exams that decide a life: GCSEs, national curricula, university entrance. Fun that moves grades, not fun instead of grades. Predictive analytics show the trajectory: where this learner lands on exam day if this week's pattern continues, in time to change the pattern.",
+        "Parents and schools see what matters without hovering: effort, progress, predicted outcomes and where help is needed — one intelligent view for every actor in the education chain, from a single family to an entire ministry cohort. The same engine serves a Birmingham GCSE student and a Kinshasa classroom, priced through ACU metering so cost tracks actual use.",
+        "Exam season rewards the students whose revision was engineered, not improvised. Explore StudYear and let the Personalisation Engine build the plan — and if you run a school or an education programme, the institutional view was built for you.",
+      ],
+      fr: [
+        "Chaque élève qui décroche décroche quelque part de précis : une notion de fractions manquée en 5e qui casse l'algèbre en 2nde, un temps verbal jamais consolidé qui empoisonne toutes les rédactions suivantes. Les diagnostics de StudYear trouvent ce « quelque part » — en cartographiant ce que l'élève sait réellement par rapport au programme, pas ce que son dernier contrôle a échantillonné par hasard.",
+        "À partir du diagnostic, le moteur de personnalisation construit un plan d'étude — et c'est la fonctionnalité qui le sépare de toutes les applis de révision statiques : le plan se reconstruit en continu. Il modélise le rythme, la courbe d'oubli et les schémas d'échec de chaque élève : un sujet maîtrisé le mois dernier ressurgit exactement quand il commence à s'effacer, et une faiblesse persistante est attaquée sous un nouvel angle au lieu de répéter ce qui a déjà échoué.",
+        "La couche d'engagement emprunte ce que les applis grand public ont réussi — séries, progression, retour immédiat — mais le pointe vers les examens qui décident d'une vie : brevets, baccalauréats, examens d'État, concours d'entrée. Du plaisir qui améliore les notes, pas du plaisir à la place des notes. L'analytique prédictive montre la trajectoire : où cet élève atterrit le jour de l'examen si le rythme de cette semaine continue, à temps pour changer le rythme.",
+        "Parents et écoles voient ce qui compte sans surveiller en permanence : effort, progrès, résultats prédits et où l'aide est nécessaire — une vue intelligente pour chaque acteur de la chaîne éducative, de la famille au ministère. Le même moteur sert un élève de GCSE à Birmingham et une classe de Kinshasa, tarifé en ACU pour que le coût suive l'usage réel.",
+        "La saison des examens récompense les élèves dont les révisions ont été construites, pas improvisées. Explorez StudYear et laissez le moteur de personnalisation bâtir le plan — et si vous dirigez une école ou un programme éducatif, la vue institutionnelle a été conçue pour vous.",
+      ],
+    },
+    keywords: [
+      "AI study plan GCSE", "AI tutor app", "personalised revision app", "predict exam results AI",
+      "application révision IA", "plan d'étude personnalisé", "soutien scolaire IA", "Duolingo alternative exams",
+    ],
+    relatedPlatformSlugs: ["studyear", "congo-voice-ai", "talento"],
+    author: "group",
+  },
+  {
+    slug: "koda-three-doors",
+    date: "2026-08-13",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Console, WhatsApp or API: which KODA door fits your business",
+      fr: "Console, WhatsApp ou API : quelle porte KODA convient à votre activité",
+    },
+    excerpt: {
+      en: "KODA verifies mobile money payments through three interfaces on one engine. Here is what each mode does, who it is for, and how to choose — from market stall to national platform.",
+      fr: "KODA vérifie les paiements mobile money par trois interfaces sur un seul moteur. Voici ce que fait chaque mode, à qui il s'adresse, et comment choisir — de l'étal de marché à la plateforme nationale.",
+    },
+    body: {
+      en: [
+        "One verification engine, three doors — because a market trader, a boutique owner and a platform engineer should not be forced through the same interface. Every KODA mode answers the same question with the same authority: did this payment really arrive, from this number, now?",
+        "The Manual Console is for the counter. Type or paste the transaction reference, get a real answer in seconds — confirmed, not found, or already used (the replay trick that catches out even careful merchants). No integration, no technical setup: an account and a browser, and the guessing ends.",
+        "WhatsApp Chat Mode is for the merchant whose office is a phone. Forward the payment detail into a KODA chat — the same conversation app you already run your business on — and the verification comes back where you are. No new app to download, no data burned, no workflow change: the door meets you where Kinshasa's commerce actually happens.",
+        "API Mode is for platforms, retailers and billers who need verification inside their own checkout: a clean developer interface that confirms mobile money payments programmatically, with webhooks for reconciliation and fraud flags. The same engine that protects a street vendor protects a national retail chain — that is the three-door architecture, and each new mobile money operator integrated strengthens every door at once.",
+        "Verification is metered per check through ACUs, so you pay in proportion to the payments you protect — no idle subscription for a quiet month. Whatever your size, stop trusting screenshots: explore KODA and pick your door. If you also need the payments themselves to move on better rails, that is what BitriPay is being built for.",
+      ],
+      fr: [
+        "Un moteur de vérification, trois portes — parce qu'un vendeur de marché, une patronne de boutique et un ingénieur de plateforme ne devraient pas être forcés de passer par la même interface. Chaque mode KODA répond à la même question avec la même autorité : ce paiement est-il vraiment arrivé, depuis ce numéro, maintenant ?",
+        "La console manuelle est faite pour le comptoir. Tapez ou collez la référence de transaction, obtenez une vraie réponse en secondes — confirmé, introuvable, ou déjà utilisé (l'astuce du rejeu qui piège même les commerçants prudents). Aucune intégration, aucune installation technique : un compte et un navigateur, et les devinettes s'arrêtent.",
+        "Le mode WhatsApp est fait pour le commerçant dont le bureau est un téléphone. Transférez le détail du paiement dans une conversation KODA — la même appli où vous gérez déjà votre activité — et la vérification revient là où vous êtes. Pas de nouvelle appli, pas de data brûlée, pas de changement d'habitudes : la porte vous rejoint là où le commerce de Kinshasa se passe vraiment.",
+        "Le mode API est fait pour les plateformes, détaillants et facturiers qui veulent la vérification dans leur propre parcours de paiement : une interface développeur propre qui confirme les paiements mobile money par programme, avec webhooks pour le rapprochement et les alertes de fraude. Le même moteur qui protège un vendeur de rue protège une chaîne nationale — c'est l'architecture à trois portes, et chaque nouvel opérateur mobile money intégré renforce toutes les portes à la fois.",
+        "La vérification est mesurée à l'unité en ACU : vous payez en proportion des paiements que vous protégez — pas d'abonnement qui tourne à vide pendant un mois calme. Quelle que soit votre taille, cessez de faire confiance aux captures d'écran : explorez KODA et choisissez votre porte. Et si vous voulez aussi que les paiements eux-mêmes circulent sur de meilleurs rails, c'est ce que BitriPay est en train de construire.",
+      ],
+    },
+    keywords: [
+      "payment verification API Africa", "WhatsApp payment verification", "verify M-Pesa payment merchant",
+      "mobile money reconciliation", "vérification paiement mobile money", "API vérification paiement", "anti-fraude mobile money commerçant",
+    ],
+    relatedPlatformSlugs: ["koda", "bitripay", "nzela-os"],
+    author: "group",
+  },
+  {
+    slug: "axionos-escrow-hiring-builders",
+    date: "2026-08-13",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Escrow, verification, earned reputation: hiring a builder without the gamble",
+      fr: "Séquestre, vérification, réputation méritée : engager un artisan sans jouer votre argent",
+    },
+    excerpt: {
+      en: "Milestone escrow that releases money only on your approval, KYC-verified trades, reviews earned from real completed jobs — the AxionOS features that make 'cowboy builder' stories impossible by design.",
+      fr: "Un séquestre par jalons qui ne libère l'argent que sur votre approbation, des artisans vérifiés KYC, des avis gagnés sur de vrais chantiers achevés — les fonctionnalités AxionOS qui rendent les histoires d'artisans véreux structurellement impossibles.",
+    },
+    body: {
+      en: [
+        "Hiring a tradesperson is one of the biggest financial decisions a household makes, and for decades it has been a gamble: deposits that vanish, quotes from strangers with purchased reviews, and no recourse when the job stalls. The directories sell you a phone number and walk away. AxionOS was built on a different premise — manage the transaction, not the lead.",
+        "Feature one: verified identity. Every trade on the platform passes identity and financial verification and insurance checks before they can quote. Not a badge bought with a subscription — a gate. The 'cowboy' cannot get in the door, because the door checks.",
+        "Feature two: milestone escrow. Your money sits protected and releases only when you approve each completed stage. No proof of work, no payout — which converts the classic horror story (deposit paid, builder gone) into a structural impossibility. For the trade, it works in reverse and just as powerfully: the moment you sign off a milestone, they are paid, with none of the 60-day invoice-chasing that kills small firms.",
+        "Feature three: earned reputation. Reviews attach only to verified, escrowed, completed jobs — reputation cannot be purchased, only built. And SignalCore, the demand engine underneath, routes genuine local jobs to trades by territory and specialism, so professionals spend their week working instead of buying recycled leads at £15–40 each from directories that charge hundreds a month before a single job lands.",
+        "Homeowners and businesses post jobs free; trades pay on success, not on hope. If you are hiring — or you are a professional tired of paying rent for contact details — explore AxionOS. It is the same governance philosophy that runs VERYX on major programmes, applied to the job on your street.",
+      ],
+      fr: [
+        "Engager un artisan est l'une des plus grosses décisions financières d'un ménage, et depuis des décennies c'est un pari : des acomptes qui disparaissent, des devis d'inconnus aux avis achetés, et aucun recours quand le chantier s'arrête. Les annuaires vous vendent un numéro de téléphone et s'en vont. AxionOS a été construit sur une autre prémisse — gérer la transaction, pas le contact.",
+        "Fonctionnalité un : l'identité vérifiée. Chaque artisan de la plateforme passe une vérification d'identité, financière et d'assurance avant de pouvoir remettre un devis. Pas un badge acheté avec un abonnement — un portail. Le « cowboy » ne peut pas entrer, parce que la porte vérifie.",
+        "Fonctionnalité deux : le séquestre par jalons. Votre argent reste protégé et n'est libéré que lorsque vous approuvez chaque étape achevée. Pas de preuve de travail, pas de paiement — ce qui transforme l'histoire d'horreur classique (acompte versé, artisan disparu) en impossibilité structurelle. Pour l'artisan, cela fonctionne en sens inverse et tout aussi puissamment : dès que vous validez un jalon, il est payé, sans les 60 jours de relances de factures qui tuent les petites entreprises.",
+        "Fonctionnalité trois : la réputation méritée. Les avis ne s'attachent qu'à des chantiers vérifiés, sous séquestre et achevés — la réputation ne peut pas s'acheter, seulement se construire. Et SignalCore, le moteur de demande sous-jacent, dirige de vrais chantiers locaux vers les artisans par territoire et spécialité : les professionnels passent leur semaine à travailler au lieu d'acheter des contacts recyclés à 15–40 £ pièce auprès d'annuaires qui facturent des centaines de livres par mois avant le moindre chantier.",
+        "Particuliers et entreprises publient leurs projets gratuitement ; les artisans paient au succès, pas à l'espoir. Si vous engagez — ou si vous êtes un professionnel fatigué de payer un loyer pour des coordonnées — explorez AxionOS. C'est la même philosophie de gouvernance qui fait tourner VERYX sur les grands programmes, appliquée au chantier de votre rue.",
+      ],
+    },
+    keywords: [
+      "escrow payment builder UK", "hire builder safely deposit protection", "Checkatrade alternative no membership",
+      "verified tradespeople Birmingham", "MyBuilder alternative", "find builder milestone payments", "protection acompte artisan",
+    ],
+    relatedPlatformSlugs: ["axionos", "jnseya-construction", "veryx"],
+    author: "group",
+  },
+  {
+    slug: "3jn-travel-instalments-seat-holding",
+    date: "2026-08-13",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Book now, pay monthly: how 3JN Travel's seat-holding and instalments work",
+      fr: "Réservez maintenant, payez chaque mois : comment fonctionnent la réservation de sièges et les paiements échelonnés de 3JN Travel",
+    },
+    excerpt: {
+      en: "Lock your Kinshasa seat months ahead, pay in instalments matched to how families actually save, and stop gambling on fare spikes — the booking features built for the diaspora corridor, explained.",
+      fr: "Bloquez votre siège pour Kinshasa des mois à l'avance, payez en échéances adaptées à la façon dont les familles épargnent vraiment, et cessez de parier sur les flambées de prix — les fonctionnalités de réservation conçues pour le corridor de la diaspora, expliquées.",
+    },
+    body: {
+      en: [
+        "The cruellest feature of corridor travel is timing: the people who most need December seats are the least able to pay for them in March. Traditional booking forces a choice between paying everything early (cash you don't have yet) or waiting (prices you won't believe). 3JN Travel's two signature features dissolve that choice.",
+        "Seat-holding locks availability and price when you commit, not when you finish paying. Behind it sits the model that makes 3JN structurally different from an aggregator: inventory secured months ahead on the London, Paris and Brussels to Kinshasa corridors, without the platform carrying speculative risk — which is why the hold is real, not a 'price alert' that evaporates.",
+        "Instalment payments then spread the fare across the months between booking and boarding, matching the way corridor families actually budget: steadily, from each pay cheque, towards a date that matters — a wedding, a return home, a December with family. Settlement runs through the group's own payment infrastructure, built for exactly these UK–DRC flows.",
+        "Around those two features sits a full travel OS: flights, hotels and holiday rentals in one place, intelligent planning for multi-leg journeys, and — for sellers — the 3JN Vendor Partner Programme, which lets travel professionals and diaspora entrepreneurs sell corridor inventory and earn recurring commission without owning a platform.",
+        "Fixed dates deserve fixed prices. Explore 3JN Travel, lock the seat while it is cheap, and let the months pay for it.",
+      ],
+      fr: [
+        "La fonctionnalité la plus cruelle du voyage en corridor, c'est le calendrier : ceux qui ont le plus besoin de sièges en décembre sont les moins capables de les payer en mars. La réservation traditionnelle impose un choix entre tout payer tôt (un argent que vous n'avez pas encore) ou attendre (des prix que vous ne croirez pas). Les deux fonctionnalités signatures de 3JN Travel dissolvent ce choix.",
+        "La réservation de sièges verrouille disponibilité et prix quand vous vous engagez, pas quand vous finissez de payer. Derrière elle se trouve le modèle qui rend 3JN structurellement différent d'un agrégateur : un inventaire sécurisé des mois à l'avance sur les corridors Londres, Paris et Bruxelles vers Kinshasa, sans risque spéculatif porté par la plateforme — c'est pourquoi le blocage est réel, pas une « alerte prix » qui s'évapore.",
+        "Les paiements échelonnés étalent ensuite le tarif sur les mois entre la réservation et l'embarquement, à la façon dont les familles du corridor budgètent vraiment : régulièrement, à chaque paie, vers une date qui compte — un mariage, un retour au pays, un décembre en famille. Le règlement passe par l'infrastructure de paiement du groupe, construite précisément pour ces flux Royaume-Uni–RDC.",
+        "Autour de ces deux fonctionnalités, un OS de voyage complet : vols, hôtels et locations en un seul endroit, planification intelligente des trajets à étapes, et — pour les vendeurs — le programme 3JN Vendor Partner, qui permet aux professionnels du voyage et aux entrepreneurs de la diaspora de vendre l'inventaire du corridor et de percevoir des commissions récurrentes sans posséder de plateforme.",
+        "Des dates fixes méritent des prix fixes. Explorez 3JN Travel, bloquez le siège tant qu'il est abordable, et laissez les mois le payer.",
+      ],
+    },
+    keywords: [
+      "book flight pay monthly", "flight instalment plan UK", "fly now pay later Kinshasa", "payer vol en plusieurs fois",
+      "billet avion Kinshasa échelonné", "hold flight price months ahead", "diaspora flight booking plan",
+    ],
+    relatedPlatformSlugs: ["3jn-travel", "3jn-vendor-partners", "bitripay"],
+    author: "group",
+  },
+);
+
 export function getArticle(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);
 }
