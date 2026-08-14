@@ -483,6 +483,243 @@ articles.push(
   },
 );
 
+// ——— Round 3: remaining feature guides + the corridor flagship ———
+articles.push(
+  {
+    slug: "joshrix-five-layers",
+    date: "2026-08-14",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "From prompt to published game: the five layers of Joshrix Studio",
+      fr: "Du prompt au jeu publié : les cinq couches de Joshrix Studio",
+    },
+    excerpt: {
+      en: "Creation, Intelligence, Runtime, Commerce, Growth — how Joshrix turns an idea into a hosted, monetised game business without a funded team, and why the creator keeps the IP.",
+      fr: "Création, Intelligence, Runtime, Commerce, Croissance — comment Joshrix transforme une idée en entreprise de jeu hébergée et monétisée sans équipe financée, et pourquoi le créateur garde la propriété intellectuelle.",
+    },
+    body: {
+      en: [
+        "The distance between a game idea and a commercial game product used to be a funded studio: designers, programmers, artists, servers, a publisher. Joshrix collapses that distance into five connected layers, and understanding them is understanding what you actually get.",
+        "The Creation layer turns prompts, documents, drawings and conversations into structured game projects — you describe, it architects. The Intelligence layer is the studio staff you don't have to hire: specialised agents that reason about gameplay, code, art, game economics, retention and safety before anything ships. The Runtime layer then runs, hosts, scales and monitors every generated game — no server bills to architect, no DevOps to learn.",
+        "The last two layers are where a game becomes a business. Commerce lets you sell and license games, templates, mechanics and assets in a marketplace; Growth analyses player behaviour and recommends controlled, ethical improvements — retention without dark patterns. And the IP sovereignty architecture means what you create remains yours: you are building a catalogue, not feeding someone else's.",
+        "The user must never feel they are coding — they must feel they are commanding a game studio. Whether you are a solo creator in Kinshasa, a micro-studio in Birmingham or a publisher in London, explore Joshrix and command yours; the same creative stack connects to EchoStream for distribution and Movie Empire OS for film, because Groupe Nseya is building the whole creative pipeline.",
+      ],
+      fr: [
+        "La distance entre une idée de jeu et un produit commercial était autrefois un studio financé : designers, programmeurs, artistes, serveurs, un éditeur. Joshrix réduit cette distance à cinq couches connectées, et les comprendre, c'est comprendre ce que vous obtenez vraiment.",
+        "La couche Création transforme prompts, documents, dessins et conversations en projets de jeu structurés — vous décrivez, elle architecture. La couche Intelligence est le personnel de studio que vous n'avez pas à embaucher : des agents spécialisés qui raisonnent sur le gameplay, le code, l'art, l'économie du jeu, la rétention et la sécurité avant toute publication. La couche Runtime fait ensuite tourner, héberge, met à l'échelle et surveille chaque jeu généré — pas de facture serveur à architecturer, pas de DevOps à apprendre.",
+        "Les deux dernières couches font d'un jeu une entreprise. Commerce vous laisse vendre et licencier jeux, modèles, mécaniques et assets dans une place de marché ; Croissance analyse le comportement des joueurs et recommande des améliorations contrôlées et éthiques — la rétention sans manipulations. Et l'architecture de souveraineté de la propriété intellectuelle signifie que ce que vous créez reste à vous : vous bâtissez un catalogue, pas celui d'un autre.",
+        "L'utilisateur ne doit jamais sentir qu'il code — il doit sentir qu'il commande un studio de jeux. Créateur solo à Kinshasa, micro-studio à Birmingham ou éditeur à Londres, explorez Joshrix et commandez le vôtre ; la même pile créative se connecte à EchoStream pour la distribution et à Movie Empire OS pour le cinéma, car le Groupe Nseya construit toute la chaîne créative.",
+      ],
+    },
+    keywords: [
+      "AI game maker", "create game with AI no coding", "AI game development platform", "sell games marketplace creator",
+      "créer un jeu avec IA", "studio de jeu IA", "game creation platform Africa",
+    ],
+    relatedPlatformSlugs: ["joshrix", "echostream", "movie-empire"],
+    author: "group",
+  },
+  {
+    slug: "jessie-os-age-bands",
+    date: "2026-08-14",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Movement for ages 10 to 100: inside JESSIE-OS's five age-band modes",
+      fr: "Du mouvement de 10 à 100 ans : au cœur des cinq modes par âge de JESSIE-OS",
+    },
+    excerpt: {
+      en: "Two-minute interventions where your day actually happens, coaching that adapts from schoolchild to grandparent, streaks that respect psychology — the JESSIE-OS features the fitness industry never built.",
+      fr: "Des interventions de deux minutes là où votre journée se passe vraiment, un coaching qui s'adapte de l'écolier au grand-parent, des séries qui respectent la psychologie — les fonctionnalités JESSIE-OS que l'industrie du fitness n'a jamais construites.",
+    },
+    body: {
+      en: [
+        "Fitness apps are built for people who already exercise. JESSIE-OS is built for the other 90%: the ones who sit for nine hours, know they shouldn't, and for whom a '30-minute workout' is not a small ask but an impossible one. Its core feature is the micro-movement intervention — short, frictionless, contextual bursts delivered where the sedentary day actually happens: at the desk, in the kitchen, during the school run.",
+        "The five age-band modes are the feature no competitor offers. A twelve-year-old gets play-shaped movement and safe progression; a desk-bound thirty-five-year-old gets posture rescue and energy management; a seventy-year-old gets balance, strength preservation and confidence — same system, radically different experience, tuned to what each body needs and each mind responds to. Everyone else optimises for the 25–40 demographic and abandons both ends of life.",
+        "Around the interventions sits the behavioural engine: streak psychology that builds habits without punishing a missed day into abandonment, wearable integrations that read your real activity instead of your intentions, and AI coaching metered through ACUs — intensive when you need it, silent when you don't, billed only for what you use.",
+        "Movement that fits real life is the feature; everything else is delivery. Discover Jess Move — and if you run a school, an employer wellbeing programme or a health service, the age-band architecture was built to serve whole populations, not just individuals.",
+      ],
+      fr: [
+        "Les applis de fitness sont construites pour les gens qui font déjà du sport. JESSIE-OS est construit pour les 90 % restants : ceux qui restent assis neuf heures, savent qu'ils ne devraient pas, et pour qui une « séance de 30 minutes » n'est pas un petit effort mais un effort impossible. Sa fonctionnalité cœur est l'intervention de micro-mouvement — des séquences courtes, sans friction, contextuelles, livrées là où la journée sédentaire se passe vraiment : au bureau, dans la cuisine, sur le trajet de l'école.",
+        "Les cinq modes par tranche d'âge sont la fonctionnalité qu'aucun concurrent n'offre. Un enfant de douze ans reçoit du mouvement en forme de jeu et une progression sûre ; un trentenaire de bureau reçoit du sauvetage postural et de la gestion d'énergie ; un senior de soixante-dix ans reçoit équilibre, préservation de la force et confiance — même système, expérience radicalement différente, réglée sur ce dont chaque corps a besoin et ce à quoi chaque esprit répond. Tous les autres optimisent pour les 25–40 ans et abandonnent les deux bouts de la vie.",
+        "Autour des interventions, le moteur comportemental : une psychologie des séries qui construit l'habitude sans transformer un jour manqué en abandon, des intégrations d'objets connectés qui lisent votre activité réelle plutôt que vos intentions, et un coaching IA mesuré en ACU — intensif quand vous en avez besoin, silencieux sinon, facturé seulement à l'usage.",
+        "Le mouvement qui s'adapte à la vraie vie, c'est la fonctionnalité ; tout le reste n'est que livraison. Découvrez Jess Move — et si vous dirigez une école, un programme de bien-être d'entreprise ou un service de santé, l'architecture par âge a été conçue pour servir des populations entières, pas seulement des individus.",
+      ],
+    },
+    keywords: [
+      "desk exercise app", "micro workout app", "fitness app for seniors", "exercise app for kids",
+      "sedentary lifestyle app", "application exercice bureau", "app fitness seniors", "workplace wellbeing app",
+    ],
+    relatedPlatformSlugs: ["jess-move", "health360-rdc", "studyear"],
+    author: "group",
+  },
+  {
+    slug: "tunakula-restaurant-partners",
+    date: "2026-08-14",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Put your restaurant online in Kinshasa: how Tunakula works for partners",
+      fr: "Mettez votre restaurant en ligne à Kinshasa : comment Tunakula fonctionne pour les partenaires",
+    },
+    excerpt: {
+      en: "Online orders without building a website, a delivery fleet without hiring drivers, mobile money without a card machine — what joining Tunakula actually gives a Kinshasa restaurant, plus the marketing co-pilot.",
+      fr: "Des commandes en ligne sans construire de site, une flotte de livraison sans embaucher de chauffeurs, le mobile money sans terminal bancaire — ce que rejoindre Tunakula apporte réellement à un restaurant de Kinshasa, avec en plus le copilote marketing.",
+    },
+    body: {
+      en: [
+        "For a Kinshasa restaurant, going online has always meant three impossible projects at once: build an ordering channel, organise deliveries, and take payments people can actually make. Tunakula CD collapses all three into one partnership — live since 2025, built for this city's realities rather than imported from someone else's.",
+        "As a partner you get a digital storefront with your menu and prices, orders arriving in real time, and a structured network of independent delivery riders moving the food — no fleet to hire, no dispatcher to employ. Customers pay by mobile money, which means no card terminal, no excluded customers, and settlement that reconciles instead of a drawer of promises.",
+        "The demand engines work for you beyond walk-in-replacement: corporate B2B contracts bring recurring office orders, subscriptions turn regulars into revenue you can plan on, events and catering fill the quiet days, and diaspora remittance-to-meal brings orders from London and Brussels for tables in Kinshasa — customers your dining room could never seat. And the built-in AI Growth Engine drafts your social posts and email campaigns and tells you the best time to post, a marketing department the size of a button.",
+        "The next generation, NZELA-OS, will move the whole experience into WhatsApp — the conversation your customers already have open. Partners who join now are first in line. Order with Tunakula to see the customer side, and use the same door to register your restaurant.",
+      ],
+      fr: [
+        "Pour un restaurant de Kinshasa, passer en ligne a toujours signifié trois projets impossibles à la fois : construire un canal de commande, organiser les livraisons, et encaisser des paiements que les gens peuvent réellement faire. Tunakula CD réduit les trois à un seul partenariat — en ligne depuis 2025, construit pour les réalités de cette ville plutôt qu'importé de celles d'un autre.",
+        "En tant que partenaire, vous obtenez une vitrine numérique avec votre menu et vos prix, des commandes qui arrivent en temps réel, et un réseau structuré de livreurs indépendants qui transportent les repas — pas de flotte à embaucher, pas de dispatcheur à salarier. Les clients paient en mobile money : pas de terminal bancaire, pas de clients exclus, et un règlement qui se rapproche au lieu d'un tiroir de promesses.",
+        "Les moteurs de demande travaillent pour vous au-delà du remplacement du comptoir : les contrats B2B apportent des commandes de bureaux récurrentes, les abonnements transforment les habitués en revenu planifiable, événements et traiteur remplissent les jours calmes, et le transfert-repas de la diaspora apporte des commandes de Londres et Bruxelles pour des tables à Kinshasa — des clients que votre salle n'aurait jamais pu asseoir. Et le moteur de croissance IA intégré rédige vos publications et campagnes email et vous dit quand publier — un service marketing de la taille d'un bouton.",
+        "La génération suivante, NZELA-OS, déplacera toute l'expérience dans WhatsApp — la conversation que vos clients ont déjà ouverte. Les partenaires qui rejoignent maintenant sont premiers dans la file. Commandez avec Tunakula pour voir le côté client, et utilisez la même porte pour inscrire votre restaurant.",
+      ],
+    },
+    keywords: [
+      "restaurant delivery partner Kinshasa", "inscrire restaurant livraison Kinshasa", "vendre repas en ligne RDC",
+      "partenaire livraison restaurant", "online ordering for restaurants Africa", "restaurant en ligne mobile money",
+    ],
+    relatedPlatformSlugs: ["tunakula-cd", "nzela-os", "koda"],
+    author: "group",
+  },
+  {
+    slug: "niche-finder-venture-briefs",
+    date: "2026-08-14",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "From market gap to venture brief: what Niche Finder actually hands you",
+      fr: "Du créneau de marché au dossier de venture : ce que Niche Finder vous remet vraiment",
+    },
+    excerpt: {
+      en: "Not trend charts — build-ready briefs. How Niche Finder's discovery, validation and brief-generation features turn 'I want to start something' into 'here is exactly what to build, for whom, and why now'.",
+      fr: "Pas des courbes de tendances — des dossiers prêts à construire. Comment les fonctionnalités de découverte, validation et génération de dossiers de Niche Finder transforment « je veux me lancer » en « voici exactement quoi construire, pour qui, et pourquoi maintenant ».",
+    },
+    body: {
+      en: [
+        "Market research tools sell you charts and leave you alone with them. Niche Finder's defining feature is its output: a build-ready venture brief — the market gap, the underserved customer, the demand evidence, the competitive landscape and the recommended entry wedge, assembled into a document you can act on or take to investors.",
+        "Discovery scans for underserved markets, emerging categories and customer segments before they become mainstream — the gaps where demand exists but supply is broken, mispriced or absent. Validation then interrogates the gap: is the demand signal real and growing, who loses money on the problem today, and what would they pay for the fix? Evidence before conviction, so you spend capital on markets rather than hunches.",
+        "The proof of the engine is this portfolio: Niche Finder is Groupe Nseya's own R&D function packaged as a product — the machine that surfaced many of the opportunities that became the ventures on this site. The same machine now works for founders choosing their next company, investors qualifying deal flow, and corporates hunting adjacent markets.",
+        "Analysis is ACU-metered: pay for the intelligence you consume on each hunt, not a research retainer. Explore Niche Finder, run your first discovery — and when the brief says build, X-EXECUTE and 3JN Fund are the group's doors from brief to funded company.",
+      ],
+      fr: [
+        "Les outils d'étude de marché vous vendent des courbes et vous laissent seul avec. La fonctionnalité fondatrice de Niche Finder est son livrable : un dossier de venture prêt à construire — le créneau, le client mal servi, les preuves de demande, le paysage concurrentiel et l'angle d'entrée recommandé, assemblés en un document sur lequel agir ou à présenter à des investisseurs.",
+        "La découverte balaie les marchés mal desservis, les catégories émergentes et les segments de clientèle avant qu'ils ne deviennent grand public — les créneaux où la demande existe mais où l'offre est cassée, mal tarifée ou absente. La validation interroge ensuite le créneau : le signal de demande est-il réel et croissant, qui perd de l'argent sur ce problème aujourd'hui, et que paierait-il pour la solution ? Les preuves avant la conviction, pour dépenser le capital sur des marchés plutôt que sur des intuitions.",
+        "La preuve du moteur, c'est ce portefeuille : Niche Finder est la fonction R&D du Groupe Nseya conditionnée en produit — la machine qui a fait émerger nombre des opportunités devenues les ventures de ce site. La même machine travaille désormais pour les fondateurs qui choisissent leur prochaine entreprise, les investisseurs qui qualifient leur deal flow, et les groupes qui chassent les marchés adjacents.",
+        "L'analyse est mesurée en ACU : payez l'intelligence consommée à chaque exploration, pas un abonnement d'études. Explorez Niche Finder, lancez votre première découverte — et quand le dossier dit « construisez », X-EXECUTE et 3JN Fund sont les portes du groupe entre le dossier et l'entreprise financée.",
+      ],
+    },
+    keywords: [
+      "find business niche AI", "market opportunity discovery tool", "validate business idea AI", "trouver niche marché IA",
+      "Exploding Topics alternative", "business idea validation tool", "étude de marché IA",
+    ],
+    relatedPlatformSlugs: ["niche-finder", "nseya-x-execute", "3jn-fund"],
+    author: "group",
+  },
+  {
+    slug: "openn-job-cross-border-hiring",
+    date: "2026-08-14",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Opportunity without borders: how Openn Job connects employers and candidates",
+      fr: "L'opportunité sans frontières : comment Openn Job connecte employeurs et candidats",
+    },
+    excerpt: {
+      en: "A marketplace where qualified candidates meet global opportunities — simplified posting for employers, real matching instead of CV roulette, and a bridge across the UK–Africa talent corridor.",
+      fr: "Une place de marché où les candidats qualifiés rencontrent des opportunités mondiales — publication simplifiée pour les employeurs, un vrai matching plutôt que la roulette des CV, et un pont sur le corridor de talents Royaume-Uni–Afrique.",
+    },
+    body: {
+      en: [
+        "Hiring is broken in both directions: employers drown in unqualified applications while qualified candidates never see the roles that fit them. Openn Job Global's marketplace attacks both sides at once — structured postings that say what the job actually requires, candidate profiles that show what a person can actually do, and matching that connects them without the roulette.",
+        "For employers, the features are speed and reach: post once, reach candidates across borders, filter by verified capability rather than keyword bingo, and manage the pipeline in one place instead of an inbox. For candidates, the promise is in the name — opportunity without borders: roles in the UK, across Africa and remote-anywhere, visible to talent that traditional job boards geographically ignore.",
+        "The corridor is the differentiator. Groupe Nseya operates between the UK, DRC and Dubai, and Openn Job is built for exactly that flow of talent: diaspora professionals looking homeward, African graduates reaching global employers, UK companies discovering the skills the big platforms never surface. Where LinkedIn prices recruiters out and Indeed buries candidates in volume, a focused corridor marketplace matches.",
+        "Explore Openn Job to post a role or build your profile — and for organisations hiring at scale in emerging markets, its sibling Talento is coming with AI skills assessment and recruitment automation on the same rails.",
+      ],
+      fr: [
+        "Le recrutement est cassé dans les deux sens : les employeurs se noient sous les candidatures non qualifiées pendant que les candidats qualifiés ne voient jamais les postes qui leur correspondent. La place de marché d'Openn Job Global attaque les deux côtés à la fois — des annonces structurées qui disent ce que le poste exige vraiment, des profils qui montrent ce qu'une personne sait vraiment faire, et un matching qui les connecte sans la roulette.",
+        "Pour les employeurs, les fonctionnalités sont la vitesse et la portée : publiez une fois, atteignez des candidats au-delà des frontières, filtrez par capacité vérifiée plutôt qu'au bingo des mots-clés, et gérez le vivier en un seul endroit plutôt que dans une boîte mail. Pour les candidats, la promesse est dans le nom — l'opportunité sans frontières : des postes au Royaume-Uni, à travers l'Afrique et en télétravail mondial, visibles pour des talents que les sites d'emploi traditionnels ignorent géographiquement.",
+        "Le corridor est le différenciateur. Le Groupe Nseya opère entre le Royaume-Uni, la RDC et Dubaï, et Openn Job est construit exactement pour ce flux de talents : les professionnels de la diaspora qui regardent vers le pays, les diplômés africains qui atteignent des employeurs mondiaux, les entreprises britanniques qui découvrent des compétences que les grandes plateformes ne font jamais remonter. Là où LinkedIn exclut les recruteurs par le prix et où Indeed noie les candidats sous le volume, une place de marché de corridor cible et matche.",
+        "Explorez Openn Job pour publier un poste ou bâtir votre profil — et pour les organisations qui recrutent à grande échelle sur les marchés émergents, son jumeau Talento arrive avec l'évaluation de compétences par IA et l'automatisation du recrutement sur les mêmes rails.",
+      ],
+    },
+    keywords: [
+      "hire African talent remote", "jobs UK Africa corridor", "recruter talents africains", "emploi diaspora congolaise",
+      "job board Africa international", "remote jobs DRC", "cross-border recruitment platform",
+    ],
+    relatedPlatformSlugs: ["openn-job-global", "talento", "nseya-x-execute"],
+    author: "group",
+  },
+  {
+    slug: "virvoo-value-sports-gear",
+    date: "2026-08-14",
+    category: { en: "Features", fr: "Fonctionnalités" },
+    title: {
+      en: "Play big without the big budget: how Virvoo keeps sports gear affordable",
+      fr: "Jouez grand sans gros budget : comment Virvoo garde l'équipement sportif abordable",
+    },
+    excerpt: {
+      en: "Multi-sport range in one cart, price intelligence that benchmarks the market daily, sourcing without the brand-tax — the Virvoo features built for students, local teams and everyday athletes.",
+      fr: "Une gamme multisport dans un seul panier, une intelligence des prix qui compare le marché chaque jour, un approvisionnement sans la taxe de marque — les fonctionnalités Virvoo pensées pour les étudiants, les équipes locales et les athlètes du quotidien.",
+    },
+    body: {
+      en: [
+        "The sports industry got one thing wrong: it made access expensive. The big brands charge for sponsorship budgets and retail ceremony; the everyday athlete pays. Virvoo's founding feature is the refusal of that tax — value-engineered gear where the price reflects the product, not the marketing around it.",
+        "One destination, every sport: basketball, football, American football, training and fitness in a single catalogue and a single cart, instead of a tab-per-store scavenger hunt. The range is curated for the people real sports culture actually lives with — students, local teams, weekend players, gym grinders — with modern, clean designs that don't announce their price point.",
+        "Underneath sits the price-intelligence engine: market prices tracked, competitors benchmarked, bundles optimised — continuously, so 'affordable' is an engineered property, not a launch promo that quietly expires. Add a fast, simple checkout and the experience is four steps: browse your sport, pick your gear, check out in seconds, receive and perform.",
+        "You don't need a big budget to play big — you need the right platform. Shop Virvoo, kit out the whole team, and keep the difference for what actually matters: playing.",
+      ],
+      fr: [
+        "L'industrie du sport s'est trompée sur un point : elle a rendu l'accès coûteux. Les grandes marques facturent leurs budgets de sponsoring et leur cérémonie de vente ; l'athlète du quotidien paie. La fonctionnalité fondatrice de Virvoo est le refus de cette taxe — un équipement conçu pour la valeur, où le prix reflète le produit, pas le marketing autour.",
+        "Une destination, tous les sports : basketball, football, football américain, entraînement et fitness dans un seul catalogue et un seul panier, au lieu d'une chasse au trésor à un onglet par boutique. La gamme est pensée pour ceux chez qui la vraie culture sportive vit — étudiants, équipes locales, joueurs du week-end, habitués de la salle — avec des designs modernes et sobres qui n'annoncent pas leur prix.",
+        "En dessous tourne le moteur d'intelligence des prix : prix du marché suivis, concurrents comparés, lots optimisés — en continu, pour que « abordable » soit une propriété d'ingénierie, pas une promo de lancement qui expire en silence. Ajoutez un passage en caisse rapide et simple, et l'expérience tient en quatre étapes : parcourez votre sport, choisissez votre équipement, payez en quelques secondes, recevez et performez.",
+        "Vous n'avez pas besoin d'un gros budget pour jouer grand — vous avez besoin de la bonne plateforme. Achetez sur Virvoo, équipez toute l'équipe, et gardez la différence pour ce qui compte vraiment : jouer.",
+      ],
+    },
+    keywords: [
+      "affordable sports gear online", "cheap football boots quality", "basketball gear budget", "équipement sportif pas cher",
+      "kit whole team budget", "multi sport equipment store", "sports gear for students",
+    ],
+    relatedPlatformSlugs: ["virvoo", "ticketroyality", "vibr"],
+    author: "group",
+  },
+  {
+    slug: "envoyer-argent-rdc-vrai-cout",
+    date: "2026-08-14",
+    category: { en: "Guide", fr: "Guide" },
+    title: {
+      en: "Sending money to the DRC: the real cost, and how to stop paying it",
+      fr: "Envoyer de l'argent en RDC : le vrai coût, et comment arrêter de le payer",
+    },
+    excerpt: {
+      en: "Sub-Saharan Africa is the most expensive place on earth to send money — around 8% of every transfer, nearly triple the UN target. Here is where the money leaks, how to compare providers honestly, and the rail being built to end it.",
+      fr: "L'Afrique subsaharienne est l'endroit le plus cher au monde pour envoyer de l'argent — environ 8 % de chaque transfert, près du triple de l'objectif de l'ONU. Voici où l'argent fuit, comment comparer honnêtement les prestataires, et le rail en construction pour y mettre fin.",
+    },
+    body: {
+      en: [
+        "Every month, money flows from London, Paris and Brussels to families in Kinshasa — and every month a share of it evaporates in fees. The World Bank measures it: sending money to Sub-Saharan Africa costs on average over 8% of the transfer, the highest of any region on earth and nearly triple the 3% target the United Nations set. On the money a family sends home in a year, that is a whole extra month's transfer taken by the pipeline.",
+        "The leak hides in two places. The visible fee is the small one; the real cost is the exchange-rate spread — the gap between the rate you're given and the real market rate, often worth several percent and never printed on the receipt. That is why 'zero-fee transfer' offers deserve suspicion: the fee moved into the rate. To compare honestly, ignore the fee line and ask one question: how many francs actually arrive per pound sent, today, all-in?",
+        "Until better rails exist, protect your transfer with discipline: always compare the arriving amount across two or three providers before sending; prefer mobile money payout over cash pickup where fees allow (it is safer and usually cheaper); avoid transferring on Fridays and holiday peaks when spreads widen; and keep your references — a paper trail matters when a payout stalls.",
+        "The structural fix is a rail built for this corridor rather than rented from legacy networks — and that is exactly what BitriPay is being engineered to be: compliance-first for DRC mobile money and the London–Kinshasa corridor, double-entry ledger at the core, built to central-bank standard from day one. It is the payment backbone of the whole Groupe Nseya ecosystem, from 3JN Travel instalments to Tunakula CD diaspora meal orders — which means volume, which means pricing the incumbents cannot follow.",
+        "Register your interest in BitriPay to be first on the rail at launch — and until then, compare hard, count what arrives, and stop tipping the pipeline.",
+      ],
+      fr: [
+        "Chaque mois, l'argent coule de Londres, Paris et Bruxelles vers les familles de Kinshasa — et chaque mois, une part s'évapore en frais. La Banque mondiale le mesure : envoyer de l'argent en Afrique subsaharienne coûte en moyenne plus de 8 % du transfert, le record mondial, près du triple de l'objectif de 3 % fixé par les Nations unies. Sur ce qu'une famille envoie au pays en un an, c'est un mois entier de transfert supplémentaire pris par le tuyau.",
+        "La fuite se cache à deux endroits. Les frais visibles sont la petite part ; le vrai coût est la marge de change — l'écart entre le taux qu'on vous donne et le vrai taux du marché, souvent plusieurs pour cent et jamais imprimé sur le reçu. C'est pourquoi les offres « transfert sans frais » méritent la méfiance : les frais ont déménagé dans le taux. Pour comparer honnêtement, ignorez la ligne « frais » et posez une seule question : combien de francs arrivent réellement par livre ou euro envoyé, aujourd'hui, tout compris ?",
+        "En attendant de meilleurs rails, protégez votre transfert par la discipline : comparez toujours le montant qui arrive chez deux ou trois prestataires avant d'envoyer ; préférez le versement en mobile money au retrait d'espèces quand les frais le permettent (plus sûr et souvent moins cher) ; évitez d'envoyer les vendredis et pics de fêtes quand les marges s'élargissent ; et gardez vos références — une trace écrite compte quand un versement se bloque.",
+        "La solution structurelle est un rail construit pour ce corridor plutôt que loué aux réseaux historiques — et c'est exactement ce que BitriPay est en train de devenir : conformité d'abord pour le mobile money de la RDC et le corridor Londres–Kinshasa, grand livre en partie double au cœur, bâti au standard banque centrale dès le premier jour. C'est la colonne vertébrale de paiement de tout l'écosystème Groupe Nseya, des paiements échelonnés de 3JN Travel aux commandes-repas de la diaspora sur Tunakula CD — donc du volume, donc des prix que les acteurs historiques ne peuvent pas suivre.",
+        "Manifestez votre intérêt pour BitriPay pour être premier sur le rail au lancement — et d'ici là, comparez durement, comptez ce qui arrive, et arrêtez de donner un pourboire au tuyau.",
+      ],
+    },
+    keywords: [
+      "envoyer argent RDC", "envoyer argent Kinshasa moins cher", "send money to Congo DRC", "transfert argent Congo frais",
+      "remittance fees Congo", "meilleur taux transfert RDC", "mobile money transfer DRC", "frais Western Union RDC",
+    ],
+    relatedPlatformSlugs: ["bitripay", "3jn-travel", "alphaafrican-wealth"],
+    author: "founder",
+  },
+);
+
 export function getArticle(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);
 }
