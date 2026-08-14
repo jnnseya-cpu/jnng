@@ -2,13 +2,14 @@
   "name": "groupe-nseya-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Groupe Nseya — premium corporate website (Next.js App Router, Tailwind CSS, Motion for React)",
+  "description": "Groupe Nseya \u2014 premium corporate website (Next.js App Router, Tailwind CSS, Motion for React)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "test:e2e": "node scripts/e2e-smoke.mjs"
+    "test:e2e": "node scripts/e2e-smoke.mjs",
+    "state": "node scripts/state-report.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
