@@ -296,6 +296,15 @@ export const fr: Dictionary = {
   },
   footer: {
     statement: "Construire des ventures intelligentes, des plateformes transformatrices et des infrastructures stratégiques en Afrique et sur les marchés mondiaux.",
+    newsletter: {
+      heading: "LE BRIEF HEBDO",
+      placeholder: "votre@email.com",
+      button: "S'abonner",
+      consent: "En vous abonnant, vous consentez à recevoir notre email hebdomadaire sur les plateformes du Groupe Nseya. Désabonnement à tout moment.",
+      success: "Abonné. Le prochain brief hebdomadaire arrivera dans votre boîte.",
+      mailtoOpened: "Votre application email s'est ouverte avec votre demande d'abonnement — appuyez sur envoyer pour la finaliser.",
+      error: "L'abonnement a échoué — veuillez réessayer.",
+    },
     group: "Groupe",
     platforms: "Plateformes",
     livePlatforms: "Plateformes en ligne",
@@ -315,6 +324,7 @@ export const fr: Dictionary = {
       body: [
         "Cette politique de confidentialité explique comment le Groupe Nseya traite les informations personnelles soumises via ce site, y compris les demandes de contact et de partenariat.",
         "Les informations soumises via le formulaire de contact sont utilisées uniquement pour examiner et répondre à votre demande. Nous ne vendons pas d'informations personnelles.",
+        "Si vous vous abonnez à notre newsletter, votre adresse email n'est utilisée que pour envoyer le brief hebdomadaire demandé ; chaque email contient un lien de désabonnement, effectif immédiatement.",
         "Pour toute question ou demande relative à la confidentialité, contactez contact@groupejnn.com.",
       ],
     },

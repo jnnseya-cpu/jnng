@@ -4,6 +4,7 @@ export const site = {
   // Canonical host — matches the production primary domain (www).
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.groupejnn.com",
   formEndpoint: process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ?? process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? "",
+  newsletterEndpoint: process.env.NEXT_PUBLIC_NEWSLETTER_ENDPOINT ?? "",
   email: "contact@groupejnn.com",
   phoneUK: "+44 (0) 7493 216101",
   phoneDRC: "+243 (0) 818 112309",

@@ -167,12 +167,12 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
   await page.goto(BASE + "/en/contact", { waitUntil: "networkidle" });
   // The form sits inside a scroll-reveal; bring it into view first.
   await page.locator("#fullName").scrollIntoViewIfNeeded();
-  await page.locator('button[type="submit"]').scrollIntoViewIfNeeded();
+  await page.locator('form:has(#fullName) button[type="submit"]').scrollIntoViewIfNeeded();
   // Wait past the anti-bot minimum-fill-time check (2s) like a human would.
   await page.waitForTimeout(2400);
 
   // invalid submit -> zod error summary (form is noValidate by design)
-  await page.locator('button[type="submit"]').click();
+  await page.locator('form:has(#fullName) button[type="submit"]').click();
   await page.waitForTimeout(500);
   const alert = await page.locator('[role="alert"]').count();
   if (alert >= 1) ok("contact: error summary on invalid submit"); else fail("contact error summary", "not shown");
@@ -184,7 +184,7 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
   await page.selectOption("#enquiryType", { index: 1 });
   await page.fill("#message", "This is a serious partnership enquiry with more than twenty characters.");
   await page.check('input[name="consent"]');
-  await page.locator('button[type="submit"]').click();
+  await page.locator('form:has(#fullName) button[type="submit"]').click();
   await page.waitForTimeout(800);
   const mailtoMsg = await page.locator("text=email app has opened").count();
   if (mailtoMsg) ok("contact: mailto fallback fires when endpoint unset"); else fail("contact mailto fallback", "message not shown");
