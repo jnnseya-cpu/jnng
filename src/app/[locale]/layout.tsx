@@ -7,6 +7,7 @@ import { site } from "@/lib/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import type { Locale } from "@/types/content";
+import splashScreens from "@/lib/splash-screens.json";
 import "../globals.css";
 
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora", display: "swap" });
@@ -49,6 +50,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: dict.meta.homeDescription,
     },
     robots: { index: true, follow: true },
+    // Do not set metadata.icons here — it would override the file-convention
+    // icons (src/app/icon.svg + apple-icon.png) and drop the favicon link.
+    // iOS ignores the web manifest for splash screens — it needs explicit
+    // apple-touch-startup-image links per device, generated together with the
+    // images by scripts/generate-pwa-assets.mjs.
+    appleWebApp: {
+      capable: true,
+      title: site.name,
+      statusBarStyle: "black-translucent",
+      startupImage: splashScreens,
+    },
   };
 }
 

@@ -10,6 +10,13 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "standalone",
     background_color: "#050709",
     theme_color: "#050709",
-    icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml" }],
+    // The 512px PNGs are what Chrome/Android composes its install splash
+    // screen from (icon on background_color); maskable covers adaptive icons.
+    icons: [
+      { src: "/icon.svg", sizes: "any", type: "image/svg+xml" },
+      { src: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { src: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+      { src: "/icons/icon-512-maskable.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+    ],
   };
 }
