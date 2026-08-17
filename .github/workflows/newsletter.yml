@@ -1,0 +1,66 @@
+# Weekly newsletter automation.
+# Every Monday 08:00 UTC: build the issue from the content files and, if the
+# email-provider secrets are configured, send it to the subscriber list via
+# Brevo (campaign create + send). Without secrets, the built issue is uploaded
+# as a workflow artifact for manual sending — nothing fails, nothing fakes.
+#
+# Required repository secrets to enable automatic sending (Settings → Secrets):
+#   BREVO_API_KEY            Brevo API v3 key (server-side only — never NEXT_PUBLIC_*)
+#   NEWSLETTER_LIST_ID_EN    Brevo list ID for English subscribers
+#   NEWSLETTER_LIST_ID_FR    Brevo list ID for French subscribers
+#   NEWSLETTER_SENDER_EMAIL  Verified sender, e.g. contact@groupejnn.com
+name: weekly-newsletter
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build issue from content files
+        id: build
+        run: |
+          node scripts/newsletter-build.mjs | tee build.json
+          echo "issue=$(node -e "console.log(JSON.parse(require('fs').readFileSync('build.json','utf8')).issue)")" >> "$GITHUB_OUTPUT"
+
+      - name: Upload issue artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.build.outputs.issue }}
+          path: newsletter/
+
+      - name: Send via Brevo (only when secrets are configured)
+        if: ${{ secrets.BREVO_API_KEY != '' }}
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          LIST_EN: ${{ secrets.NEWSLETTER_LIST_ID_EN }}
+          LIST_FR: ${{ secrets.NEWSLETTER_LIST_ID_FR }}
+          SENDER: ${{ secrets.NEWSLETTER_SENDER_EMAIL }}
+          ISSUE: ${{ steps.build.outputs.issue }}
+        run: |
+          set -euo pipefail
+          send () { # $1=lang $2=listId
+            SUBJECT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('build.json','utf8')).subjects['$1'])")
+            HTML=$(node -e "console.log(JSON.stringify(require('fs').readFileSync('newsletter/'+process.env.ISSUE+'.$1.html','utf8')))")
+            # Idempotency: campaign name includes the issue id; Brevo rejects duplicates by our own guard below.
+            EXISTS=$(curl -sf -H "api-key: $BREVO_API_KEY" "https://api.brevo.com/v3/emailCampaigns?limit=50" | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const j=JSON.parse(d);console.log((j.campaigns||[]).some(c=>c.name==='${ISSUE}-$1')?'yes':'no')})")
+            if [ "$EXISTS" = "yes" ]; then echo "campaign ${ISSUE}-$1 already exists — skipping (idempotent)"; return 0; fi
+            ID=$(curl -sf -X POST "https://api.brevo.com/v3/emailCampaigns" \
+              -H "api-key: $BREVO_API_KEY" -H "Content-Type: application/json" \
+              -d "{\"name\":\"${ISSUE}-$1\",\"subject\":$(node -e "console.log(JSON.stringify(process.argv[1]))" "$SUBJECT"),\"sender\":{\"email\":\"$SENDER\",\"name\":\"Groupe Nseya\"},\"htmlContent\":$HTML,\"recipients\":{\"listIds\":[$2]}}" \
+              | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>console.log(JSON.parse(d).id))")
+            curl -sf -X POST "https://api.brevo.com/v3/emailCampaigns/$ID/sendNow" -H "api-key: $BREVO_API_KEY"
+            echo "sent ${ISSUE}-$1 (campaign $ID)"
+          }
+          [ -n "${LIST_EN:-}" ] && send en "$LIST_EN"
+          [ -n "${LIST_FR:-}" ] && send fr "$LIST_FR"

@@ -294,6 +294,15 @@ export const en = {
   },
   footer: {
     statement: "Building intelligent ventures, transformative platforms and strategic infrastructure across Africa and global markets.",
+    newsletter: {
+      heading: "THE WEEKLY BRIEF",
+      placeholder: "your@email.com",
+      button: "Subscribe",
+      consent: "By subscribing you consent to receive our weekly email about Groupe Nseya platforms. Unsubscribe any time.",
+      success: "Subscribed. The next weekly brief will reach your inbox.",
+      mailtoOpened: "Your email app has opened with your subscription request — press send to complete it.",
+      error: "Subscription failed — please try again.",
+    },
     group: "Group",
     platforms: "Platforms",
     livePlatforms: "Live Platforms",
@@ -313,6 +322,7 @@ export const en = {
       body: [
         "This privacy policy explains how Groupe Nseya handles personal information submitted through this website, including contact and partnership enquiries.",
         "Information submitted through the contact form is used solely to review and respond to your enquiry. We do not sell personal information.",
+        "If you subscribe to our newsletter, your email address is used only to send the weekly brief you requested; every email includes an unsubscribe link and unsubscribing takes effect immediately.",
         "For any privacy question or request, contact contact@groupejnn.com.",
       ],
     },

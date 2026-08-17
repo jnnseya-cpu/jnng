@@ -89,4 +89,5 @@ Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 - [ ] Enable Web Analytics in the Vercel dashboard
 - [ ] Native-speaker review of Lingala/Swahili community summaries
 - [ ] Set NEXT_PUBLIC_CONTACT_ENDPOINT (form currently falls back to prefilled email)
+- [ ] Set NEXT_PUBLIC_NEWSLETTER_ENDPOINT + Brevo secrets (BREVO_API_KEY, NEWSLETTER_LIST_ID_EN/FR, NEWSLETTER_SENDER_EMAIL) to activate weekly newsletter sending
 - [ ] Backlink footers ("A Groupe Nseya venture") on live platform sites

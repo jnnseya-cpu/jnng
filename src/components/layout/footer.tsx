@@ -3,6 +3,7 @@ import type { Locale } from "@/types/content";
 import type { Dictionary } from "@/lib/i18n";
 import { localePath } from "@/lib/i18n";
 import { site } from "@/lib/site";
+import { NewsletterSignup } from "@/components/forms/newsletter-signup";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const year = 2026;
@@ -36,6 +37,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               GROUPE <span className="text-gold">NSEYA</span>
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">{dict.footer.statement}</p>
+            <NewsletterSignup locale={locale} dict={dict} />
           </div>
           <nav aria-label={dict.footer.group}>
             <h2 className="font-mono-label text-xs text-gold">{dict.footer.group}</h2>
