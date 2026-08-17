@@ -4,9 +4,9 @@
 
 Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 
-## Portfolio: 39 platforms — 14 Live · 3 Launching · 22 Coming Soon
+## Portfolio: 39 platforms — 15 Live · 3 Launching · 21 Coming Soon
 
-### Live (14)
+### Live (15)
 | Platform | Website | Profile |
 |---|---|---|
 | Groupe JNN | [groupejnn.com](https://groupejnn.com) | `/platforms/groupe-jnn` |
@@ -22,6 +22,7 @@ Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 | AxionOS | [evandeli.com](https://www.evandeli.com) | `/platforms/axionos` |
 | JNseya Construction | [jnseya.co.uk](https://www.jnseya.co.uk) | `/platforms/jnseya-construction` |
 | JNN Estate Agency | [jnnestate.com](https://jnnestate.com) | `/platforms/jnn-estate` |
+| TicketRoyality | [ticketroyality.com](https://ticketroyality.com) | `/platforms/ticketroyality` |
 | KODA | [kodajnn.com](https://kodajnn.com) | `/platforms/koda` |
 
 ### Launching (3)
@@ -31,13 +32,12 @@ Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 | Openn Job Global | [opennjob.com](https://www.opennjob.com) | `/platforms/openn-job-global` |
 | Virvoo | [virvoo.com](https://virvoo.com) | `/platforms/virvoo` |
 
-### Coming Soon (22)
+### Coming Soon (21)
 | Platform | Website | Profile |
 |---|---|---|
 | RakaPay | internal profile | `/platforms/rakapay` |
 | ParkSmart | internal profile | `/platforms/parksmart` |
 | BitriPay | internal profile | `/platforms/bitripay` |
-| TicketRoyality | internal profile | `/platforms/ticketroyality` |
 | VIBR | internal profile | `/platforms/vibr` |
 | HEALTH360 RDC | internal profile | `/platforms/health360-rdc` |
 | CIVIX-INTEL / GOV360 | internal profile | `/platforms/gov360` |
