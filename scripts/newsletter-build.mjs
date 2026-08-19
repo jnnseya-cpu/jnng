@@ -53,10 +53,13 @@ const articles = [...articlesSrc.matchAll(/\{\s*\n\s*slug: "(.*?)",\s*\n\s*date:
   .sort((a, b) => b.date.localeCompare(a.date))
   .slice(0, 3);
 
-// ISO week for deterministic rotation + issue naming
+// ISO-8601 week for deterministic rotation + issue naming: shift to the
+// Thursday of the current week, then count weeks from that year's Jan 1.
 const now = new Date();
-const jan4 = new Date(Date.UTC(now.getUTCFullYear(), 0, 4));
-const week = Math.ceil((((now - jan4) / 86400000) + jan4.getUTCDay() + 1) / 7);
+const thu = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+thu.setUTCDate(thu.getUTCDate() + 4 - (thu.getUTCDay() || 7));
+const week = Math.ceil((((thu - new Date(Date.UTC(thu.getUTCFullYear(), 0, 1))) / 86400000) + 1) / 7);
+const isoYear = thu.getUTCFullYear();
 const featured = live[week % live.length];
 
 const t = {
@@ -167,7 +170,7 @@ function buildText(lang) {
 }
 
 mkdirSync(new URL("../newsletter/", import.meta.url), { recursive: true });
-const issue = `issue-${now.getUTCFullYear()}-W${String(week).padStart(2, "0")}`;
+const issue = `issue-${isoYear}-W${String(week).padStart(2, "0")}`;
 for (const lang of ["en", "fr"]) {
   writeFileSync(new URL(`../newsletter/${issue}.${lang}.html`, import.meta.url), buildHtml(lang));
   writeFileSync(new URL(`../newsletter/${issue}.${lang}.txt`, import.meta.url), buildText(lang));
