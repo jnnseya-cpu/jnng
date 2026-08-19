@@ -40,7 +40,9 @@ jobs:
           path: newsletter/
 
       - name: Send via Brevo (only when secrets are configured)
-        if: ${{ secrets.BREVO_API_KEY != '' }}
+        # The `secrets` context is not allowed in step-level `if` expressions
+        # (workflow fails validation with "Unrecognized named-value: 'secrets'"),
+        # so the gate lives in the shell via env instead.
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           LIST_EN: ${{ secrets.NEWSLETTER_LIST_ID_EN }}
@@ -49,6 +51,10 @@ jobs:
           ISSUE: ${{ steps.build.outputs.issue }}
         run: |
           set -euo pipefail
+          if [ -z "${BREVO_API_KEY:-}" ]; then
+            echo "Brevo secrets not configured — issue uploaded as artifact only, nothing sent."
+            exit 0
+          fi
           send () { # $1=lang $2=listId
             SUBJECT=$(node -e "console.log(JSON.parse(require('fs').readFileSync('build.json','utf8')).subjects['$1'])")
             HTML=$(node -e "console.log(JSON.stringify(require('fs').readFileSync('newsletter/'+process.env.ISSUE+'.$1.html','utf8')))")
