@@ -1151,14 +1151,14 @@ const records: PlatformRecord[] = [
     id: "koda",
     slug: "koda",
     name: "KODA",
-    tagline: { en: "Three doors. One engine. Every mobile money payment verified.", fr: "Trois portes. Un moteur. Chaque paiement mobile money vérifié." },
+    tagline: { en: "Five doors. One engine. Every mobile money payment verified.", fr: "Cinq portes. Un moteur. Chaque paiement mobile money vérifié." },
     shortDescription: {
-      en: "A universal payment-verification platform: businesses instantly verify mobile money and digital payments without complex banking integrations — via manual console, WhatsApp workflows or developer API.",
-      fr: "Une plateforme universelle de vérification des paiements : les entreprises vérifient instantanément les paiements mobile money et numériques sans intégrations bancaires complexes — via console manuelle, WhatsApp ou API développeur.",
+      en: "A universal payment-verification platform: businesses instantly verify mobile money and digital payments without complex banking integrations — via manual console, WhatsApp workflows, developer API, USSD or inbound SMS.",
+      fr: "Une plateforme universelle de vérification des paiements : les entreprises vérifient instantanément les paiements mobile money et numériques sans intégrations bancaires complexes — via console manuelle, WhatsApp, API développeur, USSD ou SMS entrant.",
     },
     fullDescription: {
-      en: "Across African commerce, payment confirmation is a screenshot: merchants squint at forwarded SMS receipts, fraud is trivial and reconciliation is a nightly act of faith. It is the single largest source of friction in mobile-money retail — and almost nobody is solving it. KODA verifies payments through three doors onto one engine: a Manual Console for the market trader, WhatsApp Chat Mode for the informal merchant, API Mode for the platform. The same core monetises a street vendor and a national retailer without a second codebase — and every new mobile money operator integrated widens the moat. The problem is identical from Kinshasa to Nairobi to Dhaka; so is the product.",
-      fr: "Dans le commerce africain, la confirmation de paiement est une capture d'écran : les commerçants plissent les yeux sur des reçus SMS transférés, la fraude est triviale et le rapprochement est un acte de foi nocturne. C'est la plus grande source de friction du commerce en mobile money — et presque personne ne s'y attaque. KODA vérifie les paiements par trois portes sur un seul moteur : une console manuelle pour le commerçant du marché, un mode WhatsApp pour le marchand informel, un mode API pour la plateforme. Le même cœur monétise un vendeur de rue et un détaillant national sans deuxième base de code — et chaque nouvel opérateur mobile money intégré élargit la barrière. Le problème est identique de Kinshasa à Nairobi à Dhaka ; le produit aussi.",
+      en: "Across African commerce, payment confirmation is a screenshot: merchants squint at forwarded SMS receipts, fraud is trivial and reconciliation is a nightly act of faith. It is the single largest source of friction in mobile-money retail — and almost nobody is solving it. KODA verifies payments through five doors onto one engine: a Manual Console for the market trader, WhatsApp Chat Mode for the informal merchant, API Mode for the platform, USSD Mode for any handset — no smartphone, no app, no data — and Inbound SMS, where forwarding the operator's payment SMS verifies it automatically. The same core monetises a street vendor and a national retailer without a second codebase — and every new mobile money operator integrated widens the moat. The problem is identical from Kinshasa to Nairobi to Dhaka; so is the product.",
+      fr: "Dans le commerce africain, la confirmation de paiement est une capture d'écran : les commerçants plissent les yeux sur des reçus SMS transférés, la fraude est triviale et le rapprochement est un acte de foi nocturne. C'est la plus grande source de friction du commerce en mobile money — et presque personne ne s'y attaque. KODA vérifie les paiements par cinq portes sur un seul moteur : une console manuelle pour le commerçant du marché, un mode WhatsApp pour le marchand informel, un mode API pour la plateforme, un mode USSD pour n'importe quel téléphone — sans smartphone, sans application, sans données — et le SMS entrant, où transférer le SMS de l'opérateur vérifie le paiement automatiquement. Le même cœur monétise un vendeur de rue et un détaillant national sans deuxième base de code — et chaque nouvel opérateur mobile money intégré élargit la barrière. Le problème est identique de Kinshasa à Nairobi à Dhaka ; le produit aussi.",
     },
     category: { en: "Payment Verification", fr: "Vérification des paiements" },
     sector: "fintech",
@@ -1177,7 +1177,7 @@ const records: PlatformRecord[] = [
     ],
     capabilities: [
       { en: "Instant mobile money verification", fr: "Vérification instantanée du mobile money" },
-      { en: "Manual console, WhatsApp and API modes", fr: "Modes console manuelle, WhatsApp et API" },
+      { en: "Console, WhatsApp, API, USSD and inbound-SMS modes", fr: "Modes console, WhatsApp, API, USSD et SMS entrant" },
       { en: "Fraud detection and reconciliation", fr: "Détection de fraude et rapprochement" },
     ],
     ctaLabel: { en: "Explore KODA", fr: "Explorer KODA" },
