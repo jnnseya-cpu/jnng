@@ -294,6 +294,13 @@ export const fr: Dictionary = {
       },
     },
   },
+  consent: {
+    ariaLabel: "Consentement aux cookies",
+    message: "Nous utilisons le pixel Meta et les balises Google pour mesurer la découverte de nos plateformes. Rien n'est suivi sans votre accord.",
+    policy: "Politique de cookies",
+    accept: "Accepter",
+    decline: "Refuser",
+  },
   footer: {
     statement: "Construire des ventures intelligentes, des plateformes transformatrices et des infrastructures stratégiques en Afrique et sur les marchés mondiaux.",
     newsletter: {

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { site } from "@/lib/site";
+import { track } from "@/lib/analytics";
 
 type State = "default" | "submitting" | "success" | "error" | "mailto";
 
@@ -34,6 +35,7 @@ export function NewsletterSignup({ locale, dict }: { locale: Locale; dict: Dicti
         `Please subscribe this address to the weekly Groupe Nseya newsletter: ${email} (language: ${locale})`,
       )}`;
       setState("mailto");
+      track("subscribe", { method: "mailto", locale });
       return;
     }
     setState("submitting");
@@ -45,6 +47,7 @@ export function NewsletterSignup({ locale, dict }: { locale: Locale; dict: Dicti
       });
       if (!res.ok) throw new Error(`Endpoint responded ${res.status}`);
       setState("success");
+      track("subscribe", { method: "form", locale });
     } catch {
       setState("error");
     }

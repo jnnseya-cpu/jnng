@@ -292,6 +292,13 @@ export const en = {
       },
     },
   },
+  consent: {
+    ariaLabel: "Cookie consent",
+    message: "We use Meta Pixel and Google tags to measure how our platforms are discovered. Nothing is tracked unless you accept.",
+    policy: "Cookie policy",
+    accept: "Accept",
+    decline: "Decline",
+  },
   footer: {
     statement: "Building intelligent ventures, transformative platforms and strategic infrastructure across Africa and global markets.",
     newsletter: {

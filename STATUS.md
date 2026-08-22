@@ -90,4 +90,5 @@ Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 - [ ] Native-speaker review of Lingala/Swahili community summaries
 - [ ] Set NEXT_PUBLIC_CONTACT_ENDPOINT (form currently falls back to prefilled email)
 - [ ] Set NEXT_PUBLIC_NEWSLETTER_ENDPOINT + Brevo secrets (BREVO_API_KEY, NEWSLETTER_LIST_ID_EN/FR, NEWSLETTER_SENDER_EMAIL) to activate weekly newsletter sending
+- [ ] Set NEXT_PUBLIC_META_PIXEL_ID + NEXT_PUBLIC_GA_ID in Vercel to activate Meta Pixel / Google tag (consent-gated banner appears once set)
 - [ ] Backlink footers ("A Groupe Nseya venture") on live platform sites

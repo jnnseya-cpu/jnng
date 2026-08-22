@@ -6,6 +6,7 @@ import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { platforms } from "@/content/platforms";
 import { site } from "@/lib/site";
+import { track } from "@/lib/analytics";
 
 type FormState = "default" | "submitting" | "success" | "error" | "offline" | "mailto";
 
@@ -110,6 +111,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
         .join("\n");
       window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       setState("mailto");
+      track("lead", { method: "mailto", enquiry_type: d.enquiryType });
       return;
     }
 
@@ -122,6 +124,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
       });
       if (!res.ok) throw new Error(`Endpoint responded ${res.status}`);
       setState("success");
+      track("lead", { method: "form", enquiry_type: parsed.data.enquiryType });
       form.reset();
     } catch {
       setState(typeof navigator !== "undefined" && !navigator.onLine ? "offline" : "error");
