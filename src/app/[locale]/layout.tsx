@@ -6,6 +6,7 @@ import { getDictionary, isLocale, locales } from "@/lib/i18n";
 import { site } from "@/lib/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Tracking } from "@/components/analytics/tracking";
 import type { Locale } from "@/types/content";
 import splashScreens from "@/lib/splash-screens.json";
 import "../globals.css";
@@ -127,6 +128,9 @@ export default async function LocaleLayout({
             in the Vercel dashboard). The script endpoint only exists on Vercel,
             so render it there only — local/self-hosted runs stay clean. */}
         {process.env.VERCEL ? <Analytics /> : null}
+        {/* Meta Pixel + Google tag: consent-gated, active only when
+            NEXT_PUBLIC_META_PIXEL_ID / NEXT_PUBLIC_GA_ID are configured. */}
+        <Tracking locale={locale} dict={dict} />
       </body>
     </html>
   );
