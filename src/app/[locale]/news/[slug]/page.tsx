@@ -9,7 +9,9 @@ import { linkifyParagraph } from "@/lib/linkify";
 import { PlatformCard } from "@/components/platforms/platform-card";
 import { Reveal } from "@/components/motion/reveal";
 import { GoldButtonLink } from "@/components/ui/buttons";
+import { ViewCounter } from "@/components/analytics/view-counter";
 import { site } from "@/lib/site";
+import { metaDescription } from "@/lib/seo";
 
 export function generateStaticParams() {
   return locales.flatMap((locale) => articles.map((a) => ({ locale, slug: a.slug })));
@@ -25,19 +27,27 @@ export async function generateMetadata({
   const article = getArticle(slug);
   if (!article) return {};
   return {
-    title: article.title[locale],
-    description: article.excerpt[locale],
+    // Absolute: long editorial titles must not overflow with the brand suffix.
+    title: { absolute: article.title[locale] },
+    description: metaDescription(article.excerpt[locale]),
     keywords: article.keywords,
     alternates: {
       canonical: `/${locale}/news/${article.slug}`,
-      languages: { en: `/en/news/${article.slug}`, fr: `/fr/news/${article.slug}` },
+      languages: {
+        en: `/en/news/${article.slug}`,
+        fr: `/fr/news/${article.slug}`,
+        "x-default": `/en/news/${article.slug}`,
+      },
     },
     openGraph: {
       type: "article",
       title: article.title[locale],
-      description: article.excerpt[locale],
+      description: metaDescription(article.excerpt[locale]),
       publishedTime: article.date,
       url: `/${locale}/news/${article.slug}`,
+      // Defining openGraph here replaces the inherited block, which would
+      // silently drop the locale OG image — re-attach it explicitly.
+      images: [`/${locale}/opengraph-image`],
     },
   };
 }
@@ -98,6 +108,7 @@ export default async function ArticlePage({
                   new Date(article.date),
                 )}
               </time>
+              <ViewCounter path={`/${locale}/news/${article.slug}`} label={dict.news.viewsLabel} />
             </div>
             <h1 className="font-display mt-5 text-3xl font-bold leading-tight tracking-tight text-paper sm:text-4xl lg:text-5xl">
               {article.title[locale]}

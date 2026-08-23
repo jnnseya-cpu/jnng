@@ -91,4 +91,5 @@ Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 - [ ] Set NEXT_PUBLIC_CONTACT_ENDPOINT (form currently falls back to prefilled email)
 - [ ] Set NEXT_PUBLIC_NEWSLETTER_ENDPOINT + Brevo secrets (BREVO_API_KEY, NEWSLETTER_LIST_ID_EN/FR, NEWSLETTER_SENDER_EMAIL) to activate weekly newsletter sending
 - [ ] Set NEXT_PUBLIC_META_PIXEL_ID + NEXT_PUBLIC_GA_ID in Vercel to activate Meta Pixel / Google tag (consent-gated banner appears once set)
+- [ ] Create free GoatCounter site + set NEXT_PUBLIC_GOATCOUNTER_CODE in Vercel to activate the public article view counter
 - [ ] Backlink footers ("A Groupe Nseya venture") on live platform sites

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { metaDescription } from "@/lib/seo";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { platforms } from "@/content/platforms";
@@ -10,7 +11,7 @@ import { site } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: raw } = await params;
   const dict = getDictionary(isLocale(raw) ? raw : "en");
-  return { title: dict.platformsPage.title, description: dict.platformsPage.intro };
+  return { title: dict.platformsPage.title, description: metaDescription(dict.platformsPage.intro) };
 }
 
 export default async function PlatformsPage({ params }: { params: Promise<{ locale: string }> }) {

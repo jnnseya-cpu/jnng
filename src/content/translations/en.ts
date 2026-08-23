@@ -234,6 +234,7 @@ export const en = {
     furtherReading: "Further reading",
     platformsInStory: "Platforms in this story",
     byGroup: "Groupe Nseya",
+    viewsLabel: "views",
     byFounder: "Justin N. Nseya, Founder & Group Chief Executive",
     communityLabel: "IN OUR LANGUAGES · NA MINOKO NA BISO · KWA LUGHA ZETU",
   },

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import Image from "next/image";
+import { metaDescription } from "@/lib/seo";
 import { getDictionary, isLocale, localePath } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { Reveal } from "@/components/motion/reveal";
@@ -11,7 +12,7 @@ import { site } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: raw } = await params;
   const dict = getDictionary(isLocale(raw) ? raw : "en");
-  return { title: `${dict.founder.name} — ${dict.founder.title}`, description: dict.founder.bio[0] };
+  return { title: `${dict.founder.name} — ${dict.founder.title}`, description: metaDescription(dict.founder.bio[0]) };
 }
 
 // Founder portrait: drop the approved photograph at

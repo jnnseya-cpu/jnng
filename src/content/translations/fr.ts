@@ -236,6 +236,7 @@ export const fr: Dictionary = {
     furtherReading: "À lire ensuite",
     platformsInStory: "Les plateformes de cette histoire",
     byGroup: "Groupe Nseya",
+    viewsLabel: "vues",
     byFounder: "Justin N. Nseya, Fondateur et Directeur général du groupe",
     communityLabel: "DANS NOS LANGUES · NA MINOKO NA BISO · KWA LUGHA ZETU",
   },
