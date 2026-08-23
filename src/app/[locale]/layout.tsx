@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Inter, Sora, IBM_Plex_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
+import { metaDescription } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     metadataBase: new URL(site.url),
     title: { default: dict.meta.homeTitle, template: `%s | ${site.name}` },
-    description: dict.meta.homeDescription,
+    description: metaDescription(dict.meta.homeDescription),
     alternates: {
       canonical: `/${locale}`,
       languages: { en: "/en", fr: "/fr", "x-default": "/en" },
@@ -41,14 +42,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: "website",
       siteName: site.name,
       title: dict.meta.homeTitle,
-      description: dict.meta.homeDescription,
+      description: metaDescription(dict.meta.homeDescription),
       locale: locale === "fr" ? "fr_FR" : "en_GB",
       url: `/${locale}`,
     },
     twitter: {
       card: "summary_large_image",
       title: dict.meta.homeTitle,
-      description: dict.meta.homeDescription,
+      description: metaDescription(dict.meta.homeDescription),
     },
     robots: { index: true, follow: true },
     // Do not set metadata.icons here — it would override the file-convention

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { metaDescription } from "@/lib/seo";
 import { getDictionary, isLocale, localePath } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { Reveal } from "@/components/motion/reveal";
@@ -8,7 +9,7 @@ import { GoldButtonLink } from "@/components/ui/buttons";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: raw } = await params;
   const dict = getDictionary(isLocale(raw) ? raw : "en");
-  return { title: dict.about.title, description: dict.about.paragraphs[0] };
+  return { title: dict.about.title, description: metaDescription(dict.about.paragraphs[0]) };
 }
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {

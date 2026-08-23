@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { metaDescription } from "@/lib/seo";
 import { getDictionary, isLocale, localePath } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { sectors } from "@/content/sectors";
@@ -9,7 +10,7 @@ import { Reveal } from "@/components/motion/reveal";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: raw } = await params;
   const dict = getDictionary(isLocale(raw) ? raw : "en");
-  return { title: dict.sectorsPage.title, description: dict.sectorsPage.intro };
+  return { title: dict.sectorsPage.title, description: metaDescription(dict.sectorsPage.intro) };
 }
 
 export default async function SectorsPage({ params }: { params: Promise<{ locale: string }> }) {

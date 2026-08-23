@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { metaDescription } from "@/lib/seo";
 import { getDictionary, isLocale, localePath } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { verifiedMetrics } from "@/content/impact";
@@ -8,7 +9,7 @@ import { GoldButtonLink } from "@/components/ui/buttons";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: raw } = await params;
   const dict = getDictionary(isLocale(raw) ? raw : "en");
-  return { title: dict.impact.title, description: dict.impact.intro };
+  return { title: dict.impact.title, description: metaDescription(dict.impact.intro) };
 }
 
 export default async function ImpactPage({ params }: { params: Promise<{ locale: string }> }) {

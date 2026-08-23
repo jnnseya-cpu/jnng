@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { metaDescription } from "@/lib/seo";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { ContactForm } from "@/components/forms/contact-form";
@@ -8,7 +9,7 @@ import { site } from "@/lib/site";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: raw } = await params;
   const dict = getDictionary(isLocale(raw) ? raw : "en");
-  return { title: dict.contact.title, description: dict.contact.intro };
+  return { title: dict.contact.title, description: metaDescription(dict.contact.intro) };
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {

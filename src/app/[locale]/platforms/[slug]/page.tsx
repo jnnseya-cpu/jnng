@@ -6,6 +6,7 @@ import { getDictionary, isLocale, localePath, locales } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { getPlatform, platforms, relatedPlatforms } from "@/content/platforms";
 import { getSector } from "@/content/sectors";
+import { metaDescription } from "@/lib/seo";
 import { Monogram } from "@/components/ui/monogram";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { PlatformCard } from "@/components/platforms/platform-card";
@@ -29,10 +30,14 @@ export async function generateMetadata({
   if (!platform) return {};
   return {
     title: platform.name,
-    description: platform.shortDescription[locale],
+    description: metaDescription(platform.shortDescription[locale]),
     alternates: {
       canonical: `/${locale}${platform.internalPath}`,
-      languages: { en: `/en${platform.internalPath}`, fr: `/fr${platform.internalPath}` },
+      languages: {
+        en: `/en${platform.internalPath}`,
+        fr: `/fr${platform.internalPath}`,
+        "x-default": `/en${platform.internalPath}`,
+      },
     },
   };
 }
