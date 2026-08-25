@@ -208,7 +208,7 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
   const page = await ctx.newPage();
   const res = await page.goto(BASE + "/en", { waitUntil: "load" });
   const h = res?.headers() ?? {};
-  for (const [k, want] of [["x-content-type-options","nosniff"],["x-frame-options","DENY"],["referrer-policy","strict-origin-when-cross-origin"],["strict-transport-security","max-age"]]) {
+  for (const [k, want] of [["x-content-type-options","nosniff"],["x-frame-options","DENY"],["referrer-policy","strict-origin-when-cross-origin"],["strict-transport-security","max-age"],["content-security-policy","default-src 'self'"]]) {
     if ((h[k] ?? "").includes(want)) ok(`header ${k}`); else fail(`header ${k}`, h[k] ?? "missing");
   }
   await ctx.close();
