@@ -130,9 +130,9 @@ export function Tracking({ locale, dict }: { locale: Locale; dict: Dictionary })
     <div
       role="region"
       aria-label={c.ariaLabel}
-      className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-xl rounded-xl border border-gold/40 bg-midnight/95 p-4 shadow-2xl backdrop-blur sm:inset-x-auto sm:right-6 sm:left-auto"
+      className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-xl rounded-xl border border-gold/40 bg-panel/95 p-4 shadow-2xl backdrop-blur sm:inset-x-auto sm:right-6 sm:left-auto"
     >
-      <p className="text-sm leading-relaxed text-paper">
+      <p className="text-sm leading-relaxed t-fg">
         {c.message}{" "}
         <Link href={localePath(locale, "/cookies")} className="text-gold underline underline-offset-2">
           {c.policy}
@@ -142,14 +142,14 @@ export function Tracking({ locale, dict }: { locale: Locale; dict: Dictionary })
         <button
           type="button"
           onClick={() => choose("granted")}
-          className="rounded-md bg-gold px-4 py-2 text-sm font-semibold text-obsidian transition hover:brightness-110"
+          className="rounded-md bg-gold-bright px-4 py-2 text-sm font-semibold text-obsidian transition hover:brightness-110"
         >
           {c.accept}
         </button>
         <button
           type="button"
           onClick={() => choose("denied")}
-          className="rounded-md border border-paper/30 px-4 py-2 text-sm font-medium text-paper transition hover:border-paper/60"
+          className="rounded-md border border-[color:var(--rule)] px-4 py-2 text-sm font-medium t-fg transition hover:border-[color:var(--rule)]"
         >
           {c.decline}
         </button>

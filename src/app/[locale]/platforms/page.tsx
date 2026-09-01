@@ -37,10 +37,10 @@ export default async function PlatformsPage({ params }: { params: Promise<{ loca
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="font-mono-label text-xs text-gold">{dict.platformsPage.title}</p>
-            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-paper sm:text-5xl">
+            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight t-fg sm:text-5xl">
               {dict.platformsPage.heading}
             </h1>
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">{dict.platformsPage.intro}</p>
+            <p className="mt-5 max-w-3xl text-base leading-relaxed t-soft sm:text-lg">{dict.platformsPage.intro}</p>
           </Reveal>
         </div>
       </section>

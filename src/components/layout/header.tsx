@@ -75,7 +75,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${scrolled || open ? "header-glass" : "bg-transparent"}`}
+      className={`fixed inset-x-0 top-0 z-50 transition-shadow duration-300 header-glass ${scrolled ? "shadow-[0_1px_0_var(--rule)]" : ""}`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
         <Link href={localePath(locale)} className="flex items-center gap-3" aria-label="Groupe Nseya — home">
@@ -84,7 +84,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <rect x="0.5" y="0.5" width="63" height="63" rx="13.5" fill="none" stroke="#C9A55C" strokeOpacity="0.6" />
             <text x="32" y="37" textAnchor="middle" dominantBaseline="middle" fontFamily="var(--font-display)" fontWeight="700" fontSize="22" fill="#C9A55C">N</text>
           </svg>
-          <span className="font-display text-sm font-semibold tracking-[0.18em] text-paper">
+          <span className="font-display text-sm font-semibold tracking-[0.18em] text-ink">
             GROUPE <span className="text-gold">NSEYA</span>
           </span>
         </Link>
@@ -96,7 +96,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
               className={`rounded px-3 py-2 text-sm transition-colors ${
-                isActive(item.href) ? "text-gold-bright" : "text-paper/80 hover:text-paper"
+                isActive(item.href) ? "text-gold" : "t-soft hover:text-ink"
               }`}
             >
               {item.label}
@@ -105,13 +105,13 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <nav aria-label={dict.nav.languageLabel} className="font-mono-label flex items-center rounded-full border border-paper/15 p-0.5 text-[0.65rem]">
+          <nav aria-label={dict.nav.languageLabel} className="font-mono-label flex items-center rounded-full border border-[color:var(--rule-strong)] p-0.5 text-[0.65rem]">
             {(["en", "fr"] as const).map((l) => (
               <Link
                 key={l}
                 href={l === locale ? pathname ?? localePath(locale) : switchHref}
                 aria-current={l === locale ? "true" : undefined}
-                className={`rounded-full px-2.5 py-1.5 ${l === locale ? "bg-gold text-obsidian" : "text-paper/70 hover:text-paper"}`}
+                className={`rounded-full px-2.5 py-1.5 ${l === locale ? "bg-gold-bright text-obsidian" : "t-soft hover:text-ink"}`}
               >
                 {l.toUpperCase()}
               </Link>
@@ -119,7 +119,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </nav>
           <Link
             href={localePath(locale, "/contact")}
-            className="hidden min-h-11 items-center rounded-md bg-gold px-4 text-sm font-semibold text-obsidian transition-colors hover:bg-gold-bright lg:inline-flex"
+            className="hidden min-h-11 items-center rounded-md bg-gold-bright px-4 text-sm font-semibold text-obsidian transition-colors hover:bg-gold-bright lg:inline-flex"
           >
             {dict.nav.partner}
           </Link>
@@ -129,7 +129,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? dict.nav.closeMenu : dict.nav.openMenu}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-paper/15 text-paper lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-[color:var(--rule-strong)] text-ink lg:hidden"
           >
             {open ? <X aria-hidden className="h-5 w-5" /> : <Menu aria-hidden className="h-5 w-5" />}
           </button>
@@ -145,7 +145,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className={`rounded-md px-3 py-3.5 font-display text-xl font-medium ${
-                  isActive(item.href) ? "text-gold-bright" : "text-paper hover:text-gold-bright"
+                  isActive(item.href) ? "text-gold" : "text-paper hover:text-gold-bright"
                 }`}
               >
                 {item.label}
@@ -155,7 +155,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           <div className="gold-line my-6" aria-hidden />
           <Link
             href={localePath(locale, "/contact")}
-            className="inline-flex min-h-11 w-full items-center justify-center rounded-md bg-gold px-4 py-3 text-sm font-semibold text-obsidian"
+            className="inline-flex min-h-11 w-full items-center justify-center rounded-md bg-gold-bright px-4 py-3 text-sm font-semibold text-obsidian"
           >
             {dict.nav.partner}
           </Link>

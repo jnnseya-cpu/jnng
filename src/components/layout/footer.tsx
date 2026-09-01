@@ -29,14 +29,14 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   ];
 
   return (
-    <footer className="surface-midnight border-t border-paper/[0.07]">
+    <footer className="surface-midnight border-t border-[color:var(--rule)]">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-display text-sm font-semibold tracking-[0.18em] text-paper">
+            <p className="font-display text-sm font-semibold tracking-[0.18em] t-fg">
               GROUPE <span className="text-gold">NSEYA</span>
             </p>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">{dict.footer.statement}</p>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed t-soft">{dict.footer.statement}</p>
             <NewsletterSignup locale={locale} dict={dict} />
           </div>
           <nav aria-label={dict.footer.group}>
@@ -44,7 +44,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <ul className="mt-4 space-y-2.5">
               {groupLinks.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="text-sm text-paper/80 hover:text-gold-bright">
+                  <Link href={l.href} className="text-sm t-fg hover:text-gold-bright">
                     {l.label}
                   </Link>
                 </li>
@@ -56,7 +56,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <ul className="mt-4 space-y-2.5">
               {platformLinks.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="text-sm text-paper/80 hover:text-gold-bright">
+                  <Link href={l.href} className="text-sm t-fg hover:text-gold-bright">
                     {l.label}
                   </Link>
                 </li>
@@ -65,7 +65,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </nav>
           <div>
             <h2 className="font-mono-label text-xs text-gold">{dict.footer.contact}</h2>
-            <address className="mt-4 space-y-2.5 text-sm not-italic text-paper/80">
+            <address className="mt-4 space-y-2.5 text-sm not-italic t-fg">
               <p>
                 {site.address.street}
                 <br />
@@ -79,13 +79,13 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
                 </a>
               </p>
               <p>
-                <span className="text-muted">{dict.contact.ukPhone}: </span>
+                <span className="t-soft">{dict.contact.ukPhone}: </span>
                 <a href="tel:+447493216101" className="hover:text-gold-bright">
                   {site.phoneUK}
                 </a>
               </p>
               <p>
-                <span className="text-muted">{dict.contact.drcPhone}: </span>
+                <span className="t-soft">{dict.contact.drcPhone}: </span>
                 <a href="tel:+243818112309" className="hover:text-gold-bright">
                   {site.phoneDRC}
                 </a>
@@ -100,16 +100,16 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <ul className="flex flex-wrap gap-x-6 gap-y-2">
               {legalLinks.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="text-xs text-muted hover:text-paper">
+                  <Link href={l.href} className="text-xs t-soft hover:t-fg">
                     {l.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <p className="text-xs text-muted">{dict.footer.copyright.replace("{year}", String(year))}</p>
+          <p className="text-xs t-soft">{dict.footer.copyright.replace("{year}", String(year))}</p>
         </div>
-        <p className="mt-4 text-xs leading-relaxed text-muted/70">{dict.footer.relationshipLine}</p>
+        <p className="mt-4 text-xs leading-relaxed t-faint">{dict.footer.relationshipLine}</p>
       </div>
     </footer>
   );

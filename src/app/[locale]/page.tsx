@@ -32,7 +32,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <SectionHeading heading={dict.manifesto.heading} intro={dict.manifesto.body} />
-            <p className="mt-6 max-w-3xl text-base font-medium text-gold-bright">{dict.manifesto.support}</p>
+            <p className="mt-6 max-w-3xl text-base font-medium text-gold">{dict.manifesto.support}</p>
           </Reveal>
           <div className="mt-14">
             <KineticWords words={[...dict.manifesto.words]} />
@@ -73,14 +73,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <li key={s.id} className="snap-start">
                   <Link
                     href={localePath(locale, `/platforms?sector=${s.id}`)}
-                    className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full border border-paper/15 bg-paper/[0.03] px-5 py-2.5 text-sm text-paper/85 transition-colors hover:border-gold/60 hover:text-gold-bright"
+                    className="inline-flex min-h-11 items-center whitespace-nowrap rounded-full border border-[color:var(--rule)] bg-[color:var(--card-bg)] px-5 py-2.5 text-sm t-fg transition-colors hover:border-gold/60 hover:text-gold-bright"
                   >
                     {s.name[locale]}
                   </Link>
                 </li>
               ))}
             </ul>
-            <p className="mt-6 max-w-2xl text-sm italic text-muted">{dict.ecosystem.tagline}</p>
+            <p className="mt-6 max-w-2xl text-sm italic t-soft">{dict.ecosystem.tagline}</p>
           </Reveal>
         </div>
       </section>
@@ -118,15 +118,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <Reveal delay={Math.min(i * 0.1, 0.5)} className="h-full">
                   <div className="card-glass h-full rounded-2xl p-6">
                     <p className="font-mono-label text-xs text-gold">{step.num}</p>
-                    <h3 className="font-display mt-3 text-lg font-semibold text-paper">{step.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">{step.body}</p>
+                    <h3 className="font-display mt-3 text-lg font-semibold t-fg">{step.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed t-soft">{step.body}</p>
                   </div>
                 </Reveal>
               </li>
             ))}
           </ol>
           <Reveal delay={0.2}>
-            <p className="mt-10 max-w-3xl text-base font-medium text-paper/90">{dict.process.closing}</p>
+            <p className="mt-10 max-w-3xl text-base font-medium t-fg">{dict.process.closing}</p>
           </Reveal>
         </div>
       </section>

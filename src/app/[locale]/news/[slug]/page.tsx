@@ -94,7 +94,7 @@ export default async function ArticlePage({
       <section className="surface-midnight px-4 pb-14 pt-36 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <Reveal>
-            <nav aria-label="Breadcrumb" className="text-sm text-muted">
+            <nav aria-label="Breadcrumb" className="text-sm t-soft">
               <Link href={localePath(locale, "/news")} className="hover:text-gold-bright">
                 ← {dict.news.backToNews}
               </Link>
@@ -103,18 +103,18 @@ export default async function ArticlePage({
               <span className="rounded-full border border-gold/30 px-3 py-1 font-mono-label text-[0.62rem] text-gold">
                 {article.category[locale]}
               </span>
-              <time dateTime={article.date} className="font-mono-label text-[0.62rem] text-muted">
+              <time dateTime={article.date} className="font-mono-label text-[0.62rem] t-soft">
                 {new Intl.DateTimeFormat(locale === "fr" ? "fr-FR" : "en-GB", { dateStyle: "long" }).format(
                   new Date(article.date),
                 )}
               </time>
               <ViewCounter path={`/${locale}/news/${article.slug}`} label={dict.news.viewsLabel} />
             </div>
-            <h1 className="font-display mt-5 text-3xl font-bold leading-tight tracking-tight text-paper sm:text-4xl lg:text-5xl">
+            <h1 className="font-display mt-5 text-3xl font-bold leading-tight tracking-tight t-fg sm:text-4xl lg:text-5xl">
               {article.title[locale]}
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-gold-bright/90">{article.excerpt[locale]}</p>
-            <p className="mt-4 text-sm text-muted">{author}</p>
+            <p className="mt-5 text-lg leading-relaxed text-gold/90">{article.excerpt[locale]}</p>
+            <p className="mt-4 text-sm t-soft">{author}</p>
           </Reveal>
         </div>
       </section>
@@ -122,7 +122,7 @@ export default async function ArticlePage({
       <article className="py-14">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="space-y-6 text-base leading-relaxed text-paper/85 sm:text-lg">
+            <div className="space-y-6 text-base leading-relaxed t-fg sm:text-lg">
               {article.body[locale].map((paragraph, i) => (
                 <p key={i}>{linkifyParagraph(paragraph, locale, linked)}</p>
               ))}
@@ -134,14 +134,14 @@ export default async function ArticlePage({
               <aside className="card-glass mt-12 rounded-2xl border-l-2 border-l-gold p-6">
                 <h2 className="font-mono-label text-[0.62rem] text-gold">{dict.news.communityLabel}</h2>
                 {article.communitySummaries.ln ? (
-                  <p lang="ln" className="mt-4 text-sm leading-relaxed text-paper/85">
-                    <span className="font-semibold text-gold-bright">Na Lingala · </span>
+                  <p lang="ln" className="mt-4 text-sm leading-relaxed t-fg">
+                    <span className="font-semibold text-gold">Na Lingala · </span>
                     {article.communitySummaries.ln}
                   </p>
                 ) : null}
                 {article.communitySummaries.sw ? (
-                  <p lang="sw" className="mt-4 text-sm leading-relaxed text-paper/85">
-                    <span className="font-semibold text-gold-bright">Kwa Kiswahili · </span>
+                  <p lang="sw" className="mt-4 text-sm leading-relaxed t-fg">
+                    <span className="font-semibold text-gold">Kwa Kiswahili · </span>
                     {article.communitySummaries.sw}
                   </p>
                 ) : null}
@@ -181,10 +181,10 @@ export default async function ArticlePage({
                     className="card-glass card-glass-hover block h-full rounded-2xl p-6"
                   >
                     <span className="font-mono-label text-[0.6rem] text-gold">{a.category[locale]}</span>
-                    <span className="font-display mt-2 block text-lg font-semibold leading-snug text-paper">
+                    <span className="font-display mt-2 block text-lg font-semibold leading-snug t-fg">
                       {a.title[locale]}
                     </span>
-                    <span className="mt-3 block text-sm text-muted line-clamp-2">{a.excerpt[locale]}</span>
+                    <span className="mt-3 block text-sm t-soft line-clamp-2">{a.excerpt[locale]}</span>
                   </Link>
                 </li>
               ))}

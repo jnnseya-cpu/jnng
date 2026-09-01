@@ -91,7 +91,7 @@ export function PlatformDirectory({
   ];
 
   const selectCls =
-    "min-h-11 rounded-md border border-paper/15 bg-midnight px-3 py-2 text-sm text-paper focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold";
+    "min-h-11 rounded-md border border-[color:var(--rule-strong)] bg-panel px-3 py-2 text-sm t-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold";
 
   return (
     <div>
@@ -99,13 +99,13 @@ export function PlatformDirectory({
         <div className="grid gap-3 md:grid-cols-[1fr_auto_auto]">
           <label className="relative block">
             <span className="sr-only">{dict.platformsPage.searchLabel}</span>
-            <Search aria-hidden className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
+            <Search aria-hidden className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 t-soft" />
             <input
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={dict.platformsPage.searchPlaceholder}
-              className="min-h-11 w-full rounded-md border border-paper/15 bg-midnight py-2 pl-9 pr-3 text-sm text-paper placeholder:text-muted/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              className="min-h-11 w-full rounded-md border border-[color:var(--rule-strong)] bg-panel py-2 pl-9 pr-3 text-sm text-ink placeholder:text-[color:var(--fg-faint)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             />
           </label>
           <label>
@@ -146,8 +146,8 @@ export function PlatformDirectory({
               onClick={() => setStatus(opt.value)}
               className={`min-h-11 rounded-full border px-4 py-2 font-mono-label text-[0.62rem] transition-colors ${
                 status === opt.value
-                  ? "border-gold bg-gold text-obsidian"
-                  : "border-paper/15 text-paper/70 hover:border-gold/50 hover:text-paper"
+                  ? "border-gold bg-gold-bright text-obsidian"
+                  : "border-[color:var(--rule)] t-soft hover:border-gold/50 hover:t-fg"
               }`}
             >
               {opt.label}
@@ -157,7 +157,7 @@ export function PlatformDirectory({
       </div>
 
       {/* Screen-reader announcement for filtered results */}
-      <p aria-live="polite" className="mt-6 text-sm text-muted">
+      <p aria-live="polite" className="mt-6 text-sm t-soft">
         {filtered.length === 1
           ? dict.platformsPage.resultCountOne
           : dict.platformsPage.resultCountMany.replace("{count}", String(filtered.length))}
@@ -178,7 +178,7 @@ export function PlatformDirectory({
       </p>
 
       {filtered.length === 0 ? (
-        <p className="mt-10 text-center text-muted">{dict.platformsPage.noResults}</p>
+        <p className="mt-10 text-center t-soft">{dict.platformsPage.noResults}</p>
       ) : (
         <ul className="mt-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {filtered.map((p) => (

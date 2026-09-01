@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Inter, Sora, IBM_Plex_Mono } from "next/font/google";
+import { Inter, Fraunces, IBM_Plex_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
 import { metaDescription } from "@/lib/seo";
@@ -12,7 +12,13 @@ import type { Locale } from "@/types/content";
 import splashScreens from "@/lib/splash-screens.json";
 import "../globals.css";
 
-const sora = Sora({ subsets: ["latin"], variable: "--font-sora", display: "swap" });
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -116,7 +122,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} className={`${sora.variable} ${inter.variable} ${plexMono.variable}`}>
+    <html lang={locale} className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}>
       <body>
         <a href="#main-content" className="skip-link">
           {dict.nav.skipToContent}

@@ -73,7 +73,7 @@ export default async function PlatformDetailPage({
       <section className="surface-midnight px-4 pb-16 pt-36 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <nav aria-label="Breadcrumb" className="text-sm text-muted">
+            <nav aria-label="Breadcrumb" className="text-sm t-soft">
               <Link href={localePath(locale, "/platforms")} className="hover:text-gold-bright">
                 ← {dict.common.backToPlatforms}
               </Link>
@@ -89,15 +89,15 @@ export default async function PlatformDetailPage({
               <div>
                 <div className="flex flex-wrap items-center gap-3">
                   <StatusBadge status={platform.status} dict={dict} />
-                  <span className="font-mono-label text-[0.62rem] text-muted">{platform.category[locale]}</span>
+                  <span className="font-mono-label text-[0.62rem] t-soft">{platform.category[locale]}</span>
                 </div>
-                <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight text-paper sm:text-5xl">
+                <h1 className="font-display mt-4 text-4xl font-semibold tracking-tight t-fg sm:text-5xl">
                   {platform.name}
                 </h1>
-                <p className="mt-3 text-lg font-medium" style={{ color: platform.brandColour }}>
+                <p className="t-fg mt-3 text-lg font-medium italic">
                   {platform.tagline[locale]}
                 </p>
-                <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
+                <p className="mt-4 max-w-2xl text-base leading-relaxed t-soft">
                   {platform.shortDescription[locale]}
                 </p>
 
@@ -107,7 +107,7 @@ export default async function PlatformDetailPage({
                       href={platform.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-gold px-6 py-3 text-sm font-semibold text-obsidian transition-colors hover:bg-gold-bright"
+                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-gold-bright px-6 py-3 text-sm font-semibold text-obsidian transition-colors hover:bg-gold-bright"
                     >
                       {platform.ctaLabel?.[locale] ?? dict.platformDetail.visit.replace("{name}", platform.name)}
                       <ArrowUpRight aria-hidden className="h-4 w-4" />
@@ -125,7 +125,7 @@ export default async function PlatformDetailPage({
                   )}
                 </div>
                 {!external && platform.website === undefined ? (
-                  <p className="mt-4 text-xs italic text-muted/80">{dict.common.internalProfile}</p>
+                  <p className="mt-4 text-xs italic t-faint">{dict.common.internalProfile}</p>
                 ) : null}
               </div>
             </div>
@@ -139,10 +139,10 @@ export default async function PlatformDetailPage({
             <Reveal>
               <div>
                 <h2 className="font-mono-label text-xs text-gold">{dict.platformDetail.aboutPlatform}</h2>
-                <p className="mt-5 text-base leading-relaxed text-paper/85 sm:text-lg">
+                <p className="mt-5 text-base leading-relaxed t-fg sm:text-lg">
                   {platform.fullDescription[locale]}
                 </p>
-                <p className="card-glass mt-8 rounded-xl border-l-2 border-l-gold p-5 text-sm italic leading-relaxed text-muted">
+                <p className="card-glass mt-8 rounded-xl border-l-2 border-l-gold p-5 text-sm italic leading-relaxed t-soft">
                   {dict.platformDetail.strategicNote}
                 </p>
               </div>
@@ -152,11 +152,11 @@ export default async function PlatformDetailPage({
               <dl className="card-glass space-y-6 rounded-2xl p-7">
                 <div>
                   <dt className="font-mono-label text-[0.62rem] text-gold">{dict.platformDetail.sector}</dt>
-                  <dd className="mt-1.5 text-sm text-paper">{sector?.name[locale] ?? platform.category[locale]}</dd>
+                  <dd className="mt-1.5 text-sm t-fg">{sector?.name[locale] ?? platform.category[locale]}</dd>
                 </div>
                 <div>
                   <dt className="font-mono-label text-[0.62rem] text-gold">{dict.platformDetail.market}</dt>
-                  <dd className="mt-1.5 text-sm text-paper">
+                  <dd className="mt-1.5 text-sm t-fg">
                     {platform.regions.map((r) => dict.platformsPage.regions[r]).join(" · ")}
                   </dd>
                 </div>
@@ -165,7 +165,7 @@ export default async function PlatformDetailPage({
                   <dd className="mt-1.5">
                     <ul className="flex flex-wrap gap-2">
                       {platform.audiences.map((a) => (
-                        <li key={a.en} className="rounded-full border border-paper/15 px-3 py-1 text-xs text-paper/85">
+                        <li key={a.en} className="rounded-full border border-[color:var(--rule)] px-3 py-1 text-xs t-fg">
                           {a[locale]}
                         </li>
                       ))}
@@ -177,7 +177,7 @@ export default async function PlatformDetailPage({
                   <dd className="mt-1.5">
                     <ul className="space-y-2">
                       {platform.capabilities.map((c) => (
-                        <li key={c.en} className="flex items-start gap-2 text-sm text-paper/85">
+                        <li key={c.en} className="flex items-start gap-2 text-sm t-fg">
                           <span aria-hidden className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                           {c[locale]}
                         </li>
@@ -193,7 +193,7 @@ export default async function PlatformDetailPage({
                         href={platform.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-gold-bright underline-offset-4 hover:underline"
+                        className="text-sm text-gold underline-offset-4 hover:underline"
                       >
                         {platform.website?.replace(/^https?:\/\//, "")}
                         <span className="sr-only"> ({dict.common.externalLinkNote})</span>
@@ -211,7 +211,7 @@ export default async function PlatformDetailPage({
 
           <div className="mt-20">
             <Reveal>
-              <h2 className="font-display text-2xl font-semibold text-paper">{dict.platformDetail.related}</h2>
+              <h2 className="font-display text-2xl font-semibold t-fg">{dict.platformDetail.related}</h2>
             </Reveal>
             <ul className="mt-8 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {related.map((p, i) => (

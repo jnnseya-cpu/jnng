@@ -80,7 +80,7 @@ export function NewsletterSignup({ locale, dict }: { locale: Locale; dict: Dicti
           required
           autoComplete="email"
           placeholder={n.placeholder}
-          className="min-h-11 w-full rounded-md border border-paper/15 bg-midnight px-3 py-2 text-sm text-paper placeholder:text-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          className="min-h-11 w-full rounded-md border border-[color:var(--rule-strong)] bg-panel px-3 py-2 text-sm text-ink placeholder:text-[color:var(--fg-faint)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
         />
         <button
           type="submit"
@@ -91,7 +91,7 @@ export function NewsletterSignup({ locale, dict }: { locale: Locale; dict: Dicti
         </button>
       </div>
       {state === "error" ? <p className="mt-2 text-xs text-soon">{n.error}</p> : null}
-      <p className="mt-2 max-w-xs text-xs leading-relaxed text-muted/70">{n.consent}</p>
+      <p className="mt-2 max-w-xs text-xs leading-relaxed t-faint">{n.consent}</p>
     </form>
   );
 }

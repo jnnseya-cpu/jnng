@@ -15,7 +15,7 @@ export function StatusBadge({ status, dict }: { status: PlatformStatus; dict: Di
     status === "live" ? dict.status.live : status === "launching" ? dict.status.launching : dict.status.comingSoon;
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded-full border ${s.border} bg-paper/[0.03] px-3 py-1 font-mono-label text-[0.62rem] ${s.text}`}
+      className={`t-soft inline-flex items-center gap-2 rounded-full border ${s.border} bg-[color:var(--card-bg)] px-3 py-1 font-mono-label text-[0.62rem]`}
     >
       <span aria-hidden className={`status-dot h-1.5 w-1.5 rounded-full ${s.dot}`} />
       {label}

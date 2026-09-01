@@ -55,10 +55,10 @@ export function GrowthEngine({
   return (
     <section className="surface-midnight mt-20 rounded-3xl p-8 sm:p-12">
       <p className="font-mono-label text-xs text-gold">{dict.platformDetail.growthLabel}</p>
-      <h2 className="font-display mt-4 max-w-2xl text-2xl font-semibold tracking-tight text-paper sm:text-3xl">
+      <h2 className="font-display mt-4 max-w-2xl text-2xl font-semibold tracking-tight t-fg sm:text-3xl">
         {dict.platformDetail.growthHeading}
       </h2>
-      <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
+      <p className="mt-4 max-w-3xl text-base leading-relaxed t-soft">
         {dict.platformDetail.growthIntro.replace("{name}", platform.name)}
       </p>
 
@@ -71,11 +71,11 @@ export function GrowthEngine({
                 aria-hidden
                 className="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gold/30 bg-gold/10"
               >
-                <Icon className="h-5 w-5 text-gold-bright" />
+                <Icon className="h-5 w-5 text-gold" />
               </span>
               <span>
-                <span className="block text-sm font-semibold text-paper">{tool.name[locale]}</span>
-                <span className="mt-1 block text-xs leading-relaxed text-muted">{tool.description[locale]}</span>
+                <span className="block text-sm font-semibold t-fg">{tool.name[locale]}</span>
+                <span className="mt-1 block text-xs leading-relaxed t-soft">{tool.description[locale]}</span>
               </span>
             </li>
           );
@@ -88,9 +88,9 @@ export function GrowthEngine({
           aria-hidden
           className="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gold/40 bg-gold/15"
         >
-          <Gauge className="h-5 w-5 text-gold-bright" />
+          <Gauge className="h-5 w-5 text-gold" />
         </span>
-        <p className="text-sm leading-relaxed text-paper/90">
+        <p className="text-sm leading-relaxed t-fg">
           <span className="font-mono-label mr-2 text-[0.62rem] text-gold">{dict.platformDetail.acuLabel}</span>
           {dict.platformDetail.acuNote}
         </p>
