@@ -1,247 +1,186 @@
 @import "tailwindcss";
 
 @theme {
-  /* Groupe Nseya palette */
-  --color-obsidian: #050709;
-  --color-midnight: #081421;
-  --color-gold: #c9a55c;
-  --color-gold-bright: #e5c475;
-  --color-electric: #1877f2;
-  --color-congo: #007fff;
-  --color-paper: #f7f8fa;
-  --color-muted: #a9b1bc;
-  --color-live: #31d17c;
-  --color-launching: #4da3ff;
-  --color-soon: #d4a84f;
+  /* Groupe Nseya — print-luxury editorial palette.
+     Light "paper" ground with warm ink, an ink-safe antique gold accent, and
+     a warm near-black used only for feature bands. */
+  --color-paper: #fbfaf6;        /* page ground + text on dark bands */
+  --color-panel: #f1ece3;        /* raised warm panel */
+  --color-ink: #1c1813;          /* primary text on paper */
+  --color-obsidian: #16130d;     /* dark feature-band ground + text on gold */
+  --color-midnight: #f1ece3;     /* legacy alias → warm panel */
+  --color-gold: #8a6b2f;         /* antique gold, legible on paper */
+  --color-gold-bright: #a9843a;
+  --color-muted: #6e6656;        /* warm secondary text on paper */
+  --color-electric: #2d6fb8;
+  --color-congo: #2f6fb0;
+  --color-live: #2f8f5b;
+  --color-launching: #3e7fd0;
+  --color-soon: #9a7b2f;
 
-  --font-display: var(--font-sora), "Sora", "Manrope", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: var(--font-inter), "Inter", "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
 }
 
+/* Context-flipping foreground tokens: default to ink on paper; dark bands
+   override them so shared components (headings, cards) read correctly on
+   either ground with one set of classes. */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
+  --fg: #1c1813;               /* primary text */
+  --fg-soft: #574f42;          /* secondary text (AA on paper + warm panels) */
+  --fg-faint: #635b4c;         /* tertiary / captions (AA on paper + warm panels) */
+  --rule: rgba(28, 24, 19, 0.14);
+  --rule-strong: rgba(28, 24, 19, 0.26);
+  --card-bg: #ffffff;
+  --card-border: rgba(28, 24, 19, 0.12);
+  --card-shadow: 0 1px 2px rgba(28, 24, 19, 0.04), 0 12px 34px -22px rgba(28, 24, 19, 0.28);
+  --card-shadow-hover: 0 2px 4px rgba(28, 24, 19, 0.06), 0 26px 60px -28px rgba(28, 24, 19, 0.42);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--color-obsidian);
-  color: var(--color-paper);
+  background-color: var(--color-paper);
+  color: var(--fg);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background-color: color-mix(in srgb, var(--color-gold) 60%, transparent);
-  color: #050709;
+  background-color: color-mix(in srgb, var(--color-gold) 30%, transparent);
+  color: var(--color-ink);
 }
 
-/* Visible keyboard focus (WCAG 2.2 AA) */
 :focus-visible {
-  outline: 2px solid var(--color-gold-bright);
+  outline: 2px solid var(--color-gold);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-/* ————— Utility layers ————— */
-
+/* ————— Type ————— */
 .font-display {
   font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.012em;
 }
-
 .font-mono-label {
   font-family: var(--font-mono);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-/* Gold gradient headline emphasis */
-.text-gold-gradient {
-  background: linear-gradient(100deg, #e5c475 0%, #c9a55c 45%, #f0d9a0 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+/* Foreground utilities that follow the surface (see :root / .surface-midnight) */
+.t-fg { color: var(--fg); }
+.t-soft { color: var(--fg-soft); }
+.t-faint { color: var(--fg-faint); }
 
-/* Cinematic surfaces */
-.surface-midnight {
-  background:
-    radial-gradient(1200px 500px at 80% -10%, rgba(24, 119, 242, 0.08), transparent 60%),
-    radial-gradient(900px 420px at 10% 110%, rgba(201, 165, 92, 0.07), transparent 60%),
-    var(--color-midnight);
-}
+/* Editorial emphasis: gold, not a rainbow gradient */
+.text-gold-gradient { color: var(--color-gold); }
 
+/* ————— Surfaces ————— */
+
+/* Paper hero: warm paper with a whisper of tone at the top edge and a fine
+   baseline rule — no gradient orbs, no glow, no synthetic skyline. */
 .hero-canvas {
   background:
-    radial-gradient(1100px 620px at 70% 8%, rgba(0, 127, 255, 0.18), transparent 62%),
-    radial-gradient(820px 520px at 18% 30%, rgba(201, 165, 92, 0.13), transparent 58%),
-    radial-gradient(1600px 420px at 50% 74%, rgba(229, 148, 76, 0.10), transparent 65%),
-    radial-gradient(1200px 380px at 46% 78%, rgba(201, 165, 92, 0.09), transparent 60%),
-    radial-gradient(1400px 700px at 50% 115%, rgba(8, 20, 33, 0.9), transparent 70%),
-    linear-gradient(180deg, #050709 0%, #0a1526 46%, #081421 66%, #030507 100%);
+    linear-gradient(180deg, #f7f3ea 0%, var(--color-paper) 42%);
 }
 
-/* Cinematic vignette — draws the eye to the centre of the frame */
-.vignette {
-  background: radial-gradient(ellipse 92% 78% at 50% 45%, transparent 58%, rgba(2, 4, 7, 0.55) 100%);
+/* Dark feature band — the only place the brand goes to ink. Flips the
+   foreground tokens so shared components render light-on-dark automatically. */
+.surface-midnight {
+  background-color: var(--color-obsidian);
+  color: var(--color-paper);
+  --fg: #f6f2e8;
+  --fg-soft: #b8b0a0;
+  --fg-faint: #8a8272;
+  --rule: rgba(246, 242, 232, 0.16);
+  --rule-strong: rgba(246, 242, 232, 0.3);
+  --card-bg: rgba(246, 242, 232, 0.045);
+  --card-border: rgba(246, 242, 232, 0.14);
+  --card-shadow: none;
+  --card-shadow-hover: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
 }
+.surface-midnight .text-gold-gradient { color: var(--color-gold-bright); }
+/* On dark bands the deep paper-gold is too low-contrast — lift gold text/labels
+   to the brighter gold so mono-labels and links stay legible (WCAG AA). */
+.surface-midnight .text-gold { color: var(--color-gold-bright); }
 
-/* Film grain (inline SVG turbulence) — the analogue texture of a graded frame */
-.film-grain {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-  opacity: 0.045;
-  mix-blend-mode: overlay;
+/* Hairline rules */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0.55;
 }
+.rule-line { height: 1px; background: var(--rule); }
 
-/* Data corridors: gold and electric arcs drawn slowly across the sky */
-.data-arc {
-  stroke-dasharray: 6 14;
-  animation: arc-flow 9s linear infinite;
+/* Cards — a printed card: paper, hairline, restrained shadow. Depth from
+   shadow, never glow. Works on paper and (via flipped tokens) on dark bands. */
+.card-glass {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
 }
-.data-arc-slow {
-  stroke-dasharray: 4 16;
-  animation: arc-flow 14s linear infinite reverse;
+.card-glass-hover {
+  transition: transform 320ms cubic-bezier(0.2, 0.6, 0.2, 1), border-color 320ms, box-shadow 320ms;
 }
-@keyframes arc-flow {
-  to { stroke-dashoffset: -200; }
+@media (hover: hover) {
+  .card-glass-hover:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--color-gold) 55%, transparent);
+    box-shadow: var(--card-shadow-hover);
+  }
+  .card-glass-hover:hover .external-icon { transform: rotate(45deg); }
 }
+.external-icon { transition: transform 250ms ease; }
 
-/* Premium gold button sheen */
+/* Gold button — the brighter gold as ground so the dark ink label clears AA,
+   with a quiet lift on hover. */
 .btn-sheen {
-  background-image: linear-gradient(110deg, #e5c475 0%, #c9a55c 45%, #d9b56b 70%, #f0d9a0 100%);
-  background-size: 200% 100%;
-  transition: background-position 500ms ease, box-shadow 300ms ease;
+  background-color: var(--color-gold-bright);
+  transition: background-color 240ms ease, box-shadow 260ms ease, transform 200ms ease;
 }
 @media (hover: hover) {
   .btn-sheen:hover {
-    background-position: 100% 0;
-    box-shadow: 0 8px 30px -10px rgba(201, 165, 92, 0.55);
+    background-color: #c19a4a;
+    box-shadow: 0 10px 26px -12px rgba(138, 107, 47, 0.6);
+    transform: translateY(-1px);
   }
 }
 
-/* City-lights points over the hero (pure CSS, no assets) */
-.city-lights {
-  background-image:
-    radial-gradient(1.5px 1.5px at 12% 68%, rgba(229, 196, 117, 0.85), transparent 100%),
-    radial-gradient(1px 1px at 22% 74%, rgba(247, 248, 250, 0.5), transparent 100%),
-    radial-gradient(1.5px 1.5px at 31% 66%, rgba(229, 196, 117, 0.6), transparent 100%),
-    radial-gradient(1px 1px at 42% 72%, rgba(77, 163, 255, 0.7), transparent 100%),
-    radial-gradient(2px 2px at 55% 65%, rgba(229, 196, 117, 0.75), transparent 100%),
-    radial-gradient(1px 1px at 64% 70%, rgba(247, 248, 250, 0.45), transparent 100%),
-    radial-gradient(1.5px 1.5px at 74% 67%, rgba(0, 127, 255, 0.65), transparent 100%),
-    radial-gradient(1px 1px at 84% 73%, rgba(229, 196, 117, 0.6), transparent 100%),
-    radial-gradient(1.5px 1.5px at 92% 69%, rgba(247, 248, 250, 0.4), transparent 100%);
-}
-
-/* Fine grid suggesting digital infrastructure */
-.network-grid {
-  background-image:
-    linear-gradient(rgba(169, 177, 188, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(169, 177, 188, 0.05) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 75%);
-}
-
-/* Gold hairline used in the opening sequence and section dividers */
-.gold-line {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201, 165, 92, 0.9), transparent);
-}
-
-/* Card treatment */
-.card-glass {
-  background: linear-gradient(165deg, rgba(247, 248, 250, 0.045), rgba(247, 248, 250, 0.015));
-  border: 1px solid rgba(247, 248, 250, 0.09);
-  backdrop-filter: blur(8px);
-}
-
-.card-glass-hover {
-  transition: transform 300ms cubic-bezier(0.2, 0.6, 0.2, 1), border-color 300ms, box-shadow 300ms;
-}
-
+/* Founder portrait: quiet duotone that resolves to full tone on hover */
 @media (hover: hover) {
-  .card-glass-hover:hover {
-    transform: translateY(-4px) scale(1.02);
-    border-color: rgba(201, 165, 92, 0.45);
-    box-shadow: 0 18px 50px -18px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(201, 165, 92, 0.12);
-  }
-  .card-glass-hover:hover .external-icon {
-    transform: rotate(45deg);
-  }
-  .card-glass-hover:hover .status-dot {
-    animation: pulse-once 700ms ease-out 1;
-  }
+  .portrait-reveal { filter: grayscale(0.55) contrast(1.02); transition: filter 700ms ease; }
+  .portrait-reveal:hover { filter: grayscale(0); }
 }
 
-.external-icon {
-  transition: transform 250ms ease;
-}
-
-@keyframes pulse-once {
-  0% { box-shadow: 0 0 0 0 currentColor; }
-  100% { box-shadow: 0 0 0 7px transparent; }
-}
-
-/* Founder portrait monochrome-to-colour hover (desktop only) */
-@media (hover: hover) {
-  .portrait-reveal {
-    filter: grayscale(1);
-    transition: filter 700ms ease;
-  }
-  .portrait-reveal:hover {
-    filter: grayscale(0);
-  }
-}
-
-/* Header glass state after scroll */
+/* Header — paper, hairline underline once scrolled */
 .header-glass {
-  background: rgba(5, 7, 9, 0.78);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(247, 248, 250, 0.07);
+  /* Solid paper so the masthead never composites to gray over dark bands —
+     keeps the gold wordmark and active link at AA contrast everywhere. */
+  background: var(--color-paper);
+  backdrop-filter: saturate(1.05);
+  border-bottom: 1px solid var(--rule);
 }
 
 /* Skip link */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  z-index: 100;
-}
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; }
 .skip-link:focus {
-  left: 1rem;
-  top: 1rem;
-  padding: 0.75rem 1.25rem;
-  background: var(--color-gold);
-  color: #050709;
-  border-radius: 0.375rem;
-  font-weight: 600;
+  left: 1rem; top: 1rem; padding: 0.75rem 1.25rem;
+  background: var(--color-gold); color: var(--color-obsidian);
+  border-radius: 0.375rem; font-weight: 600;
 }
 
-/* Reduced motion: honour user preference globally */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .card-glass-hover:hover {
-    transform: none;
-  }
-  .portrait-reveal {
-    filter: none;
-  }
-  .data-arc,
-  .data-arc-slow {
-    animation: none;
-    stroke-dasharray: none;
-  }
+  .card-glass-hover:hover { transform: none; }
+  .portrait-reveal { filter: none; }
 }

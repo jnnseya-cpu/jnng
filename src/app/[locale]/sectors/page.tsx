@@ -24,10 +24,10 @@ export default async function SectorsPage({ params }: { params: Promise<{ locale
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="font-mono-label text-xs text-gold">{dict.sectorsPage.title}</p>
-            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-paper sm:text-5xl">
+            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight t-fg sm:text-5xl">
               {dict.sectorsPage.heading}
             </h1>
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">{dict.sectorsPage.intro}</p>
+            <p className="mt-5 max-w-3xl text-base leading-relaxed t-soft sm:text-lg">{dict.sectorsPage.intro}</p>
           </Reveal>
         </div>
       </section>
@@ -43,8 +43,8 @@ export default async function SectorsPage({ params }: { params: Promise<{ locale
                 <li key={sector.id}>
                   <Reveal delay={Math.min((i % 4) * 0.07, 0.3)} className="h-full">
                     <article className="card-glass card-glass-hover flex h-full flex-col rounded-2xl p-8">
-                      <h2 className="font-display text-2xl font-semibold text-paper">{sector.name[locale]}</h2>
-                      <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">{sector.description[locale]}</p>
+                      <h2 className="font-display text-2xl font-semibold t-fg">{sector.name[locale]}</h2>
+                      <p className="mt-3 text-sm leading-relaxed t-soft sm:text-base">{sector.description[locale]}</p>
                       {inSector.length > 0 ? (
                         <div className="mt-auto pt-6">
                           <p className="font-mono-label text-[0.62rem] text-gold">{dict.sectorsPage.platformsIn}</p>
@@ -53,7 +53,7 @@ export default async function SectorsPage({ params }: { params: Promise<{ locale
                               <li key={p.id}>
                                 <Link
                                   href={localePath(locale, p.internalPath)}
-                                  className="inline-flex min-h-8 items-center rounded-full border border-paper/15 px-3 py-1 text-xs text-paper/85 transition-colors hover:border-gold/60 hover:text-gold-bright"
+                                  className="inline-flex min-h-8 items-center rounded-full border border-[color:var(--rule)] px-3 py-1 text-xs t-fg transition-colors hover:border-gold/60 hover:text-gold-bright"
                                 >
                                   {p.name}
                                 </Link>

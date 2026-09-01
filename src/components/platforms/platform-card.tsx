@@ -34,21 +34,21 @@ export function PlatformCard({
         <StatusBadge status={platform.status} dict={dict} />
       </div>
 
-      <p className="font-mono-label mt-5 text-[0.62rem] text-muted">{platform.category[locale]}</p>
-      <h3 className="font-display mt-1.5 text-xl font-semibold text-paper">
+      <p className="font-mono-label t-faint mt-5 text-[0.62rem]">{platform.category[locale]}</p>
+      <h3 className="font-display t-fg mt-1.5 text-xl font-semibold">
         {/* Stretched link — whole card leads to the internal profile. */}
         <Link href={detailHref} className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none">
           {platform.name}
         </Link>
       </h3>
-      <p className="mt-1 text-sm font-medium" style={{ color: platform.brandColour }}>
+      <p className="t-fg mt-1 text-sm font-medium italic">
         {platform.tagline[locale]}
       </p>
-      <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted">{platform.shortDescription[locale]}</p>
+      <p className="t-soft mt-3 line-clamp-3 text-sm leading-relaxed">{platform.shortDescription[locale]}</p>
 
       <div className="mt-auto pt-5">
         {sector ? (
-          <p className="text-xs text-paper/50">
+          <p className="t-faint text-xs">
             {sector.name[locale]} · {platform.regions.map((r) => dict.platformsPage.regions[r]).join(" · ")}
           </p>
         ) : null}
@@ -65,9 +65,9 @@ export function PlatformCard({
               <span className="sr-only"> ({dict.common.externalLinkNote})</span>
             </a>
           ) : (
-            <span className="text-xs italic text-muted/80">{dict.common.internalProfile}</span>
+            <span className="text-xs italic t-faint">{dict.common.internalProfile}</span>
           )}
-          <Link href={detailHref} className="inline-flex min-h-11 items-center text-sm text-paper/70 hover:text-paper">
+          <Link href={detailHref} className="t-soft inline-flex min-h-11 items-center text-sm hover:text-gold">
             {dict.common.viewDetails} <span aria-hidden className="ml-1">→</span>
           </Link>
         </div>

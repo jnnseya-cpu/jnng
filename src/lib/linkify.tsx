@@ -59,7 +59,7 @@ export function linkifyParagraph(
       <Link
         key={`${m.alias.slug}-${m.start}`}
         href={localePath(locale, m.alias.path)}
-        className="font-medium text-gold-bright underline decoration-gold/40 underline-offset-4 hover:decoration-gold"
+        className="font-medium text-gold underline decoration-gold/40 underline-offset-4 hover:decoration-gold"
       >
         {text.slice(m.start, m.end)}
       </Link>,

@@ -23,10 +23,10 @@ export default async function ImpactPage({ params }: { params: Promise<{ locale:
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="font-mono-label text-xs text-gold">{dict.impact.title}</p>
-            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-paper sm:text-5xl">
+            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight t-fg sm:text-5xl">
               {dict.impact.heading}
             </h1>
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">{dict.impact.intro}</p>
+            <p className="mt-5 max-w-3xl text-base leading-relaxed t-soft sm:text-lg">{dict.impact.intro}</p>
           </Reveal>
         </div>
       </section>
@@ -38,9 +38,9 @@ export default async function ImpactPage({ params }: { params: Promise<{ locale:
             <ul className="mb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {verifiedMetrics.map((m) => (
                 <li key={m.label.en} className="card-glass rounded-2xl p-8">
-                  <p className="font-display text-4xl font-semibold text-gold-bright">{m.value}</p>
-                  <p className="mt-2 text-sm text-paper">{m.label[locale]}</p>
-                  {m.description ? <p className="mt-2 text-xs text-muted">{m.description[locale]}</p> : null}
+                  <p className="font-display text-4xl font-semibold text-gold">{m.value}</p>
+                  <p className="mt-2 text-sm t-fg">{m.label[locale]}</p>
+                  {m.description ? <p className="mt-2 text-xs t-soft">{m.description[locale]}</p> : null}
                 </li>
               ))}
             </ul>
@@ -51,7 +51,7 @@ export default async function ImpactPage({ params }: { params: Promise<{ locale:
               <li key={statement}>
                 <Reveal delay={Math.min(i * 0.08, 0.4)} className="h-full">
                   <div className="card-glass h-full rounded-2xl border-l-2 border-l-gold p-7">
-                    <p className="font-display text-lg font-medium leading-relaxed text-paper">{statement}</p>
+                    <p className="font-display text-lg font-medium leading-relaxed t-fg">{statement}</p>
                   </div>
                 </Reveal>
               </li>
@@ -59,7 +59,7 @@ export default async function ImpactPage({ params }: { params: Promise<{ locale:
           </ul>
 
           <Reveal delay={0.15}>
-            <p className="mt-10 text-sm italic text-muted">{dict.impact.futureNote}</p>
+            <p className="mt-10 text-sm italic t-soft">{dict.impact.futureNote}</p>
             <div className="mt-10">
               <GoldButtonLink href={localePath(locale, "/contact")}>{dict.common.startConversation}</GoldButtonLink>
             </div>

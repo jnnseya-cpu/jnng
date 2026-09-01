@@ -39,7 +39,7 @@ export function ViewCounter({ path, label }: { path: string; label: string }) {
 
   if (!count) return null;
   return (
-    <span className="font-mono-label text-[0.62rem] text-muted" aria-label={`${count} ${label}`}>
+    <span className="font-mono-label text-[0.62rem] t-soft" aria-label={`${count} ${label}`}>
       {count} {label}
     </span>
   );

@@ -16,7 +16,7 @@ export function GhostButtonLink({ href, children }: { href: string; children: Re
   return (
     <Link
       href={href}
-      className={`${base} border border-paper/25 bg-paper/[0.03] text-paper hover:border-gold/60 hover:text-gold-bright`}
+      className={`${base} t-fg border border-[var(--rule-strong)] bg-transparent hover:border-gold hover:text-gold`}
     >
       {children}
     </Link>

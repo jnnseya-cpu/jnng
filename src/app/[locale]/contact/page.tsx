@@ -23,10 +23,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="font-mono-label text-xs text-gold">{dict.contact.title}</p>
-            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-paper sm:text-5xl">
+            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight t-fg sm:text-5xl">
               {dict.contact.heading}
             </h1>
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">{dict.contact.intro}</p>
+            <p className="mt-5 max-w-3xl text-base leading-relaxed t-soft sm:text-lg">{dict.contact.intro}</p>
           </Reveal>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <div className="space-y-8">
                 <div className="card-glass rounded-2xl p-7">
                   <h2 className="font-mono-label text-xs text-gold">{dict.contact.office}</h2>
-                  <address className="mt-4 text-sm not-italic leading-relaxed text-paper/90">
+                  <address className="mt-4 text-sm not-italic leading-relaxed t-fg">
                     {site.name}
                     <br />
                     {site.address.street}
@@ -51,30 +51,30 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <div className="card-glass rounded-2xl p-7">
                   <h2 className="font-mono-label text-xs text-gold">{dict.contact.emailLabel}</h2>
                   <p className="mt-4">
-                    <a href={`mailto:${site.email}`} className="text-sm text-gold-bright underline-offset-4 hover:underline">
+                    <a href={`mailto:${site.email}`} className="text-sm text-gold underline-offset-4 hover:underline">
                       {site.email}
                     </a>
                   </p>
                   <dl className="mt-6 space-y-3 text-sm">
                     <div>
-                      <dt className="text-muted">{dict.contact.ukPhone}</dt>
+                      <dt className="t-soft">{dict.contact.ukPhone}</dt>
                       <dd>
-                        <a href="tel:+447493216101" className="text-paper hover:text-gold-bright">
+                        <a href="tel:+447493216101" className="t-fg hover:text-gold-bright">
                           {site.phoneUK}
                         </a>
                       </dd>
                     </div>
                     <div>
-                      <dt className="text-muted">{dict.contact.drcPhone}</dt>
+                      <dt className="t-soft">{dict.contact.drcPhone}</dt>
                       <dd>
-                        <a href="tel:+243818112309" className="text-paper hover:text-gold-bright">
+                        <a href="tel:+243818112309" className="t-fg hover:text-gold-bright">
                           {site.phoneDRC}
                         </a>
                       </dd>
                     </div>
                   </dl>
                 </div>
-                <p className="text-sm italic leading-relaxed text-muted">{dict.contact.partnershipPrompt}</p>
+                <p className="text-sm italic leading-relaxed t-soft">{dict.contact.partnershipPrompt}</p>
               </div>
             </Reveal>
             <Reveal delay={0.1}>

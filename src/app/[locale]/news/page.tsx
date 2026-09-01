@@ -26,10 +26,10 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="font-mono-label text-xs text-gold">{dict.news.title}</p>
-            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-paper sm:text-5xl">
+            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight t-fg sm:text-5xl">
               {dict.news.heading}
             </h1>
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">{dict.news.intro}</p>
+            <p className="mt-5 max-w-3xl text-base leading-relaxed t-soft sm:text-lg">{dict.news.intro}</p>
           </Reveal>
         </div>
       </section>
@@ -54,16 +54,16 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
                         <span className="rounded-full border border-gold/30 px-2.5 py-0.5 font-mono-label text-[0.6rem] text-gold">
                           {article.category[locale]}
                         </span>
-                        <time dateTime={article.date} className="font-mono-label text-[0.62rem] text-muted">
+                        <time dateTime={article.date} className="font-mono-label text-[0.62rem] t-soft">
                           {new Intl.DateTimeFormat(locale === "fr" ? "fr-FR" : "en-GB", { dateStyle: "long" }).format(
                             new Date(article.date),
                           )}
                         </time>
                       </span>
-                      <span className="font-display mt-4 block text-xl font-semibold leading-snug text-paper">
+                      <span className="font-display mt-4 block text-xl font-semibold leading-snug t-fg">
                         {article.title[locale]}
                       </span>
-                      <span className="mt-3 block text-sm leading-relaxed text-muted">{article.excerpt[locale]}</span>
+                      <span className="mt-3 block text-sm leading-relaxed t-soft">{article.excerpt[locale]}</span>
                       <span className="mt-auto pt-5 text-sm font-semibold text-gold">
                         {dict.news.readArticle} <span aria-hidden>→</span>
                       </span>
@@ -88,7 +88,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
                   <Reveal delay={Math.min(i * 0.08, 0.3)}>
                     <article className="card-glass rounded-2xl p-7">
                       <div className="flex flex-wrap items-center gap-3">
-                        <time dateTime={item.date} className="font-mono-label text-[0.62rem] text-muted">
+                        <time dateTime={item.date} className="font-mono-label text-[0.62rem] t-soft">
                           {new Intl.DateTimeFormat(locale === "fr" ? "fr-FR" : "en-GB", {
                             dateStyle: "long",
                           }).format(new Date(item.date))}
@@ -97,10 +97,10 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
                           {item.category[locale]}
                         </span>
                       </div>
-                      <h2 className="font-display mt-3 text-xl font-semibold leading-snug text-paper">
+                      <h2 className="font-display mt-3 text-xl font-semibold leading-snug t-fg">
                         {item.title[locale]}
                       </h2>
-                      <p className="mt-3 text-sm leading-relaxed text-muted">{item.excerpt[locale]}</p>
+                      <p className="mt-3 text-sm leading-relaxed t-soft">{item.excerpt[locale]}</p>
                       {platform ? (
                         <p className="mt-4">
                           <Link
@@ -117,7 +117,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
               );
             })}
           </ol>
-          <p className="mt-10 text-xs italic text-muted/70">{dict.news.editorialNote}</p>
+          <p className="mt-10 text-xs italic t-faint">{dict.news.editorialNote}</p>
         </div>
       </section>
     </>

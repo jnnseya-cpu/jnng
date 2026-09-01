@@ -132,8 +132,8 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
   }
 
   const inputCls =
-    "min-h-11 w-full rounded-md border border-paper/15 bg-midnight px-3 py-2.5 text-sm text-paper placeholder:text-muted/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold";
-  const labelCls = "mb-1.5 block text-sm font-medium text-paper/90";
+    "min-h-11 w-full rounded-md border border-[color:var(--rule-strong)] bg-panel px-3 py-2.5 text-sm text-ink placeholder:text-[color:var(--fg-faint)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold";
+  const labelCls = "mb-1.5 block text-sm font-medium t-fg";
   const errCls = "mt-1 text-xs text-[#ff9d9d]";
   const errorEntries = Object.entries(errors);
 
@@ -141,7 +141,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
     return (
       <div role="status" className="card-glass rounded-2xl border-live/30 p-8 text-center">
         <p className="font-display text-xl font-semibold text-live">✓</p>
-        <p className="mt-3 text-base leading-relaxed text-paper">{f.success}</p>
+        <p className="mt-3 text-base leading-relaxed t-fg">{f.success}</p>
       </div>
     );
   }
@@ -149,9 +149,9 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
   if (state === "mailto") {
     return (
       <div role="status" className="card-glass rounded-2xl border-gold/30 p-8 text-center">
-        <p className="font-display text-xl font-semibold text-gold-bright">✉</p>
-        <p className="mt-3 text-base leading-relaxed text-paper">{f.mailtoOpened}</p>
-        <p className="mt-3 text-sm text-muted">
+        <p className="font-display text-xl font-semibold text-gold">✉</p>
+        <p className="mt-3 text-base leading-relaxed t-fg">{f.mailtoOpened}</p>
+        <p className="mt-3 text-sm t-soft">
           {f.mailtoManual}{" "}
           <a href={`mailto:${site.email}`} className="text-gold underline underline-offset-2">
             {site.email}
@@ -171,7 +171,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
           className="mb-6 rounded-md border border-[#ff9d9d]/40 bg-[#ff9d9d]/5 p-4"
         >
           <p className="text-sm font-semibold text-[#ff9d9d]">{f.errorHeading}</p>
-          <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-paper/80">
+          <ul className="mt-2 list-inside list-disc space-y-1 text-sm t-fg">
             {errorEntries.map(([key, msg]) => (
               <li key={key}>{msg}</li>
             ))}
@@ -180,7 +180,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
       ) : null}
 
       {state === "error" || state === "offline" ? (
-        <div role="alert" className="mb-6 rounded-md border border-soon/40 bg-soon/5 p-4 text-sm text-paper/90">
+        <div role="alert" className="mb-6 rounded-md border border-soon/40 bg-soon/5 p-4 text-sm t-fg">
           {state === "offline" ? (
             f.offline
           ) : (
@@ -212,13 +212,13 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
         </div>
         <div>
           <label htmlFor="organisation" className={labelCls}>
-            {f.organisation} <span className="text-muted">({f.optional})</span>
+            {f.organisation} <span className="t-soft">({f.optional})</span>
           </label>
           <input id="organisation" name="organisation" autoComplete="organization" className={inputCls} />
         </div>
         <div>
           <label htmlFor="position" className={labelCls}>
-            {f.position} <span className="text-muted">({f.optional})</span>
+            {f.position} <span className="t-soft">({f.optional})</span>
           </label>
           <input id="position" name="position" autoComplete="organization-title" className={inputCls} />
         </div>
@@ -231,7 +231,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
         </div>
         <div>
           <label htmlFor="telephone" className={labelCls}>
-            {f.telephone} <span className="text-muted">({f.optional})</span>
+            {f.telephone} <span className="t-soft">({f.optional})</span>
           </label>
           <input id="telephone" name="telephone" type="tel" autoComplete="tel" className={inputCls} />
         </div>
@@ -260,7 +260,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
         </div>
         <div>
           <label htmlFor="platform" className={labelCls}>
-            {f.platformOfInterest} <span className="text-muted">({f.optional})</span>
+            {f.platformOfInterest} <span className="t-soft">({f.optional})</span>
           </label>
           <select id="platform" name="platform" defaultValue="" className={inputCls}>
             <option value="">{f.none}</option>
@@ -291,7 +291,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
       </div>
 
       <div className="mt-5">
-        <label className="flex items-start gap-3 text-sm text-paper/85">
+        <label className="flex items-start gap-3 text-sm t-fg">
           <input type="checkbox" name="consent" className="mt-1 h-4 w-4 accent-[#c9a55c]" aria-invalid={!!errors.consent} />
           <span>{f.consent}</span>
         </label>
@@ -301,7 +301,7 @@ export function ContactForm({ locale, dict }: { locale: Locale; dict: Dictionary
       <button
         type="submit"
         disabled={state === "submitting"}
-        className="mt-7 inline-flex min-h-11 w-full items-center justify-center rounded-md bg-gold px-6 py-3 text-sm font-semibold text-obsidian transition-colors hover:bg-gold-bright disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="mt-7 inline-flex min-h-11 w-full items-center justify-center rounded-md bg-gold-bright px-6 py-3 text-sm font-semibold text-obsidian transition-colors hover:bg-gold-bright disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {state === "submitting" ? f.submitting : state === "error" || state === "offline" ? f.retry : f.submit}
       </button>

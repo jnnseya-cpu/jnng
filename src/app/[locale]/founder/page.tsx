@@ -42,7 +42,7 @@ export default async function FounderPage({ params }: { params: Promise<{ locale
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="font-mono-label text-xs text-gold">{dict.founder.title}</p>
-            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-paper sm:text-5xl lg:text-6xl">
+            <h1 className="font-display mt-4 max-w-4xl text-4xl font-semibold tracking-tight t-fg sm:text-5xl lg:text-6xl">
               {dict.founder.pageTitle}
             </h1>
           </Reveal>
@@ -56,7 +56,7 @@ export default async function FounderPage({ params }: { params: Promise<{ locale
               <div>
                 {/* Editorial portrait — dark architectural frame with gold rim,
                     monochrome-to-colour hover on desktop. */}
-                <div className="portrait-reveal relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-gold/25 bg-midnight">
+                <div className="portrait-reveal relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-gold/25 bg-panel">
                   {hasPortrait ? (
                     <Image
                       src={PORTRAIT_SRC}
@@ -71,20 +71,20 @@ export default async function FounderPage({ params }: { params: Promise<{ locale
                   )}
                   <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-obsidian to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-6">
-                    <p className="font-display text-2xl font-semibold text-paper">{dict.founder.name}</p>
-                    <p className="mt-1 text-sm text-gold-bright">{dict.founder.role}</p>
-                    <p className="font-mono-label mt-3 text-[0.6rem] leading-relaxed text-muted">
+                    <p className="font-display text-2xl font-semibold t-fg">{dict.founder.name}</p>
+                    <p className="mt-1 text-sm text-gold">{dict.founder.role}</p>
+                    <p className="font-mono-label mt-3 text-[0.6rem] leading-relaxed t-soft">
                       {dict.founder.supportingTitle}
                     </p>
                   </div>
                 </div>
-                {!hasPortrait ? <p className="mt-3 text-xs italic text-muted/70">{dict.founder.portraitNote}</p> : null}
+                {!hasPortrait ? <p className="mt-3 text-xs italic t-faint">{dict.founder.portraitNote}</p> : null}
               </div>
             </Reveal>
 
             <div>
               <Reveal>
-                <div className="space-y-5 text-base leading-relaxed text-paper/85">
+                <div className="space-y-5 text-base leading-relaxed t-fg">
                   {dict.founder.bio.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
@@ -93,10 +93,10 @@ export default async function FounderPage({ params }: { params: Promise<{ locale
 
               <Reveal delay={0.1}>
                 <blockquote className="card-glass mt-10 rounded-2xl border-l-2 border-l-gold p-8">
-                  <p className="font-display text-xl font-medium italic leading-relaxed text-gold-bright">
+                  <p className="font-display text-xl font-medium italic leading-relaxed text-gold">
                     “{dict.founder.quote}”
                   </p>
-                  <footer className="mt-4 text-sm text-muted">— {dict.founder.name}</footer>
+                  <footer className="mt-4 text-sm t-soft">— {dict.founder.name}</footer>
                 </blockquote>
               </Reveal>
 
@@ -104,7 +104,7 @@ export default async function FounderPage({ params }: { params: Promise<{ locale
                 <h2 className="font-mono-label mt-12 text-xs text-gold">{dict.founder.credentialsLabel}</h2>
                 <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                   {dict.founder.credentials.map((c) => (
-                    <li key={c} className="card-glass rounded-xl px-4 py-3.5 text-sm text-paper/90">
+                    <li key={c} className="card-glass rounded-xl px-4 py-3.5 text-sm t-fg">
                       {c}
                     </li>
                   ))}
