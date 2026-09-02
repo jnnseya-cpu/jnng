@@ -28,6 +28,8 @@ export const en = {
   },
   common: {
     explorePlatforms: "Explore Our Platforms",
+    useAPlatform: "Use a live platform",
+    investorBrief: "Investor & partner brief",
     partnerCta: "Become a Strategic Partner",
     discoverVision: "Discover Our Vision",
     visitPlatform: "Visit Platform",
@@ -48,11 +50,11 @@ export const en = {
     logoAwaitingApproval: "Temporary monogram — official logo awaiting approval",
   },
   hero: {
-    eyebrow: "GROUPE NSEYA · AFRICA · UNITED KINGDOM · DUBAI · GLOBAL",
-    headline: "Building the platforms that power tomorrow.",
-    sub: "Groupe Nseya creates intelligent businesses, digital platforms and strategic infrastructure designed to solve real problems, unlock new markets and accelerate economic transformation.",
-    indicators: ["Multi-Sector Portfolio", "UK, DRC & Dubai Operations", "AI-Powered Ventures", "Built for Scale"],
-    scrollHint: "Scroll to explore",
+    eyebrow: "GROUPE NSEYA · DR CONGO · UNITED KINGDOM · DUBAI",
+    headline: "A factory for the next billion users.",
+    sub: "One payment rail, one intelligence meter, one shared agent architecture — so a new venture goes from idea to production in weeks, not quarters. {count} are live in the market today.",
+    indicators: ["Live in DR Congo, UK & Dubai", "One rail · one meter · one agent core", "Concept to production in weeks", "Founder-led operating group"],
+    scrollHint: "See what's live",
   },
   manifesto: {
     heading: "Ideas create possibility. Execution creates value.",
@@ -60,11 +62,26 @@ export const en = {
     support: "We are not a fund with a portfolio. We are a factory with an output.",
     words: ["Identify", "Validate", "Design", "Build", "Launch", "Scale"],
   },
+  liveProof: {
+    label: "LIVE NOW",
+    heading: "Don't take our word for it.",
+    intro: "{count} platforms are in the market today. Open any one — these are live products, not roadmap slides.",
+    footnote: "Each opens the venture's own live site.",
+  },
   live: {
     label: "LIVE ECOSYSTEM",
-    heading: "Built. Launched. Creating value.",
-    intro: "Our operating and launching platforms are transforming how people learn, travel, build businesses, manage projects, access services and participate in the digital economy.",
+    heading: "What's live in the market now.",
+    intro: "Real products people use today — payment verification, travel, food delivery, marketing, ticketing and more — each running on the same shared spine.",
     viewPortfolio: "View Complete Portfolio",
+  },
+  twoDoors: {
+    label: "TWO WAYS IN",
+    customerTitle: "I want to use a platform",
+    customerBody: "Send money, verify a payment, book travel, hire a builder, learn — go straight to a product that is live today.",
+    customerCta: "Browse live platforms",
+    investorTitle: "I'm an investor or partner",
+    investorBody: "See the thesis, what is already live, and how the shared spine makes each new venture cheaper to build than the last.",
+    investorCta: "Read the group brief",
   },
   ecosystem: {
     heading: "One connected ecosystem.",
@@ -72,9 +89,9 @@ export const en = {
     tagline: "One rail. One meter. One factory. One market thesis. One distribution engine.",
   },
   comingSoon: {
-    label: "THE NEXT GENERATION",
-    heading: "What we are building next.",
-    intro: "Our pipeline is focused on high-impact sectors where technology, execution and local market understanding can unlock significant economic value.",
+    label: "THE PIPELINE",
+    heading: "The factory's next output.",
+    intro: "Each venture rides the same spine — payments, metering, agents — so the pipeline compounds instead of starting from zero every time.",
   },
   process: {
     heading: "From opportunity to operating company.",
