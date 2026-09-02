@@ -30,6 +30,8 @@ export const fr: Dictionary = {
   },
   common: {
     explorePlatforms: "Explorer nos plateformes",
+    useAPlatform: "Utiliser une plateforme en ligne",
+    investorBrief: "Note investisseurs & partenaires",
     partnerCta: "Devenir partenaire stratégique",
     discoverVision: "Découvrir notre vision",
     visitPlatform: "Visiter la plateforme",
@@ -50,11 +52,11 @@ export const fr: Dictionary = {
     logoAwaitingApproval: "Monogramme temporaire — logo officiel en attente d'approbation",
   },
   hero: {
-    eyebrow: "GROUPE NSEYA · AFRIQUE · ROYAUME-UNI · DUBAÏ · INTERNATIONAL",
-    headline: "Construire les plateformes qui font avancer demain.",
-    sub: "Le Groupe Nseya crée des entreprises intelligentes, des plateformes numériques et des infrastructures stratégiques conçues pour résoudre des problèmes réels, ouvrir de nouveaux marchés et accélérer la transformation économique.",
-    indicators: ["Portefeuille multisectoriel", "Opérations UK, RDC & Dubaï", "Ventures propulsées par l'IA", "Conçu pour l'échelle"],
-    scrollHint: "Faites défiler pour explorer",
+    eyebrow: "GROUPE NSEYA · RD CONGO · ROYAUME-UNI · DUBAÏ",
+    headline: "Une usine pour le prochain milliard d'utilisateurs.",
+    sub: "Un rail de paiement, un compteur d'intelligence, une architecture d'agents commune — une nouvelle venture passe de l'idée à la production en semaines, pas en trimestres. {count} sont déjà en service aujourd'hui.",
+    indicators: ["En service en RDC, UK & Dubaï", "Un rail · un compteur · un cœur d'agents", "Du concept à la production en semaines", "Groupe dirigé par son fondateur"],
+    scrollHint: "Voir ce qui est en ligne",
   },
   manifesto: {
     heading: "Les idées créent le possible. L'exécution crée la valeur.",
@@ -62,11 +64,26 @@ export const fr: Dictionary = {
     support: "Nous ne sommes pas un fonds avec un portefeuille. Nous sommes une usine avec une production.",
     words: ["Identifier", "Valider", "Concevoir", "Construire", "Lancer", "Déployer"],
   },
+  liveProof: {
+    label: "EN LIGNE MAINTENANT",
+    heading: "Ne nous croyez pas sur parole.",
+    intro: "{count} plateformes sont sur le marché aujourd'hui. Ouvrez-en une — ce sont des produits en service, pas des diapositives de feuille de route.",
+    footnote: "Chaque lien ouvre le site en service de la venture.",
+  },
   live: {
     label: "ÉCOSYSTÈME ACTIF",
-    heading: "Construit. Lancé. Créateur de valeur.",
-    intro: "Nos plateformes opérationnelles et en lancement transforment la façon dont les gens apprennent, voyagent, créent des entreprises, gèrent des projets, accèdent aux services et participent à l'économie numérique.",
+    heading: "Ce qui est en service, maintenant.",
+    intro: "De vrais produits utilisés aujourd'hui — vérification de paiement, voyage, livraison de repas, marketing, billetterie et plus — reposant tous sur la même colonne vertébrale commune.",
     viewPortfolio: "Voir le portefeuille complet",
+  },
+  twoDoors: {
+    label: "DEUX PORTES D'ENTRÉE",
+    customerTitle: "Je veux utiliser une plateforme",
+    customerBody: "Envoyer de l'argent, vérifier un paiement, réserver un voyage, engager un artisan, apprendre — allez droit à un produit en service aujourd'hui.",
+    customerCta: "Parcourir les plateformes en ligne",
+    investorTitle: "Je suis investisseur ou partenaire",
+    investorBody: "Découvrez la thèse, ce qui est déjà en service, et comment la colonne vertébrale commune rend chaque nouvelle venture moins coûteuse à construire que la précédente.",
+    investorCta: "Lire la note du groupe",
   },
   ecosystem: {
     heading: "Un écosystème connecté.",
@@ -74,9 +91,9 @@ export const fr: Dictionary = {
     tagline: "Un rail. Un compteur. Une usine. Une thèse de marché. Un moteur de distribution.",
   },
   comingSoon: {
-    label: "LA PROCHAINE GÉNÉRATION",
-    heading: "Ce que nous construisons ensuite.",
-    intro: "Notre pipeline se concentre sur des secteurs à fort impact où la technologie, l'exécution et la connaissance des marchés locaux peuvent débloquer une valeur économique significative.",
+    label: "LE PIPELINE",
+    heading: "La prochaine production de l'usine.",
+    intro: "Chaque venture repose sur la même colonne vertébrale — paiements, mesure, agents — le pipeline se cumule au lieu de repartir de zéro à chaque fois.",
   },
   process: {
     heading: "De l'opportunité à l'entreprise opérationnelle.",

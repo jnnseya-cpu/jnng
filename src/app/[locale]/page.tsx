@@ -4,6 +4,7 @@ import type { Locale } from "@/types/content";
 import { comingSoonPlatforms, featuredPlatforms, operatingPlatforms } from "@/content/platforms";
 import { sectors } from "@/content/sectors";
 import { Hero } from "@/components/hero/hero";
+import { LiveProof } from "@/components/platforms/live-proof";
 import { Reveal, KineticWords } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { PlatformCard } from "@/components/platforms/platform-card";
@@ -26,6 +27,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <Hero locale={locale} dict={dict} />
+
+      {/* Live proof — evidence before claims */}
+      <LiveProof locale={locale} dict={dict} />
 
       {/* Brand manifesto */}
       <section className="surface-midnight py-24 sm:py-32">
@@ -128,6 +132,35 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <Reveal delay={0.2}>
             <p className="mt-10 max-w-3xl text-base font-medium t-fg">{dict.process.closing}</p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Two doors — route the customer and the investor to different places */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <p className="font-mono-label text-xs text-gold">{dict.twoDoors.label}</p>
+          </Reveal>
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <Reveal className="h-full">
+              <div className="card-glass flex h-full flex-col rounded-2xl p-8">
+                <h3 className="font-display t-fg text-2xl font-semibold">{dict.twoDoors.customerTitle}</h3>
+                <p className="t-soft mt-3 flex-1 text-base leading-relaxed">{dict.twoDoors.customerBody}</p>
+                <div className="mt-6">
+                  <GoldButtonLink href={localePath(locale, "/platforms?status=live")}>{dict.twoDoors.customerCta}</GoldButtonLink>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={0.08} className="h-full">
+              <div className="card-glass flex h-full flex-col rounded-2xl p-8">
+                <h3 className="font-display t-fg text-2xl font-semibold">{dict.twoDoors.investorTitle}</h3>
+                <p className="t-soft mt-3 flex-1 text-base leading-relaxed">{dict.twoDoors.investorBody}</p>
+                <div className="mt-6">
+                  <GhostButtonLink href={localePath(locale, "/about")}>{dict.twoDoors.investorCta}</GhostButtonLink>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

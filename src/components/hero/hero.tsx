@@ -1,10 +1,11 @@
 "use client";
 
 import { motion, MotionConfig } from "motion/react";
-import { GhostButtonLink, GoldButtonLink, TextLink } from "@/components/ui/buttons";
+import { GhostButtonLink, GoldButtonLink } from "@/components/ui/buttons";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/types/content";
 import { localePath } from "@/lib/i18n";
+import { livePlatforms } from "@/content/platforms";
 
 /**
  * Editorial hero: paper ground, a serif masthead set like a prospectus cover.
@@ -44,13 +45,14 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </motion.h1>
 
           <motion.p {...fadeUp(0.42)} className="mt-8 max-w-2xl text-lg leading-relaxed t-soft">
-            {dict.hero.sub}
+            {dict.hero.sub.replace("{count}", String(livePlatforms.length))}
           </motion.p>
 
+          {/* Two doors: a customer goes straight to a live product; an investor
+              or partner goes to the group brief. */}
           <motion.div {...fadeUp(0.58)} className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <GoldButtonLink href={localePath(locale, "/platforms")}>{dict.common.explorePlatforms}</GoldButtonLink>
-            <GhostButtonLink href={localePath(locale, "/contact")}>{dict.common.partnerCta}</GhostButtonLink>
-            <TextLink href={localePath(locale, "/about")}>{dict.common.discoverVision}</TextLink>
+            <GoldButtonLink href={localePath(locale, "/platforms?status=live")}>{dict.common.useAPlatform}</GoldButtonLink>
+            <GhostButtonLink href={localePath(locale, "/about")}>{dict.common.investorBrief}</GhostButtonLink>
           </motion.div>
 
           <motion.ul
