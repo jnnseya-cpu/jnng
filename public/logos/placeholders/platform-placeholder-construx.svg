@@ -7,7 +7,7 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="12" fill="url(#bg)"/>
-  <rect x="0.5" y="0.5" width="63" height="63" rx="11.5" fill="none" stroke="#4E7CA1" stroke-opacity="0.55"/>
-  <path d="M8 52 L56 52" stroke="#4E7CA1" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="32" y="36" text-anchor="middle" dominant-baseline="middle" font-family="Sora, Manrope, system-ui, sans-serif" font-weight="600" font-size="22" letter-spacing="1" fill="#4E7CA1">CX</text>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="11.5" fill="none" stroke="#FF6600" stroke-opacity="0.55"/>
+  <path d="M8 52 L56 52" stroke="#FF6600" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="32" y="36" text-anchor="middle" dominant-baseline="middle" font-family="Sora, Manrope, system-ui, sans-serif" font-weight="600" font-size="22" letter-spacing="1" fill="#FF6600">CX</text>
 </svg>
