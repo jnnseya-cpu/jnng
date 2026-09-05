@@ -15,7 +15,7 @@ const axeSource = readFileSync(new URL("../node_modules/axe-core/axe.min.js", im
 
 const platformSlugs = [
   "groupe-jnn","3jn-travel","studyear","nseya-x-execute","tunakula-cd","veryx","marketwar","buzz-pro",
-  "openn-job-global","joshrix","jess-move","niche-finder","virvoo","axionos","jnseya-construction","etablix","jnn-estate",
+  "openn-job-global","joshrix","jess-move","niche-finder","virvoo","axionos","jnseya-construction","etablix","construx","jnn-estate",
   "rakapay","parksmart","bitripay","ticketroyality","vibr","health360-rdc","gov360","congo-voice-ai",
   "snel-link","c-recycle","energy-industrial-drc","3jn-vendor-partners","focus-start",
   "koda","scan-go-rdc","echostream","tradenerve","nzela-os","talento","legai","alphaafrican-wealth","movie-empire","3jn-fund",
@@ -105,7 +105,7 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH 
   const page = await ctx.newPage();
   await page.goto(BASE + "/en/platforms", { waitUntil: "networkidle" });
   const cards = () => page.locator("article").count();
-  if ((await cards()) === 40) ok("directory shows all 40 platforms"); else fail("directory count", `${await cards()}`);
+  if ((await cards()) === 41) ok("directory shows all 41 platforms"); else fail("directory count", `${await cards()}`);
 
   await page.click('button[role="radio"]:has-text("Coming Soon")');
   await page.waitForTimeout(400);
