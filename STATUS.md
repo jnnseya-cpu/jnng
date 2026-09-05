@@ -4,9 +4,9 @@
 
 Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 
-## Portfolio: 39 platforms — 15 Live · 3 Launching · 21 Coming Soon
+## Portfolio: 40 platforms — 16 Live · 3 Launching · 21 Coming Soon
 
-### Live (15)
+### Live (16)
 | Platform | Website | Profile |
 |---|---|---|
 | Groupe JNN | [groupejnn.com](https://groupejnn.com) | `/platforms/groupe-jnn` |
@@ -21,6 +21,7 @@ Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 | Niche Finder | [nichefinderhq.com](https://nichefinderhq.com) | `/platforms/niche-finder` |
 | AxionOS | [evandeli.com](https://www.evandeli.com) | `/platforms/axionos` |
 | JNseya Construction | [jnseya.co.uk](https://www.jnseya.co.uk) | `/platforms/jnseya-construction` |
+| ETABLIX | [etablix.com](https://etablix.com) | `/platforms/etablix` |
 | JNN Estate Agency | [jnnestate.com](https://jnnestate.com) | `/platforms/jnn-estate` |
 | TicketRoyality | [ticketroyality.com](https://ticketroyality.com) | `/platforms/ticketroyality` |
 | KODA | [kodajnn.com](https://kodajnn.com) | `/platforms/koda` |
