@@ -697,7 +697,7 @@ const records: PlatformRecord[] = [
     internalPath: "/platforms/construx",
     logo: "/logos/placeholders/platform-placeholder-construx.svg",
     monogram: "CX",
-    brandColour: "#4E7CA1",
+    brandColour: "#FF6600", // real CONSTRUX accent (construxvg.com)
     regions: ["uk", "global"],
     audiences: [
       { en: "Contractors & delivery teams", fr: "Entreprises et équipes d'exécution" },
