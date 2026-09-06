@@ -350,14 +350,16 @@ export const fr: Dictionary = {
         "Cette politique de confidentialité explique comment le Groupe Nseya traite les informations personnelles soumises via ce site, y compris les demandes de contact et de partenariat.",
         "Les informations soumises via le formulaire de contact sont utilisées uniquement pour examiner et répondre à votre demande. Nous ne vendons pas d'informations personnelles.",
         "Si vous vous abonnez à notre newsletter, votre adresse email n'est utilisée que pour envoyer le brief hebdomadaire demandé ; chaque email contient un lien de désabonnement, effectif immédiatement.",
+        "Nous mesurons la façon dont nos plateformes sont découvertes uniquement si vous acceptez les cookies analytiques et marketing : le pixel Meta et la balise Google se chargent alors avec les adresses IP anonymisées. Vous pouvez refuser sans perdre aucune fonctionnalité, et un compteur de visites sans cookie ne stocke aucune donnée personnelle dans tous les cas.",
         "Pour toute question ou demande relative à la confidentialité, contactez contact@groupejnn.com.",
       ],
     },
     cookies: {
       title: "Politique de cookies",
       body: [
-        "Ce site n'utilise que les cookies strictement nécessaires à son fonctionnement, comme la mémorisation de votre préférence de langue.",
-        "Si des cookies d'analyse ou de marketing sont introduits, cette politique et le comportement de consentement du site seront mis à jour avant leur activation.",
+        "Ce site n'utilise que les cookies strictement nécessaires à son fonctionnement — mémoriser votre préférence de langue et votre choix concernant les cookies. Ils sont toujours actifs et n'effectuent aucun suivi.",
+        "Pour la mesure d'audience, nous utilisons un compteur de visites respectueux de la vie privée, sans cookie et sans donnée personnelle.",
+        "Les outils marketing et analytiques — le pixel Meta et la balise Google — ne se chargent qu'après votre acceptation dans le bandeau de cookies, jamais avant. En refusant, le site en reste totalement dépourvu, sans perte de fonctionnalité ; vous pouvez modifier votre choix à tout moment en effaçant les données de ce site.",
       ],
     },
     terms: {

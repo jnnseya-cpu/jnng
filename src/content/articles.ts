@@ -54,8 +54,8 @@ export const articles: Article[] = [
     date: "2026-07-21",
     category: { en: "Strategy", fr: "Stratégie" },
     title: {
-      en: "One rail, one meter, one factory: why 39 ventures share a single spine",
-      fr: "Un rail, un compteur, une usine : pourquoi 39 ventures partagent une seule colonne vertébrale",
+      en: "One rail, one meter, one factory: why every venture shares a single spine",
+      fr: "Un rail, un compteur, une usine : pourquoi chaque venture partage une seule colonne vertébrale",
     },
     excerpt: {
       en: "We are not a fund with a portfolio. We are a factory with an output — and the factory's secret is that every venture rides the same payment rail, the same billing meter and the same agent architecture.",
@@ -68,7 +68,7 @@ export const articles: Article[] = [
         "The meter: ACU billing. Every AI-native product in the portfolio monetises the same way — revenue scales with intelligence consumed, not seats occupied. VERYX, StudYear, MarketWar OS, LegAI and JESSIE-OS never had to invent a pricing model; they inherited one. Land small, expand automatically.",
         "The factory: a shared agent architecture and master specification framework. A new venture reaches production specification in weeks rather than quarters, because the blueprint, the agent registry and the event-sourced backbone already exist. This is why the portfolio can credibly hold ventures as different as Scan & Go RDC, Movie Empire OS and TradeNerve AI: the marginal cost of the next blueprint is close to zero.",
         "And one distribution engine ties it together: Nseya X-Execute puts the entire ecosystem in front of a national television audience, with editorial integrity intact — the most credible customer-acquisition channel a portfolio can own.",
-        "This is why the answer to 'why thirty-nine ventures?' is not ambition. It is arithmetic.",
+        "This is why the answer to 'why so many ventures?' is not ambition. It is arithmetic.",
       ],
       fr: [
         "Une holding possède des actifs. Un studio de ventures crée des entreprises. Le Groupe Nseya fait quelque chose de structurellement différent : il exploite une usine dont la production est constituée de plateformes prêtes pour la production, et l'économie de l'usine repose sur trois composants partagés qu'aucune venture n'a à reconstruire.",
@@ -76,7 +76,7 @@ export const articles: Article[] = [
         "Le compteur : la facturation ACU. Chaque produit natif IA du portefeuille se monétise de la même façon — le revenu croît avec l'intelligence consommée, pas avec les sièges occupés. VERYX, StudYear, MarketWar OS, LegAI et JESSIE-OS n'ont jamais eu à inventer un modèle de prix ; ils en ont hérité un. Entrer petit, s'étendre automatiquement.",
         "L'usine : une architecture d'agents partagée et un cadre de spécification maître. Une nouvelle venture atteint la spécification de production en semaines plutôt qu'en trimestres, parce que le plan, le registre d'agents et l'ossature event-sourced existent déjà. C'est pourquoi le portefeuille peut crédiblement porter des ventures aussi différentes que Scan & Go RDC, Movie Empire OS et TradeNerve AI : le coût marginal du plan suivant est proche de zéro.",
         "Et un moteur de distribution relie le tout : Nseya X-Execute place l'écosystème entier devant une audience de télévision nationale, avec une intégrité éditoriale intacte — le canal d'acquisition de clients le plus crédible qu'un portefeuille puisse posséder.",
-        "Voilà pourquoi la réponse à « pourquoi trente-neuf ventures ? » n'est pas l'ambition. C'est l'arithmétique.",
+        "Voilà pourquoi la réponse à « pourquoi autant de ventures ? » n'est pas l'ambition. C'est l'arithmétique.",
       ],
     },
     keywords: [
