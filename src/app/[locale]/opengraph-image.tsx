@@ -1,22 +1,21 @@
 import { ImageResponse } from "next/og";
-import { isLocale } from "@/lib/i18n";
+import { getDictionary, isLocale } from "@/lib/i18n";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Groupe Nseya — Building the platforms that power tomorrow.";
+export const alt = "Groupe Nseya — a factory for the next billion users.";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "fr" }];
 }
 
 // Social-share card: obsidian/navy canvas, gold hairline, master headline.
+// The headline is read from the hero dictionary so the share card always
+// tracks the site's live positioning instead of drifting from it.
 export default async function OpengraphImage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;
   const locale = isLocale(raw) ? raw : "en";
-  const headline =
-    locale === "fr"
-      ? "Construire les plateformes qui font avancer demain."
-      : "Building the platforms that power tomorrow.";
+  const headline = getDictionary(locale).hero.headline;
   const sub =
     locale === "fr"
       ? "Technologie · Investissement · Développement de projets"

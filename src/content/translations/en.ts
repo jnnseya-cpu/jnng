@@ -348,14 +348,16 @@ export const en = {
         "This privacy policy explains how Groupe Nseya handles personal information submitted through this website, including contact and partnership enquiries.",
         "Information submitted through the contact form is used solely to review and respond to your enquiry. We do not sell personal information.",
         "If you subscribe to our newsletter, your email address is used only to send the weekly brief you requested; every email includes an unsubscribe link and unsubscribing takes effect immediately.",
+        "We measure how our platforms are discovered only if you accept analytics and marketing cookies: Meta Pixel and Google's tag then load with IP addresses anonymised. You can decline without losing any functionality, and a cookieless visitor counter stores no personal data either way.",
         "For any privacy question or request, contact contact@groupejnn.com.",
       ],
     },
     cookies: {
       title: "Cookie Policy",
       body: [
-        "This website uses only the cookies strictly necessary for it to function, such as remembering your language preference.",
-        "If analytics or marketing cookies are introduced, this policy and the site's consent behaviour will be updated before they are activated.",
+        "This website uses only the cookies strictly necessary for it to function — remembering your language preference and your cookie choice. These are always on and perform no tracking.",
+        "For audience measurement we use a privacy-friendly visitor counter that sets no cookies and stores no personal data.",
+        "Marketing and analytics tools — Meta Pixel and Google's tag — load only after you accept them in the cookie banner, and never before. Declining keeps the site completely free of them, with no loss of functionality; you can change your choice at any time by clearing this site's data.",
       ],
     },
     terms: {

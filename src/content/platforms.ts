@@ -1,7 +1,7 @@
 import type { Platform } from "@/types/content";
 
 /**
- * GROUPE NSEYA — PLATFORM PORTFOLIO (28 public records)
+ * GROUPE NSEYA — PLATFORM PORTFOLIO
  *
  * Single source of truth for the portfolio. Status is controlled HERE only —
  * never hard-code a status into a component.
