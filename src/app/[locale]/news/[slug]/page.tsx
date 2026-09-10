@@ -89,6 +89,20 @@ export default async function ArticlePage({
     keywords: article.keywords.join(", "),
   };
 
+  // Answer-engine structured data: FAQPage lets search and AI engines extract
+  // and cite concise answers directly. Only emitted when the article ships FAQs.
+  const faqJsonLd = article.faq
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: article.faq.map((item) => ({
+          "@type": "Question",
+          name: item.q[locale],
+          acceptedAnswer: { "@type": "Answer", text: item.a[locale] },
+        })),
+      }
+    : null;
+
   return (
     <>
       <section className="surface-midnight px-4 pb-14 pt-36 sm:px-6 lg:px-8">
@@ -149,6 +163,26 @@ export default async function ArticlePage({
             </Reveal>
           ) : null}
 
+          {article.faq && article.faq.length > 0 ? (
+            <Reveal delay={0.05}>
+              <section className="mt-14" aria-labelledby="faq-heading">
+                <h2 id="faq-heading" className="font-display text-2xl font-bold tracking-tight t-fg sm:text-3xl">
+                  {dict.news.faqTitle}
+                </h2>
+                <dl className="mt-8 space-y-8">
+                  {article.faq.map((item, i) => (
+                    <div key={i}>
+                      <dt className="font-display text-lg font-semibold leading-snug t-fg">{item.q[locale]}</dt>
+                      <dd className="mt-3 text-base leading-relaxed t-soft sm:text-lg">
+                        {linkifyParagraph(item.a[locale], locale, linked)}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            </Reveal>
+          ) : null}
+
           <Reveal delay={0.1}>
             <div className="gold-line mt-14" aria-hidden />
             <div className="mt-10">
@@ -193,6 +227,9 @@ export default async function ArticlePage({
         </div>
       </article>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqJsonLd ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      ) : null}
     </>
   );
 }

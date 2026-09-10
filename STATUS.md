@@ -59,9 +59,10 @@ Generated from: `src/content/platforms.ts`, `src/content/articles.ts`
 | 3JN Fund | internal profile | `/platforms/3jn-fund` |
 | NZELA-OS | internal profile | `/platforms/nzela-os` |
 
-## Insights articles: 23 (× EN + FR pages)
+## Insights articles: 24 (× EN + FR pages)
 | Date | Category | Slug |
 |---|---|---|
+| 2026-09-10 | AI Agents | `/news/ai-agents-run-the-business` |
 | 2026-07-28 | Thesis | `/news/next-billion-users` |
 | 2026-07-21 | Strategy | `/news/one-shared-spine` |
 | 2026-07-14 | Enterprise | `/news/governance-is-the-product` |

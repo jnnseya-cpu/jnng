@@ -249,6 +249,7 @@ export const en = {
     readArticle: "Read article",
     backToNews: "All insights & news",
     furtherReading: "Further reading",
+    faqTitle: "Frequently asked questions",
     platformsInStory: "Platforms in this story",
     byGroup: "Groupe Nseya",
     viewsLabel: "views",

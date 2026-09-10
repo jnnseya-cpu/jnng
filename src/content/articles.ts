@@ -15,6 +15,78 @@ import type { Article } from "@/types/content";
  */
 export const articles: Article[] = [
   {
+    slug: "ai-agents-run-the-business",
+    date: "2026-09-10",
+    category: { en: "AI Agents", fr: "Agents IA" },
+    title: {
+      en: "How AI agents actually run a business in emerging markets",
+      fr: "Comment les agents IA font vraiment tourner une entreprise",
+    },
+    excerpt: {
+      en: "AI agents have moved past the chat window: taking orders, settling mobile money, verifying payments and answering in five languages. A field guide.",
+      fr: "Les agents IA ont dépassé la fenêtre de chat : prendre des commandes, régler le mobile money, vérifier les paiements et répondre en cinq langues. Un guide.",
+    },
+    body: {
+      en: [
+        "For a decade, 'AI in business' meant a chatbot bolted onto a website — a search box that talked back. That era is over. The useful unit today is the agent: software that does not just answer a question but completes a task end to end, holding context, calling tools, and handing off to a human only when judgement or authority demands it. The interesting question is no longer whether an agent can hold a conversation. It is whether an agent can run the parts of a business that used to require a payroll.",
+        "Start with the front counter. An AI agent that sells has to meet customers where they already are, and in emerging markets that place is WhatsApp, not an app store. NZELA-OS runs the ordering, upsell and dispatch conversation inside the messaging thread the customer already uses every day, building on what Tunakula CD proved about food commerce in Kinshasa. Where typing itself is the barrier, Congo Voice AI answers by voice in the customer's own language, and StudYear shows the same pattern in education — an agent that tutors and assesses at a ratio no classroom can match. The agent is not a feature of the product. In these systems the agent is the storefront, the tutor and the call centre at once.",
+        "Selling is the easy half. Settling money is where most 'AI for business' demos quietly stop, because payments punish mistakes. An agent that touches money needs a rail that treats a double-send or a mis-post as unacceptable, not unlikely. KODA verifies a mobile money payment in seconds for merchants whose fallback is a forwarded screenshot, and BitriPay settles transactions on a compliance-first, double-entry ledger built for DRC mobile money and the London–Kinshasa corridor. The design rule is simple and non-negotiable: an agent may propose a financial action, but it executes only inside guardrails that make the wrong outcome structurally impossible — idempotent writes, explicit authority, a ledger that cannot be quietly edited.",
+        "Which points at the real differentiator: accountability. An agent that acts on a company's behalf has to leave a record a bank, a ministry or a court would accept. VERYX was built around that premise from the first line of code — every action an immutable event, every decision carrying its provenance, every agent operating inside an auditable permissions envelope. LegAI applies the same discipline to legal work, and AxionOS carries it into UK construction, where verified identity and milestone escrow turn trust from a promise into a mechanism. An agent you cannot audit is not an asset; it is a liability with good manners.",
+        "Put the three together — an agent that sells where the customer already is, settles money without leaking it, and remembers everything it did — and you have something incumbents cannot ship by adding a feature. MarketWar OS runs marketing this way, JESSIE-OS runs field operations, TradeNerve AI runs trading research and Niche Finder runs venture discovery, all on the same shared rail and billing meter, so revenue scales with intelligence consumed rather than seats sold. The lesson from building across this many industries is unglamorous and durable: the winning AI agent is not the cleverest talker. It is the one you can trust with the till, the ledger and the audit — the one that, like 3JN Travel handling a diaspora booking, finishes the job without being watched.",
+      ],
+      fr: [
+        "Pendant une décennie, « l'IA en entreprise » a désigné un chatbot greffé sur un site web — une barre de recherche qui répondait. Cette époque est finie. L'unité utile aujourd'hui est l'agent : un logiciel qui ne se contente pas de répondre à une question mais accomplit une tâche de bout en bout, garde le contexte, appelle des outils et ne passe la main à un humain que lorsque le jugement ou l'autorité l'exigent. La vraie question n'est plus de savoir si un agent peut tenir une conversation. C'est de savoir s'il peut faire tourner les parties d'une entreprise qui exigeaient auparavant une masse salariale.",
+        "Commençons par le comptoir. Un agent IA qui vend doit rejoindre les clients là où ils sont déjà, et dans les marchés émergents cet endroit est WhatsApp, pas un app store. NZELA-OS mène la conversation de commande, de vente additionnelle et d'expédition à l'intérieur du fil de messagerie que le client utilise déjà chaque jour, en s'appuyant sur ce que Tunakula CD a prouvé du commerce alimentaire à Kinshasa. Là où taper est en soi la barrière, Congo Voice AI répond à la voix dans la langue du client, et StudYear montre le même schéma dans l'éducation — un agent qui enseigne et évalue à un ratio qu'aucune salle de classe ne peut atteindre. L'agent n'est pas une fonctionnalité du produit. Dans ces systèmes, l'agent est à la fois la vitrine, le professeur et le centre d'appels.",
+        "Vendre est la moitié facile. Régler l'argent est là où la plupart des démonstrations d'« IA pour l'entreprise » s'arrêtent discrètement, parce que les paiements sanctionnent les erreurs. Un agent qui touche l'argent a besoin d'un rail qui traite un double envoi ou une mauvaise écriture comme inacceptable, pas comme improbable. KODA vérifie un paiement mobile money en secondes pour des commerçants dont le recours est une capture d'écran transférée, et BitriPay règle les transactions sur un grand livre en partie double, conformité d'abord, conçu pour le mobile money de la RDC et le corridor Londres–Kinshasa. La règle de conception est simple et non négociable : un agent peut proposer une action financière, mais il ne l'exécute qu'à l'intérieur de garde-fous qui rendent le mauvais résultat structurellement impossible — écritures idempotentes, autorité explicite, un grand livre qu'on ne peut pas modifier en douce.",
+        "Ce qui pointe vers le vrai différenciateur : la responsabilité. Un agent qui agit au nom d'une entreprise doit laisser une trace qu'une banque, un ministère ou un tribunal accepterait. VERYX a été bâti autour de cette prémisse dès la première ligne de code — chaque action un événement immuable, chaque décision portant sa provenance, chaque agent opérant dans une enveloppe de permissions auditable. LegAI applique la même discipline au travail juridique, et AxionOS la porte dans la construction britannique, où l'identité vérifiée et le séquestre par jalons font de la confiance un mécanisme plutôt qu'une promesse. Un agent que vous ne pouvez pas auditer n'est pas un actif ; c'est un passif bien élevé.",
+        "Réunissez les trois — un agent qui vend là où le client est déjà, qui règle l'argent sans le laisser fuir, et qui se souvient de tout ce qu'il a fait — et vous obtenez quelque chose que les acteurs en place ne peuvent pas livrer en ajoutant une fonctionnalité. MarketWar OS mène le marketing ainsi, JESSIE-OS mène les opérations terrain, TradeNerve AI mène la recherche de trading et Niche Finder mène la découverte de ventures, tous sur le même rail et le même compteur de facturation, si bien que le revenu croît avec l'intelligence consommée plutôt qu'avec les sièges vendus. La leçon de la construction dans autant d'industries est peu spectaculaire et durable : l'agent IA gagnant n'est pas le plus beau parleur. C'est celui à qui l'on peut confier la caisse, le grand livre et l'audit — celui qui, comme 3JN Travel traitant une réservation de la diaspora, termine le travail sans être surveillé.",
+      ],
+    },
+    keywords: [
+      "AI agents", "agentic commerce", "WhatsApp commerce AI", "mobile money automation",
+      "AI customer service Africa", "emerging markets AI", "AI operating system", "answer engine optimisation",
+    ],
+    relatedPlatformSlugs: ["koda", "veryx", "nzela-os"],
+    author: "group",
+    faq: [
+      {
+        q: { en: "What is an AI agent in business software?", fr: "Qu'est-ce qu'un agent IA dans un logiciel d'entreprise ?" },
+        a: {
+          en: "An AI agent is software that completes a task end to end rather than just answering a question. It holds context, calls tools, takes actions like placing an order or verifying a payment, and escalates to a human only when judgement or authority requires it. In the Groupe Nseya ecosystem the agent is not a bolt-on feature — in products like NZELA-OS and VERYX it is the operating layer of the product itself.",
+          fr: "Un agent IA est un logiciel qui accomplit une tâche de bout en bout plutôt que de simplement répondre à une question. Il garde le contexte, appelle des outils, pose des actions comme passer une commande ou vérifier un paiement, et n'escalade vers un humain que lorsque le jugement ou l'autorité l'exigent. Dans l'écosystème du Groupe Nseya, l'agent n'est pas une option greffée — dans des produits comme NZELA-OS et VERYX, il est la couche d'exploitation du produit lui-même.",
+        },
+      },
+      {
+        q: { en: "Can AI agents handle payments safely?", fr: "Les agents IA peuvent-ils gérer les paiements en toute sécurité ?" },
+        a: {
+          en: "Yes, but only inside guardrails that make the wrong outcome structurally impossible rather than merely unlikely. An agent may propose a financial action, but execution runs through idempotent writes, explicit authority and a ledger that cannot be quietly edited. KODA verifies mobile money payments in seconds and BitriPay settles on a compliance-first, double-entry ledger — so a double-send or a mis-post is prevented by design, not caught after the fact.",
+          fr: "Oui, mais uniquement à l'intérieur de garde-fous qui rendent le mauvais résultat structurellement impossible plutôt que simplement improbable. Un agent peut proposer une action financière, mais l'exécution passe par des écritures idempotentes, une autorité explicite et un grand livre qu'on ne peut pas modifier en douce. KODA vérifie les paiements mobile money en secondes et BitriPay règle sur un grand livre en partie double, conformité d'abord — de sorte qu'un double envoi ou une mauvaise écriture est empêché par conception, pas rattrapé après coup.",
+        },
+      },
+      {
+        q: { en: "Do AI agents work without an app or reliable internet?", fr: "Les agents IA fonctionnent-ils sans application ni internet fiable ?" },
+        a: {
+          en: "They can, when they are built for it. Instead of assuming an app store and a data plan, an agent can live inside WhatsApp, answer over voice, or fall back to USSD and SMS. NZELA-OS runs commerce inside the messaging thread customers already use, and Congo Voice AI serves customers entirely by voice, with no app and no literacy prerequisite.",
+          fr: "Oui, quand ils sont conçus pour cela. Au lieu de supposer un app store et un forfait data, un agent peut vivre dans WhatsApp, répondre à la voix, ou basculer vers l'USSD et le SMS. NZELA-OS mène le commerce à l'intérieur du fil de messagerie que les clients utilisent déjà, et Congo Voice AI sert les clients entièrement à la voix, sans application et sans prérequis d'alphabétisation.",
+        },
+      },
+      {
+        q: { en: "How do you keep AI agent decisions auditable?", fr: "Comment garder les décisions d'un agent IA auditables ?" },
+        a: {
+          en: "By treating the audit trail as the substrate rather than a feature. Every action is stored as an immutable event with its provenance, and every agent operates inside a permissions envelope that can be reviewed after the fact. VERYX is architected this way from the ground up, and LegAI and AxionOS apply the same standard to legal and construction work — so a bank, a ministry or a court can reconstruct who decided what, when and on whose authority.",
+          fr: "En traitant la piste d'audit comme le socle plutôt que comme une fonctionnalité. Chaque action est stockée comme un événement immuable avec sa provenance, et chaque agent opère dans une enveloppe de permissions révisable après coup. VERYX est architecturé ainsi de fond en comble, et LegAI et AxionOS appliquent le même standard au travail juridique et à la construction — de sorte qu'une banque, un ministère ou un tribunal peut reconstituer qui a décidé quoi, quand et sous quelle autorité.",
+        },
+      },
+      {
+        q: { en: "What languages can AI agents serve customers in?", fr: "Dans quelles langues les agents IA peuvent-ils servir les clients ?" },
+        a: {
+          en: "Emerging-market agents have to work beyond the colonial languages. Congo Voice AI answers in Lingala, Swahili, Kikongo, Tshiluba and French, by voice and without text, so literacy is never a barrier to service. Serving customers in their own language is treated as core infrastructure, not a translation afterthought.",
+          fr: "Les agents des marchés émergents doivent fonctionner au-delà des langues coloniales. Congo Voice AI répond en lingala, swahili, kikongo, tshiluba et français, à la voix et sans texte, si bien que l'alphabétisation n'est jamais une barrière au service. Servir les clients dans leur propre langue est traité comme une infrastructure de base, pas comme une traduction ajoutée après coup.",
+        },
+      },
+    ],
+  },
+  {
     slug: "next-billion-users",
     date: "2026-07-28",
     category: { en: "Thesis", fr: "Thèse" },

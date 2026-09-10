@@ -119,6 +119,12 @@ export type Article = {
   relatedPlatformSlugs: string[];
   author: "group" | "founder";
   /**
+   * Optional answer-engine block. Rendered as a visible FAQ section (question
+   * H3s with linkified answers) and as FAQPage structured data, so search and
+   * AI answer engines can extract and cite concise answers directly.
+   */
+  faq?: { q: Localized; a: Localized }[];
+  /**
    * Short community summaries in national languages (Lingala, Swahili) for
    * Kinshasa-facing guides — unique-language content competitors don't write.
    * Draft quality: have native speakers review before heavy promotion.

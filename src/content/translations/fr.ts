@@ -251,6 +251,7 @@ export const fr: Dictionary = {
     readArticle: "Lire l'article",
     backToNews: "Toutes les analyses et actualités",
     furtherReading: "À lire ensuite",
+    faqTitle: "Questions fréquentes",
     platformsInStory: "Les plateformes de cette histoire",
     byGroup: "Groupe Nseya",
     viewsLabel: "vues",
